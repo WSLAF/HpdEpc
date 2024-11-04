@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.mapper.VinPartOptionNewMapper">
+  <resultMap id="BaseResultMap" type="com.domain.VinPartOptionNew">
+    <!--@mbg.generated-->
+    <!--@Table vin_part_option_new-->
+    <result column="catalog" jdbcType="VARCHAR" property="catalog" />
+    <result column="optionCodes" jdbcType="VARCHAR" property="optionCodes" />
+    <result column="exteriorKeyColorCode" jdbcType="VARCHAR" property="exteriorKeyColorCode" />
+    <result column="interiorKeyColorCode" jdbcType="VARCHAR" property="interiorKeyColorCode" />
+    <result column="modelCode" jdbcType="VARCHAR" property="modelCode" />
+    <result column="buildDate" jdbcType="VARCHAR" property="buildDate" />
+    <result column="area" jdbcType="VARCHAR" property="area" />
+    <result column="fullSpecificationCode" jdbcType="VARCHAR" property="fullSpecificationCode" />
+    <result column="sectionCode" jdbcType="VARCHAR" property="sectionCode" />
+    <result column="plant" jdbcType="VARCHAR" property="plant" />
+    <result column="vinTag" jdbcType="VARCHAR" property="vinTag" />
+    <result column="engineMipCode" jdbcType="VARCHAR" property="engineMipCode" />
+    <result column="transmissionMipCode" jdbcType="VARCHAR" property="transmissionMipCode" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="level" jdbcType="VARCHAR" property="level" />
+    <result column="type01" jdbcType="VARCHAR" property="type01" />
+    <result column="type02" jdbcType="VARCHAR" property="type02" />
+    <result column="type03" jdbcType="VARCHAR" property="type03" />
+    <result column="type04" jdbcType="VARCHAR" property="type04" />
+    <result column="type05" jdbcType="VARCHAR" property="type05" />
+    <result column="type06" jdbcType="VARCHAR" property="type06" />
+    <result column="typeWT" jdbcType="VARCHAR" property="typeWT" />
+    <result column="typeDT" jdbcType="VARCHAR" property="typeDT" />
+    <result column="partNumber" jdbcType="VARCHAR" property="partNumber" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    `catalog`, optionCodes, exteriorKeyColorCode, interiorKeyColorCode, modelCode, buildDate, 
+    area, fullSpecificationCode, sectionCode, plant, vinTag, engineMipCode, transmissionMipCode, 
+    `type`, `level`, type01, type02, type03, type04, type05, type06, typeWT,
+    typeDT, `partNumber`
+  </sql>
+  <insert id="insert" parameterType="com.domain.VinPartOptionNew">
+    <!--@mbg.generated-->
+    insert into vin_part_option_new(`catalog`, optionCodes, exteriorKeyColorCode,
+      interiorKeyColorCode, modelCode, buildDate, 
+      area, fullSpecificationCode, sectionCode, 
+      plant, vinTag, engineMipCode, 
+      transmissionMipCode, `type`,
+      `level`, type01, type02, 
+      type03, type04, type05, 
+      type06, typeWT, typeDT, 
+      `section`, `partNumber`)
+    values (#{catalog,jdbcType=VARCHAR}, #{optionCodes,jdbcType=VARCHAR}, #{exteriorKeyColorCode,jdbcType=VARCHAR}, 
+      #{interiorKeyColorCode,jdbcType=VARCHAR}, #{modelCode,jdbcType=VARCHAR}, #{buildDate,jdbcType=VARCHAR}, 
+      #{area,jdbcType=VARCHAR}, #{fullSpecificationCode,jdbcType=VARCHAR}, #{sectionCode,jdbcType=VARCHAR}, 
+      #{plant,jdbcType=VARCHAR}, #{vinTag,jdbcType=VARCHAR}, #{engineMipCode,jdbcType=VARCHAR}, 
+      #{transmissionMipCode,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR},
+      #{level,jdbcType=VARCHAR}, #{type01,jdbcType=VARCHAR}, #{type02,jdbcType=VARCHAR}, 
+      #{type03,jdbcType=VARCHAR}, #{type04,jdbcType=VARCHAR}, #{type05,jdbcType=VARCHAR}, 
+      #{type06,jdbcType=VARCHAR}, #{typeWT,jdbcType=VARCHAR}, #{typeDT,jdbcType=VARCHAR}, 
+      #{partNumber,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.domain.VinPartOptionNew">
+    <!--@mbg.generated-->
+    insert into vin_part_option_new
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="catalog != null">
+        `catalog`,
+      </if>
+      <if test="optionCodes != null">
+        optionCodes,
+      </if>
+      <if test="exteriorKeyColorCode != null">
+        exteriorKeyColorCode,
+      </if>
+      <if test="interiorKeyColorCode != null">
+        interiorKeyColorCode,
+      </if>
+      <if test="modelCode != null">
+        modelCode,
+      </if>
+      <if test="buildDate != null">
+        buildDate,
+      </if>
+      <if test="area != null">
+        area,
+      </if>
+      <if test="fullSpecificationCode != null">
+        fullSpecificationCode,
+      </if>
+      <if test="sectionCode != null">
+        sectionCode,
+      </if>
+      <if test="plant != null">
+        plant,
+      </if>
+      <if test="vinTag != null">
+        vinTag,
+      </if>
+      <if test="engineMipCode != null">
+        engineMipCode,
+      </if>
+      <if test="transmissionMipCode != null">
+        transmissionMipCode,
+      </if>
+      <if test="type != null">
+        `type`,
+      </if>
+      <if test="level != null">
+        `level`,
+      </if>
+      <if test="type01 != null">
+        type01,
+      </if>
+      <if test="type02 != null">
+        type02,
+      </if>
+      <if test="type03 != null">
+        type03,
+      </if>
+      <if test="type04 != null">
+        type04,
+      </if>
+      <if test="type05 != null">
+        type05,
+      </if>
+      <if test="type06 != null">
+        type06,
+      </if>
+      <if test="typeWT != null">
+        typeWT,
+      </if>
+      <if test="typeDT != null">
+        typeDT,
+      </if>
+      <if test="partNumber != null">
+        `partNumber`,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="catalog != null">
+        #{catalog,jdbcType=VARCHAR},
+      </if>
+      <if test="optionCodes != null">
+        #{optionCodes,jdbcType=VARCHAR},
+      </if>
+      <if test="exteriorKeyColorCode != null">
+        #{exteriorKeyColorCode,jdbcType=VARCHAR},
+      </if>
+      <if test="interiorKeyColorCode != null">
+        #{interiorKeyColorCode,jdbcType=VARCHAR},
+      </if>
+      <if test="modelCode != null">
+        #{modelCode,jdbcType=VARCHAR},
+      </if>
+      <if test="buildDate != null">
+        #{buildDate,jdbcType=VARCHAR},
+      </if>
+      <if test="area != null">
+        #{area,jdbcType=VARCHAR},
+      </if>
+      <if test="fullSpecificationCode != null">
+        #{fullSpecificationCode,jdbcType=VARCHAR},
+      </if>
+      <if test="sectionCode != null">
+        #{sectionCode,jdbcType=VARCHAR},
+      </if>
+      <if test="plant != null">
+        #{plant,jdbcType=VARCHAR},
+      </if>
+      <if test="vinTag != null">
+        #{vinTag,jdbcType=VARCHAR},
+      </if>
+      <if test="engineMipCode != null">
+        #{engineMipCode,jdbcType=VARCHAR},
+      </if>
+      <if test="transmissionMipCode != null">
+        #{transmissionMipCode,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="level != null">
+        #{level,jdbcType=VARCHAR},
+      </if>
+      <if test="type01 != null">
+        #{type01,jdbcType=VARCHAR},
+      </if>
+      <if test="type02 != null">
+        #{type02,jdbcType=VARCHAR},
+      </if>
+      <if test="type03 != null">
+        #{type03,jdbcType=VARCHAR},
+      </if>
+      <if test="type04 != null">
+        #{type04,jdbcType=VARCHAR},
+      </if>
+      <if test="type05 != null">
+        #{type05,jdbcType=VARCHAR},
+      </if>
+      <if test="type06 != null">
+        #{type06,jdbcType=VARCHAR},
+      </if>
+      <if test="typeWT != null">
+        #{typeWT,jdbcType=VARCHAR},
+      </if>
+      <if test="typeDT != null">
+        #{typeDT,jdbcType=VARCHAR},
+      </if>
+      <if test="partNumber != null">
+        #{partNumber,jdbcType=VARCHAR}}
+      </if>
+    </trim>
+  </insert>
+  <insert id="batchInsert" parameterType="map">
+    <!--@mbg.generated-->
+    insert into vin_part_option_new
+    (`catalog`, optionCodes, exteriorKeyColorCode, interiorKeyColorCode, modelCode, buildDate, 
+      area, fullSpecificationCode, sectionCode, plant, vinTag, engineMipCode, transmissionMipCode, 
+      `type`,`level`, type01, type02, type03, type04, type05, type06, typeWT,
+      typeDT,`partNumber`)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.catalog,jdbcType=VARCHAR}, #{item.optionCodes,jdbcType=VARCHAR}, #{item.exteriorKeyColorCode,jdbcType=VARCHAR}, 
+        #{item.interiorKeyColorCode,jdbcType=VARCHAR}, #{item.modelCode,jdbcType=VARCHAR}, 
+        #{item.buildDate,jdbcType=VARCHAR}, #{item.area,jdbcType=VARCHAR}, #{item.fullSpecificationCode,jdbcType=VARCHAR}, 
+        #{item.sectionCode,jdbcType=VARCHAR}, #{item.plant,jdbcType=VARCHAR}, #{item.vinTag,jdbcType=VARCHAR}, 
+        #{item.engineMipCode,jdbcType=VARCHAR}, #{item.transmissionMipCode,jdbcType=VARCHAR}, 
+        #{item.type,jdbcType=VARCHAR}, #{item.level,jdbcType=VARCHAR},
+        #{item.type01,jdbcType=VARCHAR}, #{item.type02,jdbcType=VARCHAR}, #{item.type03,jdbcType=VARCHAR}, 
+        #{item.type04,jdbcType=VARCHAR}, #{item.type05,jdbcType=VARCHAR}, #{item.type06,jdbcType=VARCHAR}, 
+        #{item.typeWT,jdbcType=VARCHAR}, #{item.typeDT,jdbcType=VARCHAR}, #{item.partNumber,jdbcType=VARCHAR}
+        )
+    </foreach>
+  </insert>
+
+<!--auto generated by MybatisCodeHelper on 2024-08-01-->
+  <select id="selectAll" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from vin_part_option_new
+  </select>
+</mapper>

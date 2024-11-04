@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.mybatismapper.CatalogMapper2">
+  <resultMap id="BaseResultMap" type="com.domain.Catalog">
+    <!--@mbg.generated-->
+    <!--@Table `catalog`-->
+    <result column="franchise" jdbcType="VARCHAR" property="franchise" />
+    <result column="catalogCategory" jdbcType="VARCHAR" property="catalogCategory" />
+    <result column="catalogCategoryName" jdbcType="VARCHAR" property="catalogCategoryName" />
+    <result column="sortOrder" jdbcType="VARCHAR" property="sortOrder" />
+    <result column="catalogDataType" jdbcType="VARCHAR" property="catalogDataType" />
+    <result column="id" jdbcType="INTEGER" property="id" />
+    <result column="catalogCode" jdbcType="VARCHAR" property="catalogCode" />
+    <result column="catalogDataTypeDescription" jdbcType="VARCHAR" property="catalogDataTypeDescription" />
+    <result column="beginDate" jdbcType="VARCHAR" property="beginDate" />
+    <result column="endDate" jdbcType="VARCHAR" property="endDate" />
+    <result column="modelBeginDate" jdbcType="VARCHAR" property="modelBeginDate" />
+    <result column="modelEndDate" jdbcType="VARCHAR" property="modelEndDate" />
+    <result column="applicableRegions" jdbcType="VARCHAR" property="applicableRegions" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+    <result column="shortcuts" jdbcType="VARCHAR" property="shortcuts" />
+    <result column="brand" jdbcType="VARCHAR" property="brand" />
+    <result column="folder" jdbcType="VARCHAR" property="folder" />
+    <result column="image" jdbcType="VARCHAR" property="image" />
+    <result column="interpretation" jdbcType="VARCHAR" property="interpretation" />
+    <result column="label" jdbcType="VARCHAR" property="label" />
+    <result column="key" jdbcType="VARCHAR" property="key" />
+    <result column="notes" jdbcType="VARCHAR" property="notes" />
+    <result column="excludeMarkets" jdbcType="VARCHAR" property="excludeMarkets" />
+    <result column="includeMarkets" jdbcType="VARCHAR" property="includeMarkets" />
+    <result column="majorFeatures" jdbcType="VARCHAR" property="majorFeatures" />
+    <result column="vehicleLine" jdbcType="VARCHAR" property="vehicleLine" />
+    <result column="avsCatalog" jdbcType="VARCHAR" property="avsCatalog" />
+    <result column="userNoteIds" jdbcType="VARCHAR" property="userNoteIds" />
+    <result column="hywCatalogDateType" jdbcType="VARCHAR" property="hywCatalogDateType" />
+    <result column="factoryBrand" jdbcType="VARCHAR" property="factoryBrand" />
+    <result column="groupType" jdbcType="VARCHAR" property="groupType" />
+    <result column="projectCode" jdbcType="VARCHAR" property="projectCode" />
+    <result column="supersessionAreas" jdbcType="VARCHAR" property="supersessionAreas" />
+    <result column="fromYear" jdbcType="VARCHAR" property="fromYear" />
+    <result column="toYear" jdbcType="VARCHAR" property="toYear" />
+    <result column="vehicleType" jdbcType="VARCHAR" property="vehicleType" />
+    <result column="vehicleCode" jdbcType="VARCHAR" property="vehicleCode" />
+    <result column="vehicleYear" jdbcType="VARCHAR" property="vehicleYear" />
+    <result column="model" jdbcType="VARCHAR" property="model" />
+    <result column="optionType" jdbcType="VARCHAR" property="optionType" />
+    <result column="catalogFolder" jdbcType="VARCHAR" property="catalogFolder" />
+    <result column="optionIndexMap" jdbcType="VARCHAR" property="optionIndexMap" />
+    <result column="glossary" jdbcType="VARCHAR" property="glossary" />
+    <result column="showInUI" jdbcType="VARCHAR" property="showInUI" />
+    <result column="catalogFactory" jdbcType="VARCHAR" property="catalogFactory" />
+    <result column="uccType" jdbcType="VARCHAR" property="uccType" />
+    <result column="plantAndRegionCode" jdbcType="VARCHAR" property="plantAndRegionCode" />
+    <result column="models" jdbcType="VARCHAR" property="models" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    franchise, catalogCategory, catalogCategoryName, sortOrder, catalogDataType, id, 
+    catalogCode, catalogDataTypeDescription, beginDate, endDate, modelBeginDate, modelEndDate, 
+    applicableRegions, description, shortcuts, brand, folder, image, interpretation, 
+    `label`, `key`, notes, excludeMarkets, includeMarkets, majorFeatures, vehicleLine, 
+    avsCatalog, userNoteIds, hywCatalogDateType, factoryBrand, groupType, projectCode, 
+    supersessionAreas, fromYear, toYear, vehicleType, vehicleCode, vehicleYear, model, 
+    optionType, catalogFolder, optionIndexMap, glossary, showInUI, catalogFactory, uccType, 
+    plantAndRegionCode, models
+  </sql>
+  <insert id="insert" parameterType="com.domain.Catalog">
+    <!--@mbg.generated-->
+    insert into `catalog` (franchise, catalogCategory, catalogCategoryName, 
+      sortOrder, catalogDataType, id, 
+      catalogCode, catalogDataTypeDescription, 
+      beginDate, endDate, modelBeginDate, 
+      modelEndDate, applicableRegions, description, 
+      shortcuts, brand, folder, 
+      image, interpretation, `label`, 
+      `key`, notes, excludeMarkets, 
+      includeMarkets, majorFeatures, vehicleLine, 
+      avsCatalog, userNoteIds, hywCatalogDateType, 
+      factoryBrand, groupType, projectCode, 
+      supersessionAreas, fromYear, toYear, 
+      vehicleType, vehicleCode, vehicleYear, 
+      model, optionType, catalogFolder, 
+      optionIndexMap, glossary, showInUI, 
+      catalogFactory, uccType, plantAndRegionCode, 
+      models)
+    values (#{franchise,jdbcType=VARCHAR}, #{catalogCategory,jdbcType=VARCHAR}, #{catalogCategoryName,jdbcType=VARCHAR}, 
+      #{sortOrder,jdbcType=VARCHAR}, #{catalogDataType,jdbcType=VARCHAR}, #{id,jdbcType=INTEGER}, 
+      #{catalogCode,jdbcType=VARCHAR}, #{catalogDataTypeDescription,jdbcType=VARCHAR}, 
+      #{beginDate,jdbcType=VARCHAR}, #{endDate,jdbcType=VARCHAR}, #{modelBeginDate,jdbcType=VARCHAR}, 
+      #{modelEndDate,jdbcType=VARCHAR}, #{applicableRegions,jdbcType=VARCHAR}, #{description,jdbcType=VARCHAR}, 
+      #{shortcuts,jdbcType=VARCHAR}, #{brand,jdbcType=VARCHAR}, #{folder,jdbcType=VARCHAR}, 
+      #{image,jdbcType=VARCHAR}, #{interpretation,jdbcType=VARCHAR}, #{label,jdbcType=VARCHAR}, 
+      #{key,jdbcType=VARCHAR}, #{notes,jdbcType=VARCHAR}, #{excludeMarkets,jdbcType=VARCHAR}, 
+      #{includeMarkets,jdbcType=VARCHAR}, #{majorFeatures,jdbcType=VARCHAR}, #{vehicleLine,jdbcType=VARCHAR}, 
+      #{avsCatalog,jdbcType=VARCHAR}, #{userNoteIds,jdbcType=VARCHAR}, #{hywCatalogDateType,jdbcType=VARCHAR}, 
+      #{factoryBrand,jdbcType=VARCHAR}, #{groupType,jdbcType=VARCHAR}, #{projectCode,jdbcType=VARCHAR}, 
+      #{supersessionAreas,jdbcType=VARCHAR}, #{fromYear,jdbcType=VARCHAR}, #{toYear,jdbcType=VARCHAR}, 
+      #{vehicleType,jdbcType=VARCHAR}, #{vehicleCode,jdbcType=VARCHAR}, #{vehicleYear,jdbcType=VARCHAR}, 
+      #{model,jdbcType=VARCHAR}, #{optionType,jdbcType=VARCHAR}, #{catalogFolder,jdbcType=VARCHAR}, 
+      #{optionIndexMap,jdbcType=VARCHAR}, #{glossary,jdbcType=VARCHAR}, #{showInUI,jdbcType=VARCHAR}, 
+      #{catalogFactory,jdbcType=VARCHAR}, #{uccType,jdbcType=VARCHAR}, #{plantAndRegionCode,jdbcType=VARCHAR}, 
+      #{models,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.domain.Catalog">
+    <!--@mbg.generated-->
+    insert into `catalog`
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="franchise != null">
+        franchise,
+      </if>
+      <if test="catalogCategory != null">
+        catalogCategory,
+      </if>
+      <if test="catalogCategoryName != null">
+        catalogCategoryName,
+      </if>
+      <if test="sortOrder != null">
+        sortOrder,
+      </if>
+      <if test="catalogDataType != null">
+        catalogDataType,
+      </if>
+      <if test="id != null">
+        id,
+      </if>
+      <if test="catalogCode != null">
+        catalogCode,
+      </if>
+      <if test="catalogDataTypeDescription != null">
+        catalogDataTypeDescription,
+      </if>
+      <if test="beginDate != null">
+        beginDate,
+      </if>
+      <if test="endDate != null">
+        endDate,
+      </if>
+      <if test="modelBeginDate != null">
+        modelBeginDate,
+      </if>
+      <if test="modelEndDate != null">
+        modelEndDate,
+      </if>
+      <if test="applicableRegions != null">
+        applicableRegions,
+      </if>
+      <if test="description != null">
+        description,
+      </if>
+      <if test="shortcuts != null">
+        shortcuts,
+      </if>
+      <if test="brand != null">
+        brand,
+      </if>
+      <if test="folder != null">
+        folder,
+      </if>
+      <if test="image != null">
+        image,
+      </if>
+      <if test="interpretation != null">
+        interpretation,
+      </if>
+      <if test="label != null">
+        `label`,
+      </if>
+      <if test="key != null">
+        `key`,
+      </if>
+      <if test="notes != null">
+        notes,
+      </if>
+      <if test="excludeMarkets != null">
+        excludeMarkets,
+      </if>
+      <if test="includeMarkets != null">
+        includeMarkets,
+      </if>
+      <if test="majorFeatures != null">
+        majorFeatures,
+      </if>
+      <if test="vehicleLine != null">
+        vehicleLine,
+      </if>
+      <if test="avsCatalog != null">
+        avsCatalog,
+      </if>
+      <if test="userNoteIds != null">
+        userNoteIds,
+      </if>
+      <if test="hywCatalogDateType != null">
+        hywCatalogDateType,
+      </if>
+      <if test="factoryBrand != null">
+        factoryBrand,
+      </if>
+      <if test="groupType != null">
+        groupType,
+      </if>
+      <if test="projectCode != null">
+        projectCode,
+      </if>
+      <if test="supersessionAreas != null">
+        supersessionAreas,
+      </if>
+      <if test="fromYear != null">
+        fromYear,
+      </if>
+      <if test="toYear != null">
+        toYear,
+      </if>
+      <if test="vehicleType != null">
+        vehicleType,
+      </if>
+      <if test="vehicleCode != null">
+        vehicleCode,
+      </if>
+      <if test="vehicleYear != null">
+        vehicleYear,
+      </if>
+      <if test="model != null">
+        model,
+      </if>
+      <if test="optionType != null">
+        optionType,
+      </if>
+      <if test="catalogFolder != null">
+        catalogFolder,
+      </if>
+      <if test="optionIndexMap != null">
+        optionIndexMap,
+      </if>
+      <if test="glossary != null">
+        glossary,
+      </if>
+      <if test="showInUI != null">
+        showInUI,
+      </if>
+      <if test="catalogFactory != null">
+        catalogFactory,
+      </if>
+      <if test="uccType != null">
+        uccType,
+      </if>
+      <if test="plantAndRegionCode != null">
+        plantAndRegionCode,
+      </if>
+      <if test="models != null">
+        models,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="franchise != null">
+        #{franchise,jdbcType=VARCHAR},
+      </if>
+      <if test="catalogCategory != null">
+        #{catalogCategory,jdbcType=VARCHAR},
+      </if>
+      <if test="catalogCategoryName != null">
+        #{catalogCategoryName,jdbcType=VARCHAR},
+      </if>
+      <if test="sortOrder != null">
+        #{sortOrder,jdbcType=VARCHAR},
+      </if>
+      <if test="catalogDataType != null">
+        #{catalogDataType,jdbcType=VARCHAR},
+      </if>
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="catalogCode != null">
+        #{catalogCode,jdbcType=VARCHAR},
+      </if>
+      <if test="catalogDataTypeDescription != null">
+        #{catalogDataTypeDescription,jdbcType=VARCHAR},
+      </if>
+      <if test="beginDate != null">
+        #{beginDate,jdbcType=VARCHAR},
+      </if>
+      <if test="endDate != null">
+        #{endDate,jdbcType=VARCHAR},
+      </if>
+      <if test="modelBeginDate != null">
+        #{modelBeginDate,jdbcType=VARCHAR},
+      </if>
+      <if test="modelEndDate != null">
+        #{modelEndDate,jdbcType=VARCHAR},
+      </if>
+      <if test="applicableRegions != null">
+        #{applicableRegions,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null">
+        #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="shortcuts != null">
+        #{shortcuts,jdbcType=VARCHAR},
+      </if>
+      <if test="brand != null">
+        #{brand,jdbcType=VARCHAR},
+      </if>
+      <if test="folder != null">
+        #{folder,jdbcType=VARCHAR},
+      </if>
+      <if test="image != null">
+        #{image,jdbcType=VARCHAR},
+      </if>
+      <if test="interpretation != null">
+        #{interpretation,jdbcType=VARCHAR},
+      </if>
+      <if test="label != null">
+        #{label,jdbcType=VARCHAR},
+      </if>
+      <if test="key != null">
+        #{key,jdbcType=VARCHAR},
+      </if>
+      <if test="notes != null">
+        #{notes,jdbcType=VARCHAR},
+      </if>
+      <if test="excludeMarkets != null">
+        #{excludeMarkets,jdbcType=VARCHAR},
+      </if>
+      <if test="includeMarkets != null">
+        #{includeMarkets,jdbcType=VARCHAR},
+      </if>
+      <if test="majorFeatures != null">
+        #{majorFeatures,jdbcType=VARCHAR},
+      </if>
+      <if test="vehicleLine != null">
+        #{vehicleLine,jdbcType=VARCHAR},
+      </if>
+      <if test="avsCatalog != null">
+        #{avsCatalog,jdbcType=VARCHAR},
+      </if>
+      <if test="userNoteIds != null">
+        #{userNoteIds,jdbcType=VARCHAR},
+      </if>
+      <if test="hywCatalogDateType != null">
+        #{hywCatalogDateType,jdbcType=VARCHAR},
+      </if>
+      <if test="factoryBrand != null">
+        #{factoryBrand,jdbcType=VARCHAR},
+      </if>
+      <if test="groupType != null">
+        #{groupType,jdbcType=VARCHAR},
+      </if>
+      <if test="projectCode != null">
+        #{projectCode,jdbcType=VARCHAR},
+      </if>
+      <if test="supersessionAreas != null">
+        #{supersessionAreas,jdbcType=VARCHAR},
+      </if>
+      <if test="fromYear != null">
+        #{fromYear,jdbcType=VARCHAR},
+      </if>
+      <if test="toYear != null">
+        #{toYear,jdbcType=VARCHAR},
+      </if>
+      <if test="vehicleType != null">
+        #{vehicleType,jdbcType=VARCHAR},
+      </if>
+      <if test="vehicleCode != null">
+        #{vehicleCode,jdbcType=VARCHAR},
+      </if>
+      <if test="vehicleYear != null">
+        #{vehicleYear,jdbcType=VARCHAR},
+      </if>
+      <if test="model != null">
+        #{model,jdbcType=VARCHAR},
+      </if>
+      <if test="optionType != null">
+        #{optionType,jdbcType=VARCHAR},
+      </if>
+      <if test="catalogFolder != null">
+        #{catalogFolder,jdbcType=VARCHAR},
+      </if>
+      <if test="optionIndexMap != null">
+        #{optionIndexMap,jdbcType=VARCHAR},
+      </if>
+      <if test="glossary != null">
+        #{glossary,jdbcType=VARCHAR},
+      </if>
+      <if test="showInUI != null">
+        #{showInUI,jdbcType=VARCHAR},
+      </if>
+      <if test="catalogFactory != null">
+        #{catalogFactory,jdbcType=VARCHAR},
+      </if>
+      <if test="uccType != null">
+        #{uccType,jdbcType=VARCHAR},
+      </if>
+      <if test="plantAndRegionCode != null">
+        #{plantAndRegionCode,jdbcType=VARCHAR},
+      </if>
+      <if test="models != null">
+        #{models,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <insert id="batchInsert" parameterType="map">
+    <!--@mbg.generated-->
+    insert into `catalog`
+    (franchise, catalogCategory, catalogCategoryName, sortOrder, catalogDataType, id, 
+      catalogCode, catalogDataTypeDescription, beginDate, endDate, modelBeginDate, modelEndDate, 
+      applicableRegions, description, shortcuts, brand, folder, image, interpretation, 
+      `label`, `key`, notes, excludeMarkets, includeMarkets, majorFeatures, vehicleLine, 
+      avsCatalog, userNoteIds, hywCatalogDateType, factoryBrand, groupType, projectCode, 
+      supersessionAreas, fromYear, toYear, vehicleType, vehicleCode, vehicleYear, model, 
+      optionType, catalogFolder, optionIndexMap, glossary, showInUI, catalogFactory, 
+      uccType, plantAndRegionCode, models)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.franchise,jdbcType=VARCHAR}, #{item.catalogCategory,jdbcType=VARCHAR}, #{item.catalogCategoryName,jdbcType=VARCHAR}, 
+        #{item.sortOrder,jdbcType=VARCHAR}, #{item.catalogDataType,jdbcType=VARCHAR}, #{item.id,jdbcType=INTEGER}, 
+        #{item.catalogCode,jdbcType=VARCHAR}, #{item.catalogDataTypeDescription,jdbcType=VARCHAR}, 
+        #{item.beginDate,jdbcType=VARCHAR}, #{item.endDate,jdbcType=VARCHAR}, #{item.modelBeginDate,jdbcType=VARCHAR}, 
+        #{item.modelEndDate,jdbcType=VARCHAR}, #{item.applicableRegions,jdbcType=VARCHAR}, 
+        #{item.description,jdbcType=VARCHAR}, #{item.shortcuts,jdbcType=VARCHAR}, #{item.brand,jdbcType=VARCHAR}, 
+        #{item.folder,jdbcType=VARCHAR}, #{item.image,jdbcType=VARCHAR}, #{item.interpretation,jdbcType=VARCHAR}, 
+        #{item.label,jdbcType=VARCHAR}, #{item.key,jdbcType=VARCHAR}, #{item.notes,jdbcType=VARCHAR}, 
+        #{item.excludeMarkets,jdbcType=VARCHAR}, #{item.includeMarkets,jdbcType=VARCHAR}, 
+        #{item.majorFeatures,jdbcType=VARCHAR}, #{item.vehicleLine,jdbcType=VARCHAR}, #{item.avsCatalog,jdbcType=VARCHAR}, 
+        #{item.userNoteIds,jdbcType=VARCHAR}, #{item.hywCatalogDateType,jdbcType=VARCHAR}, 
+        #{item.factoryBrand,jdbcType=VARCHAR}, #{item.groupType,jdbcType=VARCHAR}, #{item.projectCode,jdbcType=VARCHAR}, 
+        #{item.supersessionAreas,jdbcType=VARCHAR}, #{item.fromYear,jdbcType=VARCHAR}, 
+        #{item.toYear,jdbcType=VARCHAR}, #{item.vehicleType,jdbcType=VARCHAR}, #{item.vehicleCode,jdbcType=VARCHAR}, 
+        #{item.vehicleYear,jdbcType=VARCHAR}, #{item.model,jdbcType=VARCHAR}, #{item.optionType,jdbcType=VARCHAR}, 
+        #{item.catalogFolder,jdbcType=VARCHAR}, #{item.optionIndexMap,jdbcType=VARCHAR}, 
+        #{item.glossary,jdbcType=VARCHAR}, #{item.showInUI,jdbcType=VARCHAR}, #{item.catalogFactory,jdbcType=VARCHAR}, 
+        #{item.uccType,jdbcType=VARCHAR}, #{item.plantAndRegionCode,jdbcType=VARCHAR}, 
+        #{item.models,jdbcType=VARCHAR})
+    </foreach>
+  </insert>
+
+<!--auto generated by MybatisCodeHelper on 2024-03-13-->
+<!--  <include refid="Base_Column_List"/>-->
+  <select id="selectAll" resultMap="BaseResultMap">
+    select
+      catalogCode, catalogDataTypeDescription, fromYear, toYear
+    from `catalog`
+  </select>
+
+<!--auto generated by MybatisCodeHelper on 2024-04-16-->
+  <select id="selectCatalogCode" resultType="java.lang.String">
+        select catalogCode
+        from `catalog`
+    </select>
+
+<!--auto generated by MybatisCodeHelper on 2024-04-23-->
+  <select id="selectByCatalogCode" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from `catalog`
+    <where>
+      <if test="catalogcode != null">
+        and catalogCode=#{catalogcode,jdbcType=VARCHAR}
+      </if>
+    </where>
+  </select>
+</mapper>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.mybatismapper.SectionOptionApplicabilityMapper">
+  <resultMap id="BaseResultMap" type="org.example.model.SectionOptionApplicability">
+    <!--@mbg.generated-->
+    <!--@Table section_option_applicability-->
+    <result column="catalog_code" jdbcType="VARCHAR" property="catalogCode" />
+    <result column="type01" jdbcType="VARCHAR" property="type01" />
+    <result column="type02" jdbcType="VARCHAR" property="type02" />
+    <result column="type03" jdbcType="VARCHAR" property="type03" />
+    <result column="type04" jdbcType="VARCHAR" property="type04" />
+    <result column="type05" jdbcType="VARCHAR" property="type05" />
+    <result column="type06" jdbcType="VARCHAR" property="type06" />
+    <result column="typeWT" jdbcType="VARCHAR" property="typewt" />
+    <result column="typeDT" jdbcType="VARCHAR" property="typedt" />
+    <result column="index" jdbcType="VARCHAR" property="index" />
+    <result column="year" jdbcType="INTEGER" property="year" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    catalog_code, type01, type02, type03, type04, type05, type06, typeWT, typeDT, `index`, 
+    `year`
+  </sql>
+  <insert id="insert" parameterType="org.example.model.SectionOptionApplicability">
+    <!--@mbg.generated-->
+    insert into section_option_applicability (catalog_code, type01, type02, 
+      type03, type04, type05, 
+      type06, typeWT, typeDT, 
+      `index`, `year`)
+    values (#{catalogCode,jdbcType=VARCHAR}, #{type01,jdbcType=VARCHAR}, #{type02,jdbcType=VARCHAR}, 
+      #{type03,jdbcType=VARCHAR}, #{type04,jdbcType=VARCHAR}, #{type05,jdbcType=VARCHAR}, 
+      #{type06,jdbcType=VARCHAR}, #{typewt,jdbcType=VARCHAR}, #{typedt,jdbcType=VARCHAR}, 
+      #{index,jdbcType=VARCHAR}, #{year,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="org.example.model.SectionOptionApplicability">
+    <!--@mbg.generated-->
+    insert into section_option_applicability
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="catalogCode != null">
+        catalog_code,
+      </if>
+      <if test="type01 != null">
+        type01,
+      </if>
+      <if test="type02 != null">
+        type02,
+      </if>
+      <if test="type03 != null">
+        type03,
+      </if>
+      <if test="type04 != null">
+        type04,
+      </if>
+      <if test="type05 != null">
+        type05,
+      </if>
+      <if test="type06 != null">
+        type06,
+      </if>
+      <if test="typewt != null">
+        typeWT,
+      </if>
+      <if test="typedt != null">
+        typeDT,
+      </if>
+      <if test="index != null">
+        `index`,
+      </if>
+      <if test="year != null">
+        `year`,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="catalogCode != null">
+        #{catalogCode,jdbcType=VARCHAR},
+      </if>
+      <if test="type01 != null">
+        #{type01,jdbcType=VARCHAR},
+      </if>
+      <if test="type02 != null">
+        #{type02,jdbcType=VARCHAR},
+      </if>
+      <if test="type03 != null">
+        #{type03,jdbcType=VARCHAR},
+      </if>
+      <if test="type04 != null">
+        #{type04,jdbcType=VARCHAR},
+      </if>
+      <if test="type05 != null">
+        #{type05,jdbcType=VARCHAR},
+      </if>
+      <if test="type06 != null">
+        #{type06,jdbcType=VARCHAR},
+      </if>
+      <if test="typewt != null">
+        #{typewt,jdbcType=VARCHAR},
+      </if>
+      <if test="typedt != null">
+        #{typedt,jdbcType=VARCHAR},
+      </if>
+      <if test="index != null">
+        #{index,jdbcType=VARCHAR},
+      </if>
+      <if test="year != null">
+        #{year,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <insert id="batchInsert" parameterType="map">
+    <!--@mbg.generated-->
+    insert into section_option_applicability
+    (catalog_code, type01, type02, type03, type04, type05, type06, typeWT, typeDT, `index`, 
+      `year`)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.catalogCode,jdbcType=VARCHAR}, #{item.type01,jdbcType=VARCHAR}, #{item.type02,jdbcType=VARCHAR}, 
+        #{item.type03,jdbcType=VARCHAR}, #{item.type04,jdbcType=VARCHAR}, #{item.type05,jdbcType=VARCHAR}, 
+        #{item.type06,jdbcType=VARCHAR}, #{item.typewt,jdbcType=VARCHAR}, #{item.typedt,jdbcType=VARCHAR}, 
+        #{item.index,jdbcType=VARCHAR}, #{item.year,jdbcType=INTEGER})
+    </foreach>
+  </insert>
+</mapper>

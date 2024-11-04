@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.mybatismapper.ModelfileinfoMapper">
+  <resultMap id="BaseResultMap" type="com.domain.Modelfileinfo">
+    <!--@mbg.generated-->
+    <!--@Table modelfileinfo-->
+    <result column="ID" jdbcType="INTEGER" property="ID" />
+    <result column="Index" jdbcType="INTEGER" property="index" />
+    <result column="ModelCode" jdbcType="VARCHAR" property="modelCode" />
+    <result column="CatalogueCode" jdbcType="VARCHAR" property="catalogueCode" />
+    <result column="M1" jdbcType="VARCHAR" property="m1" />
+    <result column="GroupType" jdbcType="VARCHAR" property="groupType" />
+    <result column="ModelYear" jdbcType="VARCHAR" property="modelYear" />
+    <result column="M4" jdbcType="VARCHAR" property="m4" />
+    <result column="M5" jdbcType="VARCHAR" property="m5" />
+    <result column="M6" jdbcType="VARCHAR" property="m6" />
+    <result column="Number" jdbcType="VARCHAR" property="number" />
+    <result column="FromDate" jdbcType="INTEGER" property="fromDate" />
+    <result column="ToDate" jdbcType="INTEGER" property="toDate" />
+    <result column="Attribute1" jdbcType="VARCHAR" property="attribute1" />
+    <result column="Attribute2" jdbcType="VARCHAR" property="attribute2" />
+    <result column="Attribute3" jdbcType="VARCHAR" property="attribute3" />
+    <result column="Attribute4" jdbcType="VARCHAR" property="attribute4" />
+    <result column="Attribute5" jdbcType="VARCHAR" property="attribute5" />
+    <result column="Attribute6" jdbcType="VARCHAR" property="attribute6" />
+    <result column="Attribute7" jdbcType="VARCHAR" property="attribute7" />
+    <result column="Attribute8" jdbcType="VARCHAR" property="attribute8" />
+    <result column="Attribute9" jdbcType="VARCHAR" property="attribute9" />
+    <result column="Attribute10" jdbcType="VARCHAR" property="attribute10" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    ID, `Index`, ModelCode, CatalogueCode, M1, GroupType, ModelYear, M4, M5, M6, `Number`, 
+    FromDate, ToDate, Attribute1, Attribute2, Attribute3, Attribute4, Attribute5, Attribute6, 
+    Attribute7, Attribute8, Attribute9, Attribute10
+  </sql>
+  <insert id="insert" parameterType="com.domain.Modelfileinfo">
+    <!--@mbg.generated-->
+    insert into modelfileinfo (ID, `Index`, ModelCode, 
+      CatalogueCode, M1, GroupType, 
+      ModelYear, M4, M5, 
+      M6, `Number`, FromDate, 
+      ToDate, Attribute1, Attribute2, 
+      Attribute3, Attribute4, Attribute5, 
+      Attribute6, Attribute7, Attribute8, 
+      Attribute9, Attribute10)
+    values (#{ID,jdbcType=INTEGER}, #{index,jdbcType=INTEGER}, #{modelCode,jdbcType=VARCHAR}, 
+      #{catalogueCode,jdbcType=VARCHAR}, #{m1,jdbcType=VARCHAR}, #{groupType,jdbcType=VARCHAR}, 
+      #{modelYear,jdbcType=VARCHAR}, #{m4,jdbcType=VARCHAR}, #{m5,jdbcType=VARCHAR}, 
+      #{m6,jdbcType=VARCHAR}, #{number,jdbcType=VARCHAR}, #{fromDate,jdbcType=INTEGER}, 
+      #{toDate,jdbcType=INTEGER}, #{attribute1,jdbcType=VARCHAR}, #{attribute2,jdbcType=VARCHAR}, 
+      #{attribute3,jdbcType=VARCHAR}, #{attribute4,jdbcType=VARCHAR}, #{attribute5,jdbcType=VARCHAR}, 
+      #{attribute6,jdbcType=VARCHAR}, #{attribute7,jdbcType=VARCHAR}, #{attribute8,jdbcType=VARCHAR}, 
+      #{attribute9,jdbcType=VARCHAR}, #{attribute10,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.domain.Modelfileinfo">
+    <!--@mbg.generated-->
+    insert into modelfileinfo
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="ID != null">
+        ID,
+      </if>
+      <if test="index != null">
+        `Index`,
+      </if>
+      <if test="modelCode != null">
+        ModelCode,
+      </if>
+      <if test="catalogueCode != null">
+        CatalogueCode,
+      </if>
+      <if test="m1 != null">
+        M1,
+      </if>
+      <if test="groupType != null">
+        GroupType,
+      </if>
+      <if test="modelYear != null">
+        ModelYear,
+      </if>
+      <if test="m4 != null">
+        M4,
+      </if>
+      <if test="m5 != null">
+        M5,
+      </if>
+      <if test="m6 != null">
+        M6,
+      </if>
+      <if test="number != null">
+        `Number`,
+      </if>
+      <if test="fromDate != null">
+        FromDate,
+      </if>
+      <if test="toDate != null">
+        ToDate,
+      </if>
+      <if test="attribute1 != null">
+        Attribute1,
+      </if>
+      <if test="attribute2 != null">
+        Attribute2,
+      </if>
+      <if test="attribute3 != null">
+        Attribute3,
+      </if>
+      <if test="attribute4 != null">
+        Attribute4,
+      </if>
+      <if test="attribute5 != null">
+        Attribute5,
+      </if>
+      <if test="attribute6 != null">
+        Attribute6,
+      </if>
+      <if test="attribute7 != null">
+        Attribute7,
+      </if>
+      <if test="attribute8 != null">
+        Attribute8,
+      </if>
+      <if test="attribute9 != null">
+        Attribute9,
+      </if>
+      <if test="attribute10 != null">
+        Attribute10,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="ID != null">
+        #{ID,jdbcType=INTEGER},
+      </if>
+      <if test="index != null">
+        #{index,jdbcType=INTEGER},
+      </if>
+      <if test="modelCode != null">
+        #{modelCode,jdbcType=VARCHAR},
+      </if>
+      <if test="catalogueCode != null">
+        #{catalogueCode,jdbcType=VARCHAR},
+      </if>
+      <if test="m1 != null">
+        #{m1,jdbcType=VARCHAR},
+      </if>
+      <if test="groupType != null">
+        #{groupType,jdbcType=VARCHAR},
+      </if>
+      <if test="modelYear != null">
+        #{modelYear,jdbcType=VARCHAR},
+      </if>
+      <if test="m4 != null">
+        #{m4,jdbcType=VARCHAR},
+      </if>
+      <if test="m5 != null">
+        #{m5,jdbcType=VARCHAR},
+      </if>
+      <if test="m6 != null">
+        #{m6,jdbcType=VARCHAR},
+      </if>
+      <if test="number != null">
+        #{number,jdbcType=VARCHAR},
+      </if>
+      <if test="fromDate != null">
+        #{fromDate,jdbcType=INTEGER},
+      </if>
+      <if test="toDate != null">
+        #{toDate,jdbcType=INTEGER},
+      </if>
+      <if test="attribute1 != null">
+        #{attribute1,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute2 != null">
+        #{attribute2,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute3 != null">
+        #{attribute3,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute4 != null">
+        #{attribute4,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute5 != null">
+        #{attribute5,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute6 != null">
+        #{attribute6,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute7 != null">
+        #{attribute7,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute8 != null">
+        #{attribute8,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute9 != null">
+        #{attribute9,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute10 != null">
+        #{attribute10,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <insert id="batchInsert" parameterType="map">
+    <!--@mbg.generated-->
+    insert into modelfileinfo
+    (ID, `Index`, ModelCode, CatalogueCode, M1, GroupType, ModelYear, M4, M5, M6, `Number`, 
+      FromDate, ToDate, Attribute1, Attribute2, Attribute3, Attribute4, Attribute5, Attribute6, 
+      Attribute7, Attribute8, Attribute9, Attribute10)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.ID,jdbcType=INTEGER}, #{item.index,jdbcType=INTEGER}, #{item.modelCode,jdbcType=VARCHAR}, 
+        #{item.catalogueCode,jdbcType=VARCHAR}, #{item.m1,jdbcType=VARCHAR}, #{item.groupType,jdbcType=VARCHAR}, 
+        #{item.modelYear,jdbcType=VARCHAR}, #{item.m4,jdbcType=VARCHAR}, #{item.m5,jdbcType=VARCHAR}, 
+        #{item.m6,jdbcType=VARCHAR}, #{item.number,jdbcType=VARCHAR}, #{item.fromDate,jdbcType=INTEGER}, 
+        #{item.toDate,jdbcType=INTEGER}, #{item.attribute1,jdbcType=VARCHAR}, #{item.attribute2,jdbcType=VARCHAR}, 
+        #{item.attribute3,jdbcType=VARCHAR}, #{item.attribute4,jdbcType=VARCHAR}, #{item.attribute5,jdbcType=VARCHAR}, 
+        #{item.attribute6,jdbcType=VARCHAR}, #{item.attribute7,jdbcType=VARCHAR}, #{item.attribute8,jdbcType=VARCHAR}, 
+        #{item.attribute9,jdbcType=VARCHAR}, #{item.attribute10,jdbcType=VARCHAR})
+    </foreach>
+  </insert>
+
+  <select id="selectAllByCataloguecode" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from modelfileinfo
+    where CatalogueCode=#{cataloguecode,jdbcType=VARCHAR}
+  </select>
+</mapper>

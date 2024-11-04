@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.mybatismapper.VinDecodeNewestMapper">
+  <resultMap id="BaseResultMap" type="com.domain.VinDecodeNewest">
+    <!--@mbg.generated-->
+    <!--@Table vin_decode_newest-->
+    <result column="vin" jdbcType="VARCHAR" property="vin" />
+    <result column="interior_key_colour_code" jdbcType="VARCHAR" property="interior_key_colour_code" />
+    <result column="exterior_key_colour_code" jdbcType="VARCHAR" property="exterior_key_colour_code" />
+    <result column="interior_colour_desc" jdbcType="VARCHAR" property="interior_colour_desc" />
+    <result column="exterior_colour_desc" jdbcType="VARCHAR" property="exterior_colour_desc" />
+    <result column="catalog_code" jdbcType="VARCHAR" property="catalog_code" />
+    <result column="production_date" jdbcType="VARCHAR" property="production_date" />
+    <result column="model_year" jdbcType="VARCHAR" property="model_year" />
+    <result column="model" jdbcType="VARCHAR" property="model" />
+    <result column="country" jdbcType="VARCHAR" property="country" />
+    <result column="region" jdbcType="VARCHAR" property="region" />
+    <result column="plant" jdbcType="VARCHAR" property="plant" />
+    <result column="section_applicability" jdbcType="VARCHAR" property="section_applicability" />
+    <result column="interior_colour_sub_attributes" jdbcType="VARCHAR" property="interior_colour_sub_attributes" />
+    <result column="exterior_colour_sub_attributes" jdbcType="VARCHAR" property="exterior_colour_sub_attributes" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    vin, interior_key_colour_code, exterior_key_colour_code, interior_colour_desc, exterior_colour_desc, 
+    catalog_code, production_date, model_year, model, country, region, plant, section_applicability,
+    interior_colour_sub_attributes, exterior_colour_sub_attributes
+  </sql>
+  <insert id="insert" parameterType="com.domain.VinDecodeNewest">
+    <!--@mbg.generated-->
+    insert into vin_decode_newest (vin, interior_key_colour_code, exterior_key_colour_code, 
+      interior_colour_desc, exterior_colour_desc, 
+      catalog_code, production_date, model_year, 
+      model, country, region, 
+      plant, section_applicability, interior_colour_sub_attributes, exterior_colour_sub_attributes)
+    values (#{vin,jdbcType=VARCHAR}, #{interior_key_colour_code,jdbcType=VARCHAR}, #{exterior_key_colour_code,jdbcType=VARCHAR}, 
+      #{interior_colour_desc,jdbcType=VARCHAR}, #{exterior_colour_desc,jdbcType=VARCHAR}, 
+      #{catalog_code,jdbcType=VARCHAR}, #{production_date,jdbcType=VARCHAR}, #{model_year,jdbcType=VARCHAR},
+      #{model,jdbcType=VARCHAR}, #{country,jdbcType=VARCHAR}, #{region,jdbcType=VARCHAR}, 
+      #{plant,jdbcType=VARCHAR}, #{section_applicability,jdbcType=VARCHAR}, #{interior_colour_sub_attributes,jdbcType=VARCHAR},
+    #{exterior_colour_sub_attributes,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.domain.VinDecodeNewest">
+    <!--@mbg.generated-->
+    insert into vin_decode_newest
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="vin != null">
+        vin,
+      </if>
+      <if test="interior_key_colour_code != null">
+        interior_key_colour_code,
+      </if>
+      <if test="exterior_key_colour_code != null">
+        exterior_key_colour_code,
+      </if>
+      <if test="interior_colour_desc != null">
+        interior_colour_desc,
+      </if>
+      <if test="exterior_colour_desc != null">
+        exterior_colour_desc,
+      </if>
+      <if test="catalog_code != null">
+        catalog_code,
+      </if>
+      <if test="production_date != null">
+        production_date,
+      </if>
+      <if test="model_year != null">
+        model_year,
+      </if>
+      <if test="model != null">
+        model,
+      </if>
+      <if test="country != null">
+        country,
+      </if>
+      <if test="region != null">
+        region,
+      </if>
+      <if test="plant != null">
+        plant,
+      </if>
+      <if test="section_applicability != null">
+        section_applicability,
+      </if>
+      <if test="interior_colour_sub_attributes != null">
+        interior_colour_sub_attributes,
+      </if>
+      <if test="exterior_colour_sub_attributes != null">
+        exterior_colour_sub_attributes,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="vin != null">
+        #{vin,jdbcType=VARCHAR},
+      </if>
+      <if test="interior_key_colour_code != null">
+        #{interior_key_colour_code,jdbcType=VARCHAR},
+      </if>
+      <if test="exterior_key_colour_code != null">
+        #{exterior_key_colour_code,jdbcType=VARCHAR},
+      </if>
+      <if test="interior_colour_desc != null">
+        #{interior_colour_desc,jdbcType=VARCHAR},
+      </if>
+      <if test="exterior_colour_desc != null">
+        #{exterior_colour_desc,jdbcType=VARCHAR},
+      </if>
+      <if test="catalog_code != null">
+        #{catalog_code,jdbcType=VARCHAR},
+      </if>
+      <if test="production_date != null">
+        #{production_date,jdbcType=VARCHAR},
+      </if>
+      <if test="model_year != null">
+        #{model_year,jdbcType=VARCHAR},
+      </if>
+      <if test="model != null">
+        #{model,jdbcType=VARCHAR},
+      </if>
+      <if test="country != null">
+        #{country,jdbcType=VARCHAR},
+      </if>
+      <if test="region != null">
+        #{region,jdbcType=VARCHAR},
+      </if>
+      <if test="plant != null">
+        #{plant,jdbcType=VARCHAR},
+      </if>
+      <if test="section_applicability != null">
+        #{section_applicability,jdbcType=VARCHAR},
+      </if>
+      <if test="interior_colour_sub_attributes != null">
+        #{interior_colour_sub_attributes,jdbcType=VARCHAR}
+      </if>
+      <if test="exterior_colour_sub_attributes != null">
+        #{exterior_colour_sub_attributes,jdbcType=VARCHAR}
+      </if>
+    </trim>
+  </insert>
+  <insert id="batchInsert" parameterType="map">
+    <!--@mbg.generated-->
+    insert into vin_decode_newest
+    (vin, interior_key_colour_code, exterior_key_colour_code, interior_colour_desc, exterior_colour_desc, 
+      catalog_code, production_date, model_year, model, country, region, plant, section_applicability,
+        interior_colour_sub_attributes, exterior_colour_sub_attributes
+      )
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.vin,jdbcType=VARCHAR}, #{item.interior_key_colour_code,jdbcType=VARCHAR}, 
+        #{item.exterior_key_colour_code,jdbcType=VARCHAR}, #{item.interior_colour_desc,jdbcType=VARCHAR}, 
+        #{item.exterior_colour_desc,jdbcType=VARCHAR}, #{item.catalog_code,jdbcType=VARCHAR}, 
+        #{item.production_date,jdbcType=VARCHAR}, #{item.model_year,jdbcType=VARCHAR},
+        #{item.model,jdbcType=VARCHAR}, #{item.country,jdbcType=VARCHAR}, #{item.region,jdbcType=VARCHAR}, 
+        #{item.plant,jdbcType=VARCHAR}, #{item.section_applicability,jdbcType=VARCHAR},
+        #{item.interior_colour_sub_attributes,jdbcType=VARCHAR}, #{item.exterior_colour_sub_attributes,jdbcType=VARCHAR})
+    </foreach>
+  </insert>
+  <select id="selectByVin" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from vin_decode_newest
+    <where>
+      <if test="vin != null">
+        and vin=#{vin,jdbcType=VARCHAR}
+      </if>
+    </where>
+  </select>
+</mapper>

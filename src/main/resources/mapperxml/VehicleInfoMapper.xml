@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.mybatismapper.VehicleInfoMapper">
+  <resultMap id="BaseResultMap" type="com.domain.VehicleInfo">
+    <!--@mbg.generated-->
+    <!--@Table vehicle_info-->
+    <result column="optionCodes" jdbcType="VARCHAR" property="optionCodes" />
+    <result column="transmissionCode" jdbcType="VARCHAR" property="transmissionCode" />
+    <result column="transmissionFactory" jdbcType="VARCHAR" property="transmissionFactory" />
+    <result column="transmissionNumber" jdbcType="VARCHAR" property="transmissionNumber" />
+    <result column="keyNumber" jdbcType="VARCHAR" property="keyNumber" />
+    <result column="engineCode" jdbcType="VARCHAR" property="engineCode" />
+    <result column="engineFactory" jdbcType="VARCHAR" property="engineFactory" />
+    <result column="modelYearCode" jdbcType="VARCHAR" property="modelYearCode" />
+    <result column="seatCode" jdbcType="VARCHAR" property="seatCode" />
+    <result column="version" jdbcType="VARCHAR" property="version" />
+    <result column="optionNumber" jdbcType="VARCHAR" property="optionNumber" />
+    <result column="nation" jdbcType="VARCHAR" property="nation" />
+    <result column="plant" jdbcType="VARCHAR" property="plant" />
+    <result column="exteriorKeyColorCode" jdbcType="VARCHAR" property="exteriorKeyColorCode" />
+    <result column="interiorKeyColorCode" jdbcType="VARCHAR" property="interiorKeyColorCode" />
+    <result column="engineProductDate" jdbcType="VARCHAR" property="engineProductDate" />
+    <result column="transmissionProductDate" jdbcType="VARCHAR" property="transmissionProductDate" />
+    <result column="area" jdbcType="VARCHAR" property="area" />
+    <result column="vinTag" jdbcType="VARCHAR" property="vinTag" />
+    <result column="localModel" jdbcType="TINYINT" property="localModel" />
+    <result column="fullSpecificationCode" jdbcType="VARCHAR" property="fullSpecificationCode" />
+    <result column="engineMipCode" jdbcType="VARCHAR" property="engineMipCode" />
+    <result column="transmissionMipCode" jdbcType="VARCHAR" property="transmissionMipCode" />
+    <result column="clientCatalogInformationString" jdbcType="VARCHAR" property="clientCatalogInformationString" />
+    <result column="buildDate" jdbcType="VARCHAR" property="buildDate" />
+    <result column="vin" jdbcType="VARCHAR" property="vin" />
+    <result column="engineNumber" jdbcType="VARCHAR" property="engineNumber" />
+    <result column="displayBuildDate" jdbcType="VARCHAR" property="displayBuildDate" />
+    <result column="modelCode" jdbcType="VARCHAR" property="modelCode" />
+    <result column="modelYear" jdbcType="VARCHAR" property="modelYear" />
+    <result column="modelID" jdbcType="VARCHAR" property="modelID" />
+    <result column="applicableRegions" jdbcType="VARCHAR" property="applicableRegions" />
+    <result column="match" jdbcType="INTEGER" property="match" />
+    <result column="vehicleDataSource" jdbcType="INTEGER" property="vehicleDataSource" />
+    <result column="interpretationAVSData" jdbcType="VARCHAR" property="interpretationAVSData" />
+    <result column="catalogCode" jdbcType="VARCHAR" property="catalogCode" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    optionCodes, transmissionCode, transmissionFactory, transmissionNumber, keyNumber, 
+    engineCode, engineFactory, modelYearCode, seatCode, version, optionNumber, nation, 
+    plant, exteriorKeyColorCode, interiorKeyColorCode, engineProductDate, transmissionProductDate, 
+    area, vinTag, localModel, fullSpecificationCode, engineMipCode, transmissionMipCode, 
+    clientCatalogInformationString, buildDate, vin, engineNumber, displayBuildDate, modelCode, 
+    modelYear, modelID, applicableRegions, `match`, vehicleDataSource, interpretationAVSData, 
+    catalogCode, `type`
+  </sql>
+  <insert id="insert" parameterType="com.domain.VehicleInfo">
+    <!--@mbg.generated-->
+    insert into vehicle_info (optionCodes, transmissionCode, transmissionFactory, 
+      transmissionNumber, keyNumber, engineCode, 
+      engineFactory, modelYearCode, seatCode, 
+      version, optionNumber, nation, 
+      plant, exteriorKeyColorCode, interiorKeyColorCode, 
+      engineProductDate, transmissionProductDate, 
+      area, vinTag, localModel, 
+      fullSpecificationCode, engineMipCode, transmissionMipCode, 
+      clientCatalogInformationString, buildDate, 
+      vin, engineNumber, displayBuildDate, 
+      modelCode, modelYear, modelID, 
+      applicableRegions, `match`, vehicleDataSource, 
+      interpretationAVSData, catalogCode, `type`
+      )
+    values (#{optionCodes,jdbcType=VARCHAR}, #{transmissionCode,jdbcType=VARCHAR}, #{transmissionFactory,jdbcType=VARCHAR}, 
+      #{transmissionNumber,jdbcType=VARCHAR}, #{keyNumber,jdbcType=VARCHAR}, #{engineCode,jdbcType=VARCHAR}, 
+      #{engineFactory,jdbcType=VARCHAR}, #{modelYearCode,jdbcType=VARCHAR}, #{seatCode,jdbcType=VARCHAR}, 
+      #{version,jdbcType=VARCHAR}, #{optionNumber,jdbcType=VARCHAR}, #{nation,jdbcType=VARCHAR}, 
+      #{plant,jdbcType=VARCHAR}, #{exteriorKeyColorCode,jdbcType=VARCHAR}, #{interiorKeyColorCode,jdbcType=VARCHAR}, 
+      #{engineProductDate,jdbcType=VARCHAR}, #{transmissionProductDate,jdbcType=VARCHAR}, 
+      #{area,jdbcType=VARCHAR}, #{vinTag,jdbcType=VARCHAR}, #{localModel,jdbcType=TINYINT}, 
+      #{fullSpecificationCode,jdbcType=VARCHAR}, #{engineMipCode,jdbcType=VARCHAR}, #{transmissionMipCode,jdbcType=VARCHAR}, 
+      #{clientCatalogInformationString,jdbcType=VARCHAR}, #{buildDate,jdbcType=VARCHAR}, 
+      #{vin,jdbcType=VARCHAR}, #{engineNumber,jdbcType=VARCHAR}, #{displayBuildDate,jdbcType=VARCHAR}, 
+      #{modelCode,jdbcType=VARCHAR}, #{modelYear,jdbcType=VARCHAR}, #{modelID,jdbcType=VARCHAR}, 
+      #{applicableRegions,jdbcType=VARCHAR}, #{match,jdbcType=INTEGER}, #{vehicleDataSource,jdbcType=INTEGER}, 
+      #{interpretationAVSData,jdbcType=VARCHAR}, #{catalogCode,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.domain.VehicleInfo">
+    <!--@mbg.generated-->
+    insert into vehicle_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="optionCodes != null">
+        optionCodes,
+      </if>
+      <if test="transmissionCode != null">
+        transmissionCode,
+      </if>
+      <if test="transmissionFactory != null">
+        transmissionFactory,
+      </if>
+      <if test="transmissionNumber != null">
+        transmissionNumber,
+      </if>
+      <if test="keyNumber != null">
+        keyNumber,
+      </if>
+      <if test="engineCode != null">
+        engineCode,
+      </if>
+      <if test="engineFactory != null">
+        engineFactory,
+      </if>
+      <if test="modelYearCode != null">
+        modelYearCode,
+      </if>
+      <if test="seatCode != null">
+        seatCode,
+      </if>
+      <if test="version != null">
+        version,
+      </if>
+      <if test="optionNumber != null">
+        optionNumber,
+      </if>
+      <if test="nation != null">
+        nation,
+      </if>
+      <if test="plant != null">
+        plant,
+      </if>
+      <if test="exteriorKeyColorCode != null">
+        exteriorKeyColorCode,
+      </if>
+      <if test="interiorKeyColorCode != null">
+        interiorKeyColorCode,
+      </if>
+      <if test="engineProductDate != null">
+        engineProductDate,
+      </if>
+      <if test="transmissionProductDate != null">
+        transmissionProductDate,
+      </if>
+      <if test="area != null">
+        area,
+      </if>
+      <if test="vinTag != null">
+        vinTag,
+      </if>
+      <if test="localModel != null">
+        localModel,
+      </if>
+      <if test="fullSpecificationCode != null">
+        fullSpecificationCode,
+      </if>
+      <if test="engineMipCode != null">
+        engineMipCode,
+      </if>
+      <if test="transmissionMipCode != null">
+        transmissionMipCode,
+      </if>
+      <if test="clientCatalogInformationString != null">
+        clientCatalogInformationString,
+      </if>
+      <if test="buildDate != null">
+        buildDate,
+      </if>
+      <if test="vin != null">
+        vin,
+      </if>
+      <if test="engineNumber != null">
+        engineNumber,
+      </if>
+      <if test="displayBuildDate != null">
+        displayBuildDate,
+      </if>
+      <if test="modelCode != null">
+        modelCode,
+      </if>
+      <if test="modelYear != null">
+        modelYear,
+      </if>
+      <if test="modelID != null">
+        modelID,
+      </if>
+      <if test="applicableRegions != null">
+        applicableRegions,
+      </if>
+      <if test="match != null">
+        `match`,
+      </if>
+      <if test="vehicleDataSource != null">
+        vehicleDataSource,
+      </if>
+      <if test="interpretationAVSData != null">
+        interpretationAVSData,
+      </if>
+      <if test="catalogCode != null">
+        catalogCode,
+      </if>
+      <if test="type != null">
+        `type`,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="optionCodes != null">
+        #{optionCodes,jdbcType=VARCHAR},
+      </if>
+      <if test="transmissionCode != null">
+        #{transmissionCode,jdbcType=VARCHAR},
+      </if>
+      <if test="transmissionFactory != null">
+        #{transmissionFactory,jdbcType=VARCHAR},
+      </if>
+      <if test="transmissionNumber != null">
+        #{transmissionNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="keyNumber != null">
+        #{keyNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="engineCode != null">
+        #{engineCode,jdbcType=VARCHAR},
+      </if>
+      <if test="engineFactory != null">
+        #{engineFactory,jdbcType=VARCHAR},
+      </if>
+      <if test="modelYearCode != null">
+        #{modelYearCode,jdbcType=VARCHAR},
+      </if>
+      <if test="seatCode != null">
+        #{seatCode,jdbcType=VARCHAR},
+      </if>
+      <if test="version != null">
+        #{version,jdbcType=VARCHAR},
+      </if>
+      <if test="optionNumber != null">
+        #{optionNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="nation != null">
+        #{nation,jdbcType=VARCHAR},
+      </if>
+      <if test="plant != null">
+        #{plant,jdbcType=VARCHAR},
+      </if>
+      <if test="exteriorKeyColorCode != null">
+        #{exteriorKeyColorCode,jdbcType=VARCHAR},
+      </if>
+      <if test="interiorKeyColorCode != null">
+        #{interiorKeyColorCode,jdbcType=VARCHAR},
+      </if>
+      <if test="engineProductDate != null">
+        #{engineProductDate,jdbcType=VARCHAR},
+      </if>
+      <if test="transmissionProductDate != null">
+        #{transmissionProductDate,jdbcType=VARCHAR},
+      </if>
+      <if test="area != null">
+        #{area,jdbcType=VARCHAR},
+      </if>
+      <if test="vinTag != null">
+        #{vinTag,jdbcType=VARCHAR},
+      </if>
+      <if test="localModel != null">
+        #{localModel,jdbcType=TINYINT},
+      </if>
+      <if test="fullSpecificationCode != null">
+        #{fullSpecificationCode,jdbcType=VARCHAR},
+      </if>
+      <if test="engineMipCode != null">
+        #{engineMipCode,jdbcType=VARCHAR},
+      </if>
+      <if test="transmissionMipCode != null">
+        #{transmissionMipCode,jdbcType=VARCHAR},
+      </if>
+      <if test="clientCatalogInformationString != null">
+        #{clientCatalogInformationString,jdbcType=VARCHAR},
+      </if>
+      <if test="buildDate != null">
+        #{buildDate,jdbcType=VARCHAR},
+      </if>
+      <if test="vin != null">
+        #{vin,jdbcType=VARCHAR},
+      </if>
+      <if test="engineNumber != null">
+        #{engineNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="displayBuildDate != null">
+        #{displayBuildDate,jdbcType=VARCHAR},
+      </if>
+      <if test="modelCode != null">
+        #{modelCode,jdbcType=VARCHAR},
+      </if>
+      <if test="modelYear != null">
+        #{modelYear,jdbcType=VARCHAR},
+      </if>
+      <if test="modelID != null">
+        #{modelID,jdbcType=VARCHAR},
+      </if>
+      <if test="applicableRegions != null">
+        #{applicableRegions,jdbcType=VARCHAR},
+      </if>
+      <if test="match != null">
+        #{match,jdbcType=INTEGER},
+      </if>
+      <if test="vehicleDataSource != null">
+        #{vehicleDataSource,jdbcType=INTEGER},
+      </if>
+      <if test="interpretationAVSData != null">
+        #{interpretationAVSData,jdbcType=VARCHAR},
+      </if>
+      <if test="catalogCode != null">
+        #{catalogCode,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <insert id="batchInsert" parameterType="map">
+    <!--@mbg.generated-->
+    insert into vehicle_info
+    (optionCodes, transmissionCode, transmissionFactory, transmissionNumber, keyNumber, 
+      engineCode, engineFactory, modelYearCode, seatCode, version, optionNumber, nation, 
+      plant, exteriorKeyColorCode, interiorKeyColorCode, engineProductDate, transmissionProductDate, 
+      area, vinTag, localModel, fullSpecificationCode, engineMipCode, transmissionMipCode, 
+      clientCatalogInformationString, buildDate, vin, engineNumber, displayBuildDate, 
+      modelCode, modelYear, modelID, applicableRegions, `match`, vehicleDataSource, interpretationAVSData, 
+      catalogCode, `type`)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.optionCodes,jdbcType=VARCHAR}, #{item.transmissionCode,jdbcType=VARCHAR}, 
+        #{item.transmissionFactory,jdbcType=VARCHAR}, #{item.transmissionNumber,jdbcType=VARCHAR}, 
+        #{item.keyNumber,jdbcType=VARCHAR}, #{item.engineCode,jdbcType=VARCHAR}, #{item.engineFactory,jdbcType=VARCHAR}, 
+        #{item.modelYearCode,jdbcType=VARCHAR}, #{item.seatCode,jdbcType=VARCHAR}, #{item.version,jdbcType=VARCHAR}, 
+        #{item.optionNumber,jdbcType=VARCHAR}, #{item.nation,jdbcType=VARCHAR}, #{item.plant,jdbcType=VARCHAR}, 
+        #{item.exteriorKeyColorCode,jdbcType=VARCHAR}, #{item.interiorKeyColorCode,jdbcType=VARCHAR}, 
+        #{item.engineProductDate,jdbcType=VARCHAR}, #{item.transmissionProductDate,jdbcType=VARCHAR}, 
+        #{item.area,jdbcType=VARCHAR}, #{item.vinTag,jdbcType=VARCHAR}, #{item.localModel,jdbcType=TINYINT}, 
+        #{item.fullSpecificationCode,jdbcType=VARCHAR}, #{item.engineMipCode,jdbcType=VARCHAR}, 
+        #{item.transmissionMipCode,jdbcType=VARCHAR}, #{item.clientCatalogInformationString,jdbcType=VARCHAR}, 
+        #{item.buildDate,jdbcType=VARCHAR}, #{item.vin,jdbcType=VARCHAR}, #{item.engineNumber,jdbcType=VARCHAR}, 
+        #{item.displayBuildDate,jdbcType=VARCHAR}, #{item.modelCode,jdbcType=VARCHAR}, 
+        #{item.modelYear,jdbcType=VARCHAR}, #{item.modelID,jdbcType=VARCHAR}, #{item.applicableRegions,jdbcType=VARCHAR}, 
+        #{item.match,jdbcType=INTEGER}, #{item.vehicleDataSource,jdbcType=INTEGER}, #{item.interpretationAVSData,jdbcType=VARCHAR}, 
+        #{item.catalogCode,jdbcType=VARCHAR}, #{item.type,jdbcType=VARCHAR})
+    </foreach>
+  </insert>
+
+<!--auto generated by MybatisCodeHelper on 2024-04-24-->
+  <select id="selectByVin" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from vehicle_info
+    where vin=#{vin,jdbcType=VARCHAR}
+  </select>
+</mapper>

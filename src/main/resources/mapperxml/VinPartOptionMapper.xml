@@ -1,0 +1,1320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.mybatismapper.VinPartOptionMapper">
+  <resultMap id="BaseResultMap" type="com.domain.VinPartOption">
+    <!--@mbg.generated-->
+    <!--@Table vin_part_option-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="driveType" jdbcType="VARCHAR" property="driveType" />
+    <result column="weatherType" jdbcType="VARCHAR" property="weatherType" />
+    <result column="plantCode" jdbcType="VARCHAR" property="plantCode" />
+    <result column="vinTag" jdbcType="VARCHAR" property="vinTag" />
+    <result column="options" jdbcType="VARCHAR" property="options" />
+    <result column="excludedOptions" jdbcType="VARCHAR" property="excludedOptions" />
+    <result column="uccCodes" jdbcType="VARCHAR" property="uccCodes" />
+    <result column="oemRelatedPart" jdbcType="VARCHAR" property="oemRelatedPart" />
+    <result column="oemPart" jdbcType="VARCHAR" property="oemPart" />
+    <result column="localPart" jdbcType="VARCHAR" property="localPart" />
+    <result column="localPartSourceType" jdbcType="VARCHAR" property="localPartSourceType" />
+    <result column="supersessionCodeUS" jdbcType="VARCHAR" property="supersessionCodeUS" />
+    <result column="optionWeight" jdbcType="INTEGER" property="optionWeight" />
+    <result column="nations" jdbcType="VARCHAR" property="nations" />
+    <result column="excludedNations" jdbcType="VARCHAR" property="excludedNations" />
+    <result column="optionCount" jdbcType="INTEGER" property="optionCount" />
+    <result column="partColor" jdbcType="VARCHAR" property="partColor" />
+    <result column="otherEBOM" jdbcType="VARCHAR" property="otherEBOM" />
+    <result column="localModelOptionCode" jdbcType="VARCHAR" property="localModelOptionCode" />
+    <result column="sectionNumberDisplay" jdbcType="VARCHAR" property="sectionNumberDisplay" />
+    <result column="isBomPart" jdbcType="TINYINT" property="isBomPart" />
+    <result column="lookups" jdbcType="VARCHAR" property="lookups" />
+    <result column="bomPartSections" jdbcType="VARCHAR" property="bomPartSections" />
+    <result column="UID" jdbcType="INTEGER" property="UID" />
+    <result column="alsoIllustratedInChart" jdbcType="TINYINT" property="alsoIllustratedInChart" />
+    <result column="associatedPart" jdbcType="TINYINT" property="associatedPart" />
+    <result column="baseCode" jdbcType="VARCHAR" property="baseCode" />
+    <result column="beginDate" jdbcType="VARCHAR" property="beginDate" />
+    <result column="calibrationAVSStream" jdbcType="VARCHAR" property="calibrationAVSStream" />
+    <result column="calibrationCatchCode" jdbcType="VARCHAR" property="calibrationCatchCode" />
+    <result column="calibrationHeader" jdbcType="VARCHAR" property="calibrationHeader" />
+    <result column="calibrationIdentificationNumber" jdbcType="VARCHAR" property="calibrationIdentificationNumber" />
+    <result column="calibrationNumber" jdbcType="VARCHAR" property="calibrationNumber" />
+    <result column="calibrationNumberDescription" jdbcType="VARCHAR" property="calibrationNumberDescription" />
+    <result column="calloutRemarkDescription" jdbcType="VARCHAR" property="calloutRemarkDescription" />
+    <result column="decode" jdbcType="VARCHAR" property="decode" />
+    <result column="effectiveDateDescription" jdbcType="VARCHAR" property="effectiveDateDescription" />
+    <result column="endDate" jdbcType="VARCHAR" property="endDate" />
+    <result column="exportMarketPart" jdbcType="TINYINT" property="exportMarketPart" />
+    <result column="finisCode" jdbcType="VARCHAR" property="finisCode" />
+    <result column="groupDescription" jdbcType="VARCHAR" property="groupDescription" />
+    <result column="groupKey" jdbcType="VARCHAR" property="groupKey" />
+    <result column="groupBasicBeginDate" jdbcType="VARCHAR" property="groupBasicBeginDate" />
+    <result column="groupBasicEndDate" jdbcType="VARCHAR" property="groupBasicEndDate" />
+    <result column="handType" jdbcType="VARCHAR" property="handType" />
+    <result column="hasImage" jdbcType="TINYINT" property="hasImage" />
+    <result column="hasKit" jdbcType="TINYINT" property="hasKit" />
+    <result column="hasNote" jdbcType="TINYINT" property="hasNote" />
+    <result column="hasPartsList" jdbcType="TINYINT" property="hasPartsList" />
+    <result column="illustratedInChart" jdbcType="TINYINT" property="illustratedInChart" />
+    <result column="interpretationCodes" jdbcType="VARCHAR" property="interpretationCodes" />
+    <result column="isExportMarketSection" jdbcType="TINYINT" property="isExportMarketSection" />
+    <result column="isGroup" jdbcType="TINYINT" property="isGroup" />
+    <result column="lightTruckDescription" jdbcType="VARCHAR" property="lightTruckDescription" />
+    <result column="mainPart" jdbcType="TINYINT" property="mainPart" />
+    <result column="modelCode" jdbcType="VARCHAR" property="modelCode" />
+    <result column="motorCraftNumber" jdbcType="VARCHAR" property="motorCraftNumber" />
+    <result column="searchPartId" jdbcType="VARCHAR" property="searchPartId" />
+    <result column="partId" jdbcType="VARCHAR" property="partId" />
+    <result column="partListId" jdbcType="VARCHAR" property="partListId" />
+    <result column="partListKey" jdbcType="VARCHAR" property="partListKey" />
+    <result column="partListNumber" jdbcType="VARCHAR" property="partListNumber" />
+    <result column="partNameCode" jdbcType="VARCHAR" property="partNameCode" />
+    <result column="partTypeCode" jdbcType="VARCHAR" property="partTypeCode" />
+    <result column="recallNumber" jdbcType="VARCHAR" property="recallNumber" />
+    <result column="refersToGroup" jdbcType="TINYINT" property="refersToGroup" />
+    <result column="refersToPartsList" jdbcType="TINYINT" property="refersToPartsList" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="replacingPartNumber" jdbcType="VARCHAR" property="replacingPartNumber" />
+    <result column="restrictionDescription" jdbcType="VARCHAR" property="restrictionDescription" />
+    <result column="sectionId" jdbcType="VARCHAR" property="sectionId" />
+    <result column="sectionPath" jdbcType="VARCHAR" property="sectionPath" />
+    <result column="source" jdbcType="VARCHAR" property="source" />
+    <result column="usageDescription" jdbcType="VARCHAR" property="usageDescription" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="notAvailable" jdbcType="VARCHAR" property="notAvailable" />
+    <result column="treatAsNineties" jdbcType="TINYINT" property="treatAsNineties" />
+    <result column="identificationNumbers" jdbcType="VARCHAR" property="identificationNumbers" />
+    <result column="componentId" jdbcType="INTEGER" property="componentId" />
+    <result column="componentSourceId" jdbcType="INTEGER" property="componentSourceId" />
+    <result column="notes" jdbcType="VARCHAR" property="notes" />
+    <result column="sections" jdbcType="VARCHAR" property="sections" />
+    <result column="calloutKeys" jdbcType="VARCHAR" property="calloutKeys" />
+    <result column="localProduct" jdbcType="TINYINT" property="localProduct" />
+    <result column="markets" jdbcType="VARCHAR" property="markets" />
+    <result column="sectionApplicability" jdbcType="TINYINT" property="sectionApplicability" />
+    <result column="alternatePartList" jdbcType="VARCHAR" property="alternatePartList" />
+    <result column="catalogCode" jdbcType="VARCHAR" property="catalogCode" />
+    <result column="partCode" jdbcType="VARCHAR" property="partCode" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+    <result column="quantity" jdbcType="VARCHAR" property="quantity" />
+    <result column="supersessionCode" jdbcType="VARCHAR" property="supersessionCode" />
+    <result column="supersessionCodeDescription" jdbcType="VARCHAR" property="supersessionCodeDescription" />
+    <result column="supersessionAbbreviation" jdbcType="VARCHAR" property="supersessionAbbreviation" />
+    <result column="supersessionAbbreviationDescription" jdbcType="VARCHAR" property="supersessionAbbreviationDescription" />
+    <result column="supersessionAbbreviationLexicon" jdbcType="VARCHAR" property="supersessionAbbreviationLexicon" />
+    <result column="hashcode" jdbcType="INTEGER" property="hashcode" />
+    <result column="automakerDescription" jdbcType="VARCHAR" property="automakerDescription" />
+    <result column="applicable" jdbcType="TINYINT" property="applicable" />
+    <result column="excluded" jdbcType="TINYINT" property="excluded" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, driveType, weatherType, plantCode, vinTag, `options`, excludedOptions, uccCodes, 
+    oemRelatedPart, oemPart, localPart, localPartSourceType, supersessionCodeUS, optionWeight, 
+    nations, excludedNations, optionCount, partColor, otherEBOM, localModelOptionCode, 
+    sectionNumberDisplay, isBomPart, lookups, bomPartSections, `UID`, alsoIllustratedInChart, 
+    associatedPart, baseCode, beginDate, calibrationAVSStream, calibrationCatchCode, 
+    calibrationHeader, calibrationIdentificationNumber, calibrationNumber, calibrationNumberDescription, 
+    calloutRemarkDescription, decode, effectiveDateDescription, endDate, exportMarketPart, 
+    finisCode, groupDescription, groupKey, groupBasicBeginDate, groupBasicEndDate, handType, 
+    hasImage, hasKit, hasNote, hasPartsList, illustratedInChart, interpretationCodes, 
+    isExportMarketSection, isGroup, lightTruckDescription, mainPart, modelCode, motorCraftNumber, 
+    searchPartId, partId, partListId, partListKey, partListNumber, partNameCode, partTypeCode, 
+    recallNumber, refersToGroup, refersToPartsList, remark, replacingPartNumber, restrictionDescription, 
+    sectionId, sectionPath, `source`, usageDescription, `type`, notAvailable, treatAsNineties, 
+    identificationNumbers, componentId, componentSourceId, notes, sections, calloutKeys, 
+    localProduct, markets, sectionApplicability, alternatePartList, catalogCode, partCode, 
+    description, quantity, supersessionCode, supersessionCodeDescription, supersessionAbbreviation, 
+    supersessionAbbreviationDescription, supersessionAbbreviationLexicon, hashcode, automakerDescription, 
+    applicable, excluded
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from vin_part_option
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    <!--@mbg.generated-->
+    delete from vin_part_option
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.domain.VinPartOption" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into vin_part_option (driveType, weatherType, plantCode, 
+      vinTag, `options`, excludedOptions, 
+      uccCodes, oemRelatedPart, oemPart, 
+      localPart, localPartSourceType, supersessionCodeUS, 
+      optionWeight, nations, excludedNations, 
+      optionCount, partColor, otherEBOM, 
+      localModelOptionCode, sectionNumberDisplay, 
+      isBomPart, lookups, bomPartSections, 
+      `UID`, alsoIllustratedInChart, associatedPart, 
+      baseCode, beginDate, calibrationAVSStream, 
+      calibrationCatchCode, calibrationHeader, 
+      calibrationIdentificationNumber, calibrationNumber, 
+      calibrationNumberDescription, calloutRemarkDescription, 
+      decode, effectiveDateDescription, endDate, 
+      exportMarketPart, finisCode, groupDescription, 
+      groupKey, groupBasicBeginDate, groupBasicEndDate, 
+      handType, hasImage, hasKit, 
+      hasNote, hasPartsList, illustratedInChart, 
+      interpretationCodes, isExportMarketSection, 
+      isGroup, lightTruckDescription, mainPart, 
+      modelCode, motorCraftNumber, searchPartId, 
+      partId, partListId, partListKey, 
+      partListNumber, partNameCode, partTypeCode, 
+      recallNumber, refersToGroup, refersToPartsList, 
+      remark, replacingPartNumber, restrictionDescription, 
+      sectionId, sectionPath, `source`, 
+      usageDescription, `type`, notAvailable, 
+      treatAsNineties, identificationNumbers, 
+      componentId, componentSourceId, notes, 
+      sections, calloutKeys, localProduct, 
+      markets, sectionApplicability, alternatePartList, 
+      catalogCode, partCode, description, 
+      quantity, supersessionCode, supersessionCodeDescription, 
+      supersessionAbbreviation, supersessionAbbreviationDescription, 
+      supersessionAbbreviationLexicon, hashcode, 
+      automakerDescription, applicable, excluded
+      )
+    values (#{driveType,jdbcType=VARCHAR}, #{weatherType,jdbcType=VARCHAR}, #{plantCode,jdbcType=VARCHAR}, 
+      #{vinTag,jdbcType=VARCHAR}, #{options,jdbcType=VARCHAR}, #{excludedOptions,jdbcType=VARCHAR}, 
+      #{uccCodes,jdbcType=VARCHAR}, #{oemRelatedPart,jdbcType=VARCHAR}, #{oemPart,jdbcType=VARCHAR}, 
+      #{localPart,jdbcType=VARCHAR}, #{localPartSourceType,jdbcType=VARCHAR}, #{supersessionCodeUS,jdbcType=VARCHAR}, 
+      #{optionWeight,jdbcType=INTEGER}, #{nations,jdbcType=VARCHAR}, #{excludedNations,jdbcType=VARCHAR}, 
+      #{optionCount,jdbcType=INTEGER}, #{partColor,jdbcType=VARCHAR}, #{otherEBOM,jdbcType=VARCHAR}, 
+      #{localModelOptionCode,jdbcType=VARCHAR}, #{sectionNumberDisplay,jdbcType=VARCHAR}, 
+      #{isBomPart,jdbcType=TINYINT}, #{lookups,jdbcType=VARCHAR}, #{bomPartSections,jdbcType=VARCHAR}, 
+      #{UID,jdbcType=INTEGER}, #{alsoIllustratedInChart,jdbcType=TINYINT}, #{associatedPart,jdbcType=TINYINT}, 
+      #{baseCode,jdbcType=VARCHAR}, #{beginDate,jdbcType=VARCHAR}, #{calibrationAVSStream,jdbcType=VARCHAR}, 
+      #{calibrationCatchCode,jdbcType=VARCHAR}, #{calibrationHeader,jdbcType=VARCHAR}, 
+      #{calibrationIdentificationNumber,jdbcType=VARCHAR}, #{calibrationNumber,jdbcType=VARCHAR}, 
+      #{calibrationNumberDescription,jdbcType=VARCHAR}, #{calloutRemarkDescription,jdbcType=VARCHAR}, 
+      #{decode,jdbcType=VARCHAR}, #{effectiveDateDescription,jdbcType=VARCHAR}, #{endDate,jdbcType=VARCHAR}, 
+      #{exportMarketPart,jdbcType=TINYINT}, #{finisCode,jdbcType=VARCHAR}, #{groupDescription,jdbcType=VARCHAR}, 
+      #{groupKey,jdbcType=VARCHAR}, #{groupBasicBeginDate,jdbcType=VARCHAR}, #{groupBasicEndDate,jdbcType=VARCHAR}, 
+      #{handType,jdbcType=VARCHAR}, #{hasImage,jdbcType=TINYINT}, #{hasKit,jdbcType=TINYINT}, 
+      #{hasNote,jdbcType=TINYINT}, #{hasPartsList,jdbcType=TINYINT}, #{illustratedInChart,jdbcType=TINYINT}, 
+      #{interpretationCodes,jdbcType=VARCHAR}, #{isExportMarketSection,jdbcType=TINYINT}, 
+      #{isGroup,jdbcType=TINYINT}, #{lightTruckDescription,jdbcType=VARCHAR}, #{mainPart,jdbcType=TINYINT}, 
+      #{modelCode,jdbcType=VARCHAR}, #{motorCraftNumber,jdbcType=VARCHAR}, #{searchPartId,jdbcType=VARCHAR}, 
+      #{partId,jdbcType=VARCHAR}, #{partListId,jdbcType=VARCHAR}, #{partListKey,jdbcType=VARCHAR}, 
+      #{partListNumber,jdbcType=VARCHAR}, #{partNameCode,jdbcType=VARCHAR}, #{partTypeCode,jdbcType=VARCHAR}, 
+      #{recallNumber,jdbcType=VARCHAR}, #{refersToGroup,jdbcType=TINYINT}, #{refersToPartsList,jdbcType=TINYINT}, 
+      #{remark,jdbcType=VARCHAR}, #{replacingPartNumber,jdbcType=VARCHAR}, #{restrictionDescription,jdbcType=VARCHAR}, 
+      #{sectionId,jdbcType=VARCHAR}, #{sectionPath,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, 
+      #{usageDescription,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR}, #{notAvailable,jdbcType=VARCHAR}, 
+      #{treatAsNineties,jdbcType=TINYINT}, #{identificationNumbers,jdbcType=VARCHAR}, 
+      #{componentId,jdbcType=INTEGER}, #{componentSourceId,jdbcType=INTEGER}, #{notes,jdbcType=VARCHAR}, 
+      #{sections,jdbcType=VARCHAR}, #{calloutKeys,jdbcType=VARCHAR}, #{localProduct,jdbcType=TINYINT}, 
+      #{markets,jdbcType=VARCHAR}, #{sectionApplicability,jdbcType=TINYINT}, #{alternatePartList,jdbcType=VARCHAR}, 
+      #{catalogCode,jdbcType=VARCHAR}, #{partCode,jdbcType=VARCHAR}, #{description,jdbcType=VARCHAR}, 
+      #{quantity,jdbcType=VARCHAR}, #{supersessionCode,jdbcType=VARCHAR}, #{supersessionCodeDescription,jdbcType=VARCHAR}, 
+      #{supersessionAbbreviation,jdbcType=VARCHAR}, #{supersessionAbbreviationDescription,jdbcType=VARCHAR}, 
+      #{supersessionAbbreviationLexicon,jdbcType=VARCHAR}, #{hashcode,jdbcType=INTEGER}, 
+      #{automakerDescription,jdbcType=VARCHAR}, #{applicable,jdbcType=TINYINT}, #{excluded,jdbcType=TINYINT}
+      )
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.domain.VinPartOption" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into vin_part_option
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="driveType != null">
+        driveType,
+      </if>
+      <if test="weatherType != null">
+        weatherType,
+      </if>
+      <if test="plantCode != null">
+        plantCode,
+      </if>
+      <if test="vinTag != null">
+        vinTag,
+      </if>
+      <if test="options != null">
+        `options`,
+      </if>
+      <if test="excludedOptions != null">
+        excludedOptions,
+      </if>
+      <if test="uccCodes != null">
+        uccCodes,
+      </if>
+      <if test="oemRelatedPart != null">
+        oemRelatedPart,
+      </if>
+      <if test="oemPart != null">
+        oemPart,
+      </if>
+      <if test="localPart != null">
+        localPart,
+      </if>
+      <if test="localPartSourceType != null">
+        localPartSourceType,
+      </if>
+      <if test="supersessionCodeUS != null">
+        supersessionCodeUS,
+      </if>
+      <if test="optionWeight != null">
+        optionWeight,
+      </if>
+      <if test="nations != null">
+        nations,
+      </if>
+      <if test="excludedNations != null">
+        excludedNations,
+      </if>
+      <if test="optionCount != null">
+        optionCount,
+      </if>
+      <if test="partColor != null">
+        partColor,
+      </if>
+      <if test="otherEBOM != null">
+        otherEBOM,
+      </if>
+      <if test="localModelOptionCode != null">
+        localModelOptionCode,
+      </if>
+      <if test="sectionNumberDisplay != null">
+        sectionNumberDisplay,
+      </if>
+      <if test="isBomPart != null">
+        isBomPart,
+      </if>
+      <if test="lookups != null">
+        lookups,
+      </if>
+      <if test="bomPartSections != null">
+        bomPartSections,
+      </if>
+      <if test="UID != null">
+        `UID`,
+      </if>
+      <if test="alsoIllustratedInChart != null">
+        alsoIllustratedInChart,
+      </if>
+      <if test="associatedPart != null">
+        associatedPart,
+      </if>
+      <if test="baseCode != null">
+        baseCode,
+      </if>
+      <if test="beginDate != null">
+        beginDate,
+      </if>
+      <if test="calibrationAVSStream != null">
+        calibrationAVSStream,
+      </if>
+      <if test="calibrationCatchCode != null">
+        calibrationCatchCode,
+      </if>
+      <if test="calibrationHeader != null">
+        calibrationHeader,
+      </if>
+      <if test="calibrationIdentificationNumber != null">
+        calibrationIdentificationNumber,
+      </if>
+      <if test="calibrationNumber != null">
+        calibrationNumber,
+      </if>
+      <if test="calibrationNumberDescription != null">
+        calibrationNumberDescription,
+      </if>
+      <if test="calloutRemarkDescription != null">
+        calloutRemarkDescription,
+      </if>
+      <if test="decode != null">
+        decode,
+      </if>
+      <if test="effectiveDateDescription != null">
+        effectiveDateDescription,
+      </if>
+      <if test="endDate != null">
+        endDate,
+      </if>
+      <if test="exportMarketPart != null">
+        exportMarketPart,
+      </if>
+      <if test="finisCode != null">
+        finisCode,
+      </if>
+      <if test="groupDescription != null">
+        groupDescription,
+      </if>
+      <if test="groupKey != null">
+        groupKey,
+      </if>
+      <if test="groupBasicBeginDate != null">
+        groupBasicBeginDate,
+      </if>
+      <if test="groupBasicEndDate != null">
+        groupBasicEndDate,
+      </if>
+      <if test="handType != null">
+        handType,
+      </if>
+      <if test="hasImage != null">
+        hasImage,
+      </if>
+      <if test="hasKit != null">
+        hasKit,
+      </if>
+      <if test="hasNote != null">
+        hasNote,
+      </if>
+      <if test="hasPartsList != null">
+        hasPartsList,
+      </if>
+      <if test="illustratedInChart != null">
+        illustratedInChart,
+      </if>
+      <if test="interpretationCodes != null">
+        interpretationCodes,
+      </if>
+      <if test="isExportMarketSection != null">
+        isExportMarketSection,
+      </if>
+      <if test="isGroup != null">
+        isGroup,
+      </if>
+      <if test="lightTruckDescription != null">
+        lightTruckDescription,
+      </if>
+      <if test="mainPart != null">
+        mainPart,
+      </if>
+      <if test="modelCode != null">
+        modelCode,
+      </if>
+      <if test="motorCraftNumber != null">
+        motorCraftNumber,
+      </if>
+      <if test="searchPartId != null">
+        searchPartId,
+      </if>
+      <if test="partId != null">
+        partId,
+      </if>
+      <if test="partListId != null">
+        partListId,
+      </if>
+      <if test="partListKey != null">
+        partListKey,
+      </if>
+      <if test="partListNumber != null">
+        partListNumber,
+      </if>
+      <if test="partNameCode != null">
+        partNameCode,
+      </if>
+      <if test="partTypeCode != null">
+        partTypeCode,
+      </if>
+      <if test="recallNumber != null">
+        recallNumber,
+      </if>
+      <if test="refersToGroup != null">
+        refersToGroup,
+      </if>
+      <if test="refersToPartsList != null">
+        refersToPartsList,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+      <if test="replacingPartNumber != null">
+        replacingPartNumber,
+      </if>
+      <if test="restrictionDescription != null">
+        restrictionDescription,
+      </if>
+      <if test="sectionId != null">
+        sectionId,
+      </if>
+      <if test="sectionPath != null">
+        sectionPath,
+      </if>
+      <if test="source != null">
+        `source`,
+      </if>
+      <if test="usageDescription != null">
+        usageDescription,
+      </if>
+      <if test="type != null">
+        `type`,
+      </if>
+      <if test="notAvailable != null">
+        notAvailable,
+      </if>
+      <if test="treatAsNineties != null">
+        treatAsNineties,
+      </if>
+      <if test="identificationNumbers != null">
+        identificationNumbers,
+      </if>
+      <if test="componentId != null">
+        componentId,
+      </if>
+      <if test="componentSourceId != null">
+        componentSourceId,
+      </if>
+      <if test="notes != null">
+        notes,
+      </if>
+      <if test="sections != null">
+        sections,
+      </if>
+      <if test="calloutKeys != null">
+        calloutKeys,
+      </if>
+      <if test="localProduct != null">
+        localProduct,
+      </if>
+      <if test="markets != null">
+        markets,
+      </if>
+      <if test="sectionApplicability != null">
+        sectionApplicability,
+      </if>
+      <if test="alternatePartList != null">
+        alternatePartList,
+      </if>
+      <if test="catalogCode != null">
+        catalogCode,
+      </if>
+      <if test="partCode != null">
+        partCode,
+      </if>
+      <if test="description != null">
+        description,
+      </if>
+      <if test="quantity != null">
+        quantity,
+      </if>
+      <if test="supersessionCode != null">
+        supersessionCode,
+      </if>
+      <if test="supersessionCodeDescription != null">
+        supersessionCodeDescription,
+      </if>
+      <if test="supersessionAbbreviation != null">
+        supersessionAbbreviation,
+      </if>
+      <if test="supersessionAbbreviationDescription != null">
+        supersessionAbbreviationDescription,
+      </if>
+      <if test="supersessionAbbreviationLexicon != null">
+        supersessionAbbreviationLexicon,
+      </if>
+      <if test="hashcode != null">
+        hashcode,
+      </if>
+      <if test="automakerDescription != null">
+        automakerDescription,
+      </if>
+      <if test="applicable != null">
+        applicable,
+      </if>
+      <if test="excluded != null">
+        excluded,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="driveType != null">
+        #{driveType,jdbcType=VARCHAR},
+      </if>
+      <if test="weatherType != null">
+        #{weatherType,jdbcType=VARCHAR},
+      </if>
+      <if test="plantCode != null">
+        #{plantCode,jdbcType=VARCHAR},
+      </if>
+      <if test="vinTag != null">
+        #{vinTag,jdbcType=VARCHAR},
+      </if>
+      <if test="options != null">
+        #{options,jdbcType=VARCHAR},
+      </if>
+      <if test="excludedOptions != null">
+        #{excludedOptions,jdbcType=VARCHAR},
+      </if>
+      <if test="uccCodes != null">
+        #{uccCodes,jdbcType=VARCHAR},
+      </if>
+      <if test="oemRelatedPart != null">
+        #{oemRelatedPart,jdbcType=VARCHAR},
+      </if>
+      <if test="oemPart != null">
+        #{oemPart,jdbcType=VARCHAR},
+      </if>
+      <if test="localPart != null">
+        #{localPart,jdbcType=VARCHAR},
+      </if>
+      <if test="localPartSourceType != null">
+        #{localPartSourceType,jdbcType=VARCHAR},
+      </if>
+      <if test="supersessionCodeUS != null">
+        #{supersessionCodeUS,jdbcType=VARCHAR},
+      </if>
+      <if test="optionWeight != null">
+        #{optionWeight,jdbcType=INTEGER},
+      </if>
+      <if test="nations != null">
+        #{nations,jdbcType=VARCHAR},
+      </if>
+      <if test="excludedNations != null">
+        #{excludedNations,jdbcType=VARCHAR},
+      </if>
+      <if test="optionCount != null">
+        #{optionCount,jdbcType=INTEGER},
+      </if>
+      <if test="partColor != null">
+        #{partColor,jdbcType=VARCHAR},
+      </if>
+      <if test="otherEBOM != null">
+        #{otherEBOM,jdbcType=VARCHAR},
+      </if>
+      <if test="localModelOptionCode != null">
+        #{localModelOptionCode,jdbcType=VARCHAR},
+      </if>
+      <if test="sectionNumberDisplay != null">
+        #{sectionNumberDisplay,jdbcType=VARCHAR},
+      </if>
+      <if test="isBomPart != null">
+        #{isBomPart,jdbcType=TINYINT},
+      </if>
+      <if test="lookups != null">
+        #{lookups,jdbcType=VARCHAR},
+      </if>
+      <if test="bomPartSections != null">
+        #{bomPartSections,jdbcType=VARCHAR},
+      </if>
+      <if test="UID != null">
+        #{UID,jdbcType=INTEGER},
+      </if>
+      <if test="alsoIllustratedInChart != null">
+        #{alsoIllustratedInChart,jdbcType=TINYINT},
+      </if>
+      <if test="associatedPart != null">
+        #{associatedPart,jdbcType=TINYINT},
+      </if>
+      <if test="baseCode != null">
+        #{baseCode,jdbcType=VARCHAR},
+      </if>
+      <if test="beginDate != null">
+        #{beginDate,jdbcType=VARCHAR},
+      </if>
+      <if test="calibrationAVSStream != null">
+        #{calibrationAVSStream,jdbcType=VARCHAR},
+      </if>
+      <if test="calibrationCatchCode != null">
+        #{calibrationCatchCode,jdbcType=VARCHAR},
+      </if>
+      <if test="calibrationHeader != null">
+        #{calibrationHeader,jdbcType=VARCHAR},
+      </if>
+      <if test="calibrationIdentificationNumber != null">
+        #{calibrationIdentificationNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="calibrationNumber != null">
+        #{calibrationNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="calibrationNumberDescription != null">
+        #{calibrationNumberDescription,jdbcType=VARCHAR},
+      </if>
+      <if test="calloutRemarkDescription != null">
+        #{calloutRemarkDescription,jdbcType=VARCHAR},
+      </if>
+      <if test="decode != null">
+        #{decode,jdbcType=VARCHAR},
+      </if>
+      <if test="effectiveDateDescription != null">
+        #{effectiveDateDescription,jdbcType=VARCHAR},
+      </if>
+      <if test="endDate != null">
+        #{endDate,jdbcType=VARCHAR},
+      </if>
+      <if test="exportMarketPart != null">
+        #{exportMarketPart,jdbcType=TINYINT},
+      </if>
+      <if test="finisCode != null">
+        #{finisCode,jdbcType=VARCHAR},
+      </if>
+      <if test="groupDescription != null">
+        #{groupDescription,jdbcType=VARCHAR},
+      </if>
+      <if test="groupKey != null">
+        #{groupKey,jdbcType=VARCHAR},
+      </if>
+      <if test="groupBasicBeginDate != null">
+        #{groupBasicBeginDate,jdbcType=VARCHAR},
+      </if>
+      <if test="groupBasicEndDate != null">
+        #{groupBasicEndDate,jdbcType=VARCHAR},
+      </if>
+      <if test="handType != null">
+        #{handType,jdbcType=VARCHAR},
+      </if>
+      <if test="hasImage != null">
+        #{hasImage,jdbcType=TINYINT},
+      </if>
+      <if test="hasKit != null">
+        #{hasKit,jdbcType=TINYINT},
+      </if>
+      <if test="hasNote != null">
+        #{hasNote,jdbcType=TINYINT},
+      </if>
+      <if test="hasPartsList != null">
+        #{hasPartsList,jdbcType=TINYINT},
+      </if>
+      <if test="illustratedInChart != null">
+        #{illustratedInChart,jdbcType=TINYINT},
+      </if>
+      <if test="interpretationCodes != null">
+        #{interpretationCodes,jdbcType=VARCHAR},
+      </if>
+      <if test="isExportMarketSection != null">
+        #{isExportMarketSection,jdbcType=TINYINT},
+      </if>
+      <if test="isGroup != null">
+        #{isGroup,jdbcType=TINYINT},
+      </if>
+      <if test="lightTruckDescription != null">
+        #{lightTruckDescription,jdbcType=VARCHAR},
+      </if>
+      <if test="mainPart != null">
+        #{mainPart,jdbcType=TINYINT},
+      </if>
+      <if test="modelCode != null">
+        #{modelCode,jdbcType=VARCHAR},
+      </if>
+      <if test="motorCraftNumber != null">
+        #{motorCraftNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="searchPartId != null">
+        #{searchPartId,jdbcType=VARCHAR},
+      </if>
+      <if test="partId != null">
+        #{partId,jdbcType=VARCHAR},
+      </if>
+      <if test="partListId != null">
+        #{partListId,jdbcType=VARCHAR},
+      </if>
+      <if test="partListKey != null">
+        #{partListKey,jdbcType=VARCHAR},
+      </if>
+      <if test="partListNumber != null">
+        #{partListNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="partNameCode != null">
+        #{partNameCode,jdbcType=VARCHAR},
+      </if>
+      <if test="partTypeCode != null">
+        #{partTypeCode,jdbcType=VARCHAR},
+      </if>
+      <if test="recallNumber != null">
+        #{recallNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="refersToGroup != null">
+        #{refersToGroup,jdbcType=TINYINT},
+      </if>
+      <if test="refersToPartsList != null">
+        #{refersToPartsList,jdbcType=TINYINT},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="replacingPartNumber != null">
+        #{replacingPartNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="restrictionDescription != null">
+        #{restrictionDescription,jdbcType=VARCHAR},
+      </if>
+      <if test="sectionId != null">
+        #{sectionId,jdbcType=VARCHAR},
+      </if>
+      <if test="sectionPath != null">
+        #{sectionPath,jdbcType=VARCHAR},
+      </if>
+      <if test="source != null">
+        #{source,jdbcType=VARCHAR},
+      </if>
+      <if test="usageDescription != null">
+        #{usageDescription,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="notAvailable != null">
+        #{notAvailable,jdbcType=VARCHAR},
+      </if>
+      <if test="treatAsNineties != null">
+        #{treatAsNineties,jdbcType=TINYINT},
+      </if>
+      <if test="identificationNumbers != null">
+        #{identificationNumbers,jdbcType=VARCHAR},
+      </if>
+      <if test="componentId != null">
+        #{componentId,jdbcType=INTEGER},
+      </if>
+      <if test="componentSourceId != null">
+        #{componentSourceId,jdbcType=INTEGER},
+      </if>
+      <if test="notes != null">
+        #{notes,jdbcType=VARCHAR},
+      </if>
+      <if test="sections != null">
+        #{sections,jdbcType=VARCHAR},
+      </if>
+      <if test="calloutKeys != null">
+        #{calloutKeys,jdbcType=VARCHAR},
+      </if>
+      <if test="localProduct != null">
+        #{localProduct,jdbcType=TINYINT},
+      </if>
+      <if test="markets != null">
+        #{markets,jdbcType=VARCHAR},
+      </if>
+      <if test="sectionApplicability != null">
+        #{sectionApplicability,jdbcType=TINYINT},
+      </if>
+      <if test="alternatePartList != null">
+        #{alternatePartList,jdbcType=VARCHAR},
+      </if>
+      <if test="catalogCode != null">
+        #{catalogCode,jdbcType=VARCHAR},
+      </if>
+      <if test="partCode != null">
+        #{partCode,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null">
+        #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="quantity != null">
+        #{quantity,jdbcType=VARCHAR},
+      </if>
+      <if test="supersessionCode != null">
+        #{supersessionCode,jdbcType=VARCHAR},
+      </if>
+      <if test="supersessionCodeDescription != null">
+        #{supersessionCodeDescription,jdbcType=VARCHAR},
+      </if>
+      <if test="supersessionAbbreviation != null">
+        #{supersessionAbbreviation,jdbcType=VARCHAR},
+      </if>
+      <if test="supersessionAbbreviationDescription != null">
+        #{supersessionAbbreviationDescription,jdbcType=VARCHAR},
+      </if>
+      <if test="supersessionAbbreviationLexicon != null">
+        #{supersessionAbbreviationLexicon,jdbcType=VARCHAR},
+      </if>
+      <if test="hashcode != null">
+        #{hashcode,jdbcType=INTEGER},
+      </if>
+      <if test="automakerDescription != null">
+        #{automakerDescription,jdbcType=VARCHAR},
+      </if>
+      <if test="applicable != null">
+        #{applicable,jdbcType=TINYINT},
+      </if>
+      <if test="excluded != null">
+        #{excluded,jdbcType=TINYINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.domain.VinPartOption">
+    <!--@mbg.generated-->
+    update vin_part_option
+    <set>
+      <if test="driveType != null">
+        driveType = #{driveType,jdbcType=VARCHAR},
+      </if>
+      <if test="weatherType != null">
+        weatherType = #{weatherType,jdbcType=VARCHAR},
+      </if>
+      <if test="plantCode != null">
+        plantCode = #{plantCode,jdbcType=VARCHAR},
+      </if>
+      <if test="vinTag != null">
+        vinTag = #{vinTag,jdbcType=VARCHAR},
+      </if>
+      <if test="options != null">
+        `options` = #{options,jdbcType=VARCHAR},
+      </if>
+      <if test="excludedOptions != null">
+        excludedOptions = #{excludedOptions,jdbcType=VARCHAR},
+      </if>
+      <if test="uccCodes != null">
+        uccCodes = #{uccCodes,jdbcType=VARCHAR},
+      </if>
+      <if test="oemRelatedPart != null">
+        oemRelatedPart = #{oemRelatedPart,jdbcType=VARCHAR},
+      </if>
+      <if test="oemPart != null">
+        oemPart = #{oemPart,jdbcType=VARCHAR},
+      </if>
+      <if test="localPart != null">
+        localPart = #{localPart,jdbcType=VARCHAR},
+      </if>
+      <if test="localPartSourceType != null">
+        localPartSourceType = #{localPartSourceType,jdbcType=VARCHAR},
+      </if>
+      <if test="supersessionCodeUS != null">
+        supersessionCodeUS = #{supersessionCodeUS,jdbcType=VARCHAR},
+      </if>
+      <if test="optionWeight != null">
+        optionWeight = #{optionWeight,jdbcType=INTEGER},
+      </if>
+      <if test="nations != null">
+        nations = #{nations,jdbcType=VARCHAR},
+      </if>
+      <if test="excludedNations != null">
+        excludedNations = #{excludedNations,jdbcType=VARCHAR},
+      </if>
+      <if test="optionCount != null">
+        optionCount = #{optionCount,jdbcType=INTEGER},
+      </if>
+      <if test="partColor != null">
+        partColor = #{partColor,jdbcType=VARCHAR},
+      </if>
+      <if test="otherEBOM != null">
+        otherEBOM = #{otherEBOM,jdbcType=VARCHAR},
+      </if>
+      <if test="localModelOptionCode != null">
+        localModelOptionCode = #{localModelOptionCode,jdbcType=VARCHAR},
+      </if>
+      <if test="sectionNumberDisplay != null">
+        sectionNumberDisplay = #{sectionNumberDisplay,jdbcType=VARCHAR},
+      </if>
+      <if test="isBomPart != null">
+        isBomPart = #{isBomPart,jdbcType=TINYINT},
+      </if>
+      <if test="lookups != null">
+        lookups = #{lookups,jdbcType=VARCHAR},
+      </if>
+      <if test="bomPartSections != null">
+        bomPartSections = #{bomPartSections,jdbcType=VARCHAR},
+      </if>
+      <if test="UID != null">
+        `UID` = #{UID,jdbcType=INTEGER},
+      </if>
+      <if test="alsoIllustratedInChart != null">
+        alsoIllustratedInChart = #{alsoIllustratedInChart,jdbcType=TINYINT},
+      </if>
+      <if test="associatedPart != null">
+        associatedPart = #{associatedPart,jdbcType=TINYINT},
+      </if>
+      <if test="baseCode != null">
+        baseCode = #{baseCode,jdbcType=VARCHAR},
+      </if>
+      <if test="beginDate != null">
+        beginDate = #{beginDate,jdbcType=VARCHAR},
+      </if>
+      <if test="calibrationAVSStream != null">
+        calibrationAVSStream = #{calibrationAVSStream,jdbcType=VARCHAR},
+      </if>
+      <if test="calibrationCatchCode != null">
+        calibrationCatchCode = #{calibrationCatchCode,jdbcType=VARCHAR},
+      </if>
+      <if test="calibrationHeader != null">
+        calibrationHeader = #{calibrationHeader,jdbcType=VARCHAR},
+      </if>
+      <if test="calibrationIdentificationNumber != null">
+        calibrationIdentificationNumber = #{calibrationIdentificationNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="calibrationNumber != null">
+        calibrationNumber = #{calibrationNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="calibrationNumberDescription != null">
+        calibrationNumberDescription = #{calibrationNumberDescription,jdbcType=VARCHAR},
+      </if>
+      <if test="calloutRemarkDescription != null">
+        calloutRemarkDescription = #{calloutRemarkDescription,jdbcType=VARCHAR},
+      </if>
+      <if test="decode != null">
+        decode = #{decode,jdbcType=VARCHAR},
+      </if>
+      <if test="effectiveDateDescription != null">
+        effectiveDateDescription = #{effectiveDateDescription,jdbcType=VARCHAR},
+      </if>
+      <if test="endDate != null">
+        endDate = #{endDate,jdbcType=VARCHAR},
+      </if>
+      <if test="exportMarketPart != null">
+        exportMarketPart = #{exportMarketPart,jdbcType=TINYINT},
+      </if>
+      <if test="finisCode != null">
+        finisCode = #{finisCode,jdbcType=VARCHAR},
+      </if>
+      <if test="groupDescription != null">
+        groupDescription = #{groupDescription,jdbcType=VARCHAR},
+      </if>
+      <if test="groupKey != null">
+        groupKey = #{groupKey,jdbcType=VARCHAR},
+      </if>
+      <if test="groupBasicBeginDate != null">
+        groupBasicBeginDate = #{groupBasicBeginDate,jdbcType=VARCHAR},
+      </if>
+      <if test="groupBasicEndDate != null">
+        groupBasicEndDate = #{groupBasicEndDate,jdbcType=VARCHAR},
+      </if>
+      <if test="handType != null">
+        handType = #{handType,jdbcType=VARCHAR},
+      </if>
+      <if test="hasImage != null">
+        hasImage = #{hasImage,jdbcType=TINYINT},
+      </if>
+      <if test="hasKit != null">
+        hasKit = #{hasKit,jdbcType=TINYINT},
+      </if>
+      <if test="hasNote != null">
+        hasNote = #{hasNote,jdbcType=TINYINT},
+      </if>
+      <if test="hasPartsList != null">
+        hasPartsList = #{hasPartsList,jdbcType=TINYINT},
+      </if>
+      <if test="illustratedInChart != null">
+        illustratedInChart = #{illustratedInChart,jdbcType=TINYINT},
+      </if>
+      <if test="interpretationCodes != null">
+        interpretationCodes = #{interpretationCodes,jdbcType=VARCHAR},
+      </if>
+      <if test="isExportMarketSection != null">
+        isExportMarketSection = #{isExportMarketSection,jdbcType=TINYINT},
+      </if>
+      <if test="isGroup != null">
+        isGroup = #{isGroup,jdbcType=TINYINT},
+      </if>
+      <if test="lightTruckDescription != null">
+        lightTruckDescription = #{lightTruckDescription,jdbcType=VARCHAR},
+      </if>
+      <if test="mainPart != null">
+        mainPart = #{mainPart,jdbcType=TINYINT},
+      </if>
+      <if test="modelCode != null">
+        modelCode = #{modelCode,jdbcType=VARCHAR},
+      </if>
+      <if test="motorCraftNumber != null">
+        motorCraftNumber = #{motorCraftNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="searchPartId != null">
+        searchPartId = #{searchPartId,jdbcType=VARCHAR},
+      </if>
+      <if test="partId != null">
+        partId = #{partId,jdbcType=VARCHAR},
+      </if>
+      <if test="partListId != null">
+        partListId = #{partListId,jdbcType=VARCHAR},
+      </if>
+      <if test="partListKey != null">
+        partListKey = #{partListKey,jdbcType=VARCHAR},
+      </if>
+      <if test="partListNumber != null">
+        partListNumber = #{partListNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="partNameCode != null">
+        partNameCode = #{partNameCode,jdbcType=VARCHAR},
+      </if>
+      <if test="partTypeCode != null">
+        partTypeCode = #{partTypeCode,jdbcType=VARCHAR},
+      </if>
+      <if test="recallNumber != null">
+        recallNumber = #{recallNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="refersToGroup != null">
+        refersToGroup = #{refersToGroup,jdbcType=TINYINT},
+      </if>
+      <if test="refersToPartsList != null">
+        refersToPartsList = #{refersToPartsList,jdbcType=TINYINT},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="replacingPartNumber != null">
+        replacingPartNumber = #{replacingPartNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="restrictionDescription != null">
+        restrictionDescription = #{restrictionDescription,jdbcType=VARCHAR},
+      </if>
+      <if test="sectionId != null">
+        sectionId = #{sectionId,jdbcType=VARCHAR},
+      </if>
+      <if test="sectionPath != null">
+        sectionPath = #{sectionPath,jdbcType=VARCHAR},
+      </if>
+      <if test="source != null">
+        `source` = #{source,jdbcType=VARCHAR},
+      </if>
+      <if test="usageDescription != null">
+        usageDescription = #{usageDescription,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        `type` = #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="notAvailable != null">
+        notAvailable = #{notAvailable,jdbcType=VARCHAR},
+      </if>
+      <if test="treatAsNineties != null">
+        treatAsNineties = #{treatAsNineties,jdbcType=TINYINT},
+      </if>
+      <if test="identificationNumbers != null">
+        identificationNumbers = #{identificationNumbers,jdbcType=VARCHAR},
+      </if>
+      <if test="componentId != null">
+        componentId = #{componentId,jdbcType=INTEGER},
+      </if>
+      <if test="componentSourceId != null">
+        componentSourceId = #{componentSourceId,jdbcType=INTEGER},
+      </if>
+      <if test="notes != null">
+        notes = #{notes,jdbcType=VARCHAR},
+      </if>
+      <if test="sections != null">
+        sections = #{sections,jdbcType=VARCHAR},
+      </if>
+      <if test="calloutKeys != null">
+        calloutKeys = #{calloutKeys,jdbcType=VARCHAR},
+      </if>
+      <if test="localProduct != null">
+        localProduct = #{localProduct,jdbcType=TINYINT},
+      </if>
+      <if test="markets != null">
+        markets = #{markets,jdbcType=VARCHAR},
+      </if>
+      <if test="sectionApplicability != null">
+        sectionApplicability = #{sectionApplicability,jdbcType=TINYINT},
+      </if>
+      <if test="alternatePartList != null">
+        alternatePartList = #{alternatePartList,jdbcType=VARCHAR},
+      </if>
+      <if test="catalogCode != null">
+        catalogCode = #{catalogCode,jdbcType=VARCHAR},
+      </if>
+      <if test="partCode != null">
+        partCode = #{partCode,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null">
+        description = #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="quantity != null">
+        quantity = #{quantity,jdbcType=VARCHAR},
+      </if>
+      <if test="supersessionCode != null">
+        supersessionCode = #{supersessionCode,jdbcType=VARCHAR},
+      </if>
+      <if test="supersessionCodeDescription != null">
+        supersessionCodeDescription = #{supersessionCodeDescription,jdbcType=VARCHAR},
+      </if>
+      <if test="supersessionAbbreviation != null">
+        supersessionAbbreviation = #{supersessionAbbreviation,jdbcType=VARCHAR},
+      </if>
+      <if test="supersessionAbbreviationDescription != null">
+        supersessionAbbreviationDescription = #{supersessionAbbreviationDescription,jdbcType=VARCHAR},
+      </if>
+      <if test="supersessionAbbreviationLexicon != null">
+        supersessionAbbreviationLexicon = #{supersessionAbbreviationLexicon,jdbcType=VARCHAR},
+      </if>
+      <if test="hashcode != null">
+        hashcode = #{hashcode,jdbcType=INTEGER},
+      </if>
+      <if test="automakerDescription != null">
+        automakerDescription = #{automakerDescription,jdbcType=VARCHAR},
+      </if>
+      <if test="applicable != null">
+        applicable = #{applicable,jdbcType=TINYINT},
+      </if>
+      <if test="excluded != null">
+        excluded = #{excluded,jdbcType=TINYINT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.domain.VinPartOption">
+    <!--@mbg.generated-->
+    update vin_part_option
+    set driveType = #{driveType,jdbcType=VARCHAR},
+      weatherType = #{weatherType,jdbcType=VARCHAR},
+      plantCode = #{plantCode,jdbcType=VARCHAR},
+      vinTag = #{vinTag,jdbcType=VARCHAR},
+      `options` = #{options,jdbcType=VARCHAR},
+      excludedOptions = #{excludedOptions,jdbcType=VARCHAR},
+      uccCodes = #{uccCodes,jdbcType=VARCHAR},
+      oemRelatedPart = #{oemRelatedPart,jdbcType=VARCHAR},
+      oemPart = #{oemPart,jdbcType=VARCHAR},
+      localPart = #{localPart,jdbcType=VARCHAR},
+      localPartSourceType = #{localPartSourceType,jdbcType=VARCHAR},
+      supersessionCodeUS = #{supersessionCodeUS,jdbcType=VARCHAR},
+      optionWeight = #{optionWeight,jdbcType=INTEGER},
+      nations = #{nations,jdbcType=VARCHAR},
+      excludedNations = #{excludedNations,jdbcType=VARCHAR},
+      optionCount = #{optionCount,jdbcType=INTEGER},
+      partColor = #{partColor,jdbcType=VARCHAR},
+      otherEBOM = #{otherEBOM,jdbcType=VARCHAR},
+      localModelOptionCode = #{localModelOptionCode,jdbcType=VARCHAR},
+      sectionNumberDisplay = #{sectionNumberDisplay,jdbcType=VARCHAR},
+      isBomPart = #{isBomPart,jdbcType=TINYINT},
+      lookups = #{lookups,jdbcType=VARCHAR},
+      bomPartSections = #{bomPartSections,jdbcType=VARCHAR},
+      `UID` = #{UID,jdbcType=INTEGER},
+      alsoIllustratedInChart = #{alsoIllustratedInChart,jdbcType=TINYINT},
+      associatedPart = #{associatedPart,jdbcType=TINYINT},
+      baseCode = #{baseCode,jdbcType=VARCHAR},
+      beginDate = #{beginDate,jdbcType=VARCHAR},
+      calibrationAVSStream = #{calibrationAVSStream,jdbcType=VARCHAR},
+      calibrationCatchCode = #{calibrationCatchCode,jdbcType=VARCHAR},
+      calibrationHeader = #{calibrationHeader,jdbcType=VARCHAR},
+      calibrationIdentificationNumber = #{calibrationIdentificationNumber,jdbcType=VARCHAR},
+      calibrationNumber = #{calibrationNumber,jdbcType=VARCHAR},
+      calibrationNumberDescription = #{calibrationNumberDescription,jdbcType=VARCHAR},
+      calloutRemarkDescription = #{calloutRemarkDescription,jdbcType=VARCHAR},
+      decode = #{decode,jdbcType=VARCHAR},
+      effectiveDateDescription = #{effectiveDateDescription,jdbcType=VARCHAR},
+      endDate = #{endDate,jdbcType=VARCHAR},
+      exportMarketPart = #{exportMarketPart,jdbcType=TINYINT},
+      finisCode = #{finisCode,jdbcType=VARCHAR},
+      groupDescription = #{groupDescription,jdbcType=VARCHAR},
+      groupKey = #{groupKey,jdbcType=VARCHAR},
+      groupBasicBeginDate = #{groupBasicBeginDate,jdbcType=VARCHAR},
+      groupBasicEndDate = #{groupBasicEndDate,jdbcType=VARCHAR},
+      handType = #{handType,jdbcType=VARCHAR},
+      hasImage = #{hasImage,jdbcType=TINYINT},
+      hasKit = #{hasKit,jdbcType=TINYINT},
+      hasNote = #{hasNote,jdbcType=TINYINT},
+      hasPartsList = #{hasPartsList,jdbcType=TINYINT},
+      illustratedInChart = #{illustratedInChart,jdbcType=TINYINT},
+      interpretationCodes = #{interpretationCodes,jdbcType=VARCHAR},
+      isExportMarketSection = #{isExportMarketSection,jdbcType=TINYINT},
+      isGroup = #{isGroup,jdbcType=TINYINT},
+      lightTruckDescription = #{lightTruckDescription,jdbcType=VARCHAR},
+      mainPart = #{mainPart,jdbcType=TINYINT},
+      modelCode = #{modelCode,jdbcType=VARCHAR},
+      motorCraftNumber = #{motorCraftNumber,jdbcType=VARCHAR},
+      searchPartId = #{searchPartId,jdbcType=VARCHAR},
+      partId = #{partId,jdbcType=VARCHAR},
+      partListId = #{partListId,jdbcType=VARCHAR},
+      partListKey = #{partListKey,jdbcType=VARCHAR},
+      partListNumber = #{partListNumber,jdbcType=VARCHAR},
+      partNameCode = #{partNameCode,jdbcType=VARCHAR},
+      partTypeCode = #{partTypeCode,jdbcType=VARCHAR},
+      recallNumber = #{recallNumber,jdbcType=VARCHAR},
+      refersToGroup = #{refersToGroup,jdbcType=TINYINT},
+      refersToPartsList = #{refersToPartsList,jdbcType=TINYINT},
+      remark = #{remark,jdbcType=VARCHAR},
+      replacingPartNumber = #{replacingPartNumber,jdbcType=VARCHAR},
+      restrictionDescription = #{restrictionDescription,jdbcType=VARCHAR},
+      sectionId = #{sectionId,jdbcType=VARCHAR},
+      sectionPath = #{sectionPath,jdbcType=VARCHAR},
+      `source` = #{source,jdbcType=VARCHAR},
+      usageDescription = #{usageDescription,jdbcType=VARCHAR},
+      `type` = #{type,jdbcType=VARCHAR},
+      notAvailable = #{notAvailable,jdbcType=VARCHAR},
+      treatAsNineties = #{treatAsNineties,jdbcType=TINYINT},
+      identificationNumbers = #{identificationNumbers,jdbcType=VARCHAR},
+      componentId = #{componentId,jdbcType=INTEGER},
+      componentSourceId = #{componentSourceId,jdbcType=INTEGER},
+      notes = #{notes,jdbcType=VARCHAR},
+      sections = #{sections,jdbcType=VARCHAR},
+      calloutKeys = #{calloutKeys,jdbcType=VARCHAR},
+      localProduct = #{localProduct,jdbcType=TINYINT},
+      markets = #{markets,jdbcType=VARCHAR},
+      sectionApplicability = #{sectionApplicability,jdbcType=TINYINT},
+      alternatePartList = #{alternatePartList,jdbcType=VARCHAR},
+      catalogCode = #{catalogCode,jdbcType=VARCHAR},
+      partCode = #{partCode,jdbcType=VARCHAR},
+      description = #{description,jdbcType=VARCHAR},
+      quantity = #{quantity,jdbcType=VARCHAR},
+      supersessionCode = #{supersessionCode,jdbcType=VARCHAR},
+      supersessionCodeDescription = #{supersessionCodeDescription,jdbcType=VARCHAR},
+      supersessionAbbreviation = #{supersessionAbbreviation,jdbcType=VARCHAR},
+      supersessionAbbreviationDescription = #{supersessionAbbreviationDescription,jdbcType=VARCHAR},
+      supersessionAbbreviationLexicon = #{supersessionAbbreviationLexicon,jdbcType=VARCHAR},
+      hashcode = #{hashcode,jdbcType=INTEGER},
+      automakerDescription = #{automakerDescription,jdbcType=VARCHAR},
+      applicable = #{applicable,jdbcType=TINYINT},
+      excluded = #{excluded,jdbcType=TINYINT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <insert id="batchInsert" keyColumn="id" keyProperty="id" parameterType="map" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into vin_part_option
+    (driveType, weatherType, plantCode, vinTag, `options`, excludedOptions, uccCodes, 
+      oemRelatedPart, oemPart, localPart, localPartSourceType, supersessionCodeUS, optionWeight, 
+      nations, excludedNations, optionCount, partColor, otherEBOM, localModelOptionCode, 
+      sectionNumberDisplay, isBomPart, lookups, bomPartSections, `UID`, alsoIllustratedInChart, 
+      associatedPart, baseCode, beginDate, calibrationAVSStream, calibrationCatchCode, 
+      calibrationHeader, calibrationIdentificationNumber, calibrationNumber, calibrationNumberDescription, 
+      calloutRemarkDescription, decode, effectiveDateDescription, endDate, exportMarketPart, 
+      finisCode, groupDescription, groupKey, groupBasicBeginDate, groupBasicEndDate, 
+      handType, hasImage, hasKit, hasNote, hasPartsList, illustratedInChart, interpretationCodes, 
+      isExportMarketSection, isGroup, lightTruckDescription, mainPart, modelCode, motorCraftNumber, 
+      searchPartId, partId, partListId, partListKey, partListNumber, partNameCode, partTypeCode, 
+      recallNumber, refersToGroup, refersToPartsList, remark, replacingPartNumber, restrictionDescription, 
+      sectionId, sectionPath, `source`, usageDescription, `type`, notAvailable, treatAsNineties, 
+      identificationNumbers, componentId, componentSourceId, notes, sections, calloutKeys, 
+      localProduct, markets, sectionApplicability, alternatePartList, catalogCode, partCode, 
+      description, quantity, supersessionCode, supersessionCodeDescription, supersessionAbbreviation, 
+      supersessionAbbreviationDescription, supersessionAbbreviationLexicon, hashcode, 
+      automakerDescription, applicable, excluded)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.driveType,jdbcType=VARCHAR}, #{item.weatherType,jdbcType=VARCHAR}, #{item.plantCode,jdbcType=VARCHAR}, 
+        #{item.vinTag,jdbcType=VARCHAR}, #{item.options,jdbcType=VARCHAR}, #{item.excludedOptions,jdbcType=VARCHAR}, 
+        #{item.uccCodes,jdbcType=VARCHAR}, #{item.oemRelatedPart,jdbcType=VARCHAR}, #{item.oemPart,jdbcType=VARCHAR}, 
+        #{item.localPart,jdbcType=VARCHAR}, #{item.localPartSourceType,jdbcType=VARCHAR}, 
+        #{item.supersessionCodeUS,jdbcType=VARCHAR}, #{item.optionWeight,jdbcType=INTEGER}, 
+        #{item.nations,jdbcType=VARCHAR}, #{item.excludedNations,jdbcType=VARCHAR}, #{item.optionCount,jdbcType=INTEGER}, 
+        #{item.partColor,jdbcType=VARCHAR}, #{item.otherEBOM,jdbcType=VARCHAR}, #{item.localModelOptionCode,jdbcType=VARCHAR}, 
+        #{item.sectionNumberDisplay,jdbcType=VARCHAR}, #{item.isBomPart,jdbcType=TINYINT}, 
+        #{item.lookups,jdbcType=VARCHAR}, #{item.bomPartSections,jdbcType=VARCHAR}, #{item.UID,jdbcType=INTEGER}, 
+        #{item.alsoIllustratedInChart,jdbcType=TINYINT}, #{item.associatedPart,jdbcType=TINYINT}, 
+        #{item.baseCode,jdbcType=VARCHAR}, #{item.beginDate,jdbcType=VARCHAR}, #{item.calibrationAVSStream,jdbcType=VARCHAR}, 
+        #{item.calibrationCatchCode,jdbcType=VARCHAR}, #{item.calibrationHeader,jdbcType=VARCHAR}, 
+        #{item.calibrationIdentificationNumber,jdbcType=VARCHAR}, #{item.calibrationNumber,jdbcType=VARCHAR}, 
+        #{item.calibrationNumberDescription,jdbcType=VARCHAR}, #{item.calloutRemarkDescription,jdbcType=VARCHAR}, 
+        #{item.decode,jdbcType=VARCHAR}, #{item.effectiveDateDescription,jdbcType=VARCHAR}, 
+        #{item.endDate,jdbcType=VARCHAR}, #{item.exportMarketPart,jdbcType=TINYINT}, #{item.finisCode,jdbcType=VARCHAR}, 
+        #{item.groupDescription,jdbcType=VARCHAR}, #{item.groupKey,jdbcType=VARCHAR}, #{item.groupBasicBeginDate,jdbcType=VARCHAR}, 
+        #{item.groupBasicEndDate,jdbcType=VARCHAR}, #{item.handType,jdbcType=VARCHAR}, 
+        #{item.hasImage,jdbcType=TINYINT}, #{item.hasKit,jdbcType=TINYINT}, #{item.hasNote,jdbcType=TINYINT}, 
+        #{item.hasPartsList,jdbcType=TINYINT}, #{item.illustratedInChart,jdbcType=TINYINT}, 
+        #{item.interpretationCodes,jdbcType=VARCHAR}, #{item.isExportMarketSection,jdbcType=TINYINT}, 
+        #{item.isGroup,jdbcType=TINYINT}, #{item.lightTruckDescription,jdbcType=VARCHAR}, 
+        #{item.mainPart,jdbcType=TINYINT}, #{item.modelCode,jdbcType=VARCHAR}, #{item.motorCraftNumber,jdbcType=VARCHAR}, 
+        #{item.searchPartId,jdbcType=VARCHAR}, #{item.partId,jdbcType=VARCHAR}, #{item.partListId,jdbcType=VARCHAR}, 
+        #{item.partListKey,jdbcType=VARCHAR}, #{item.partListNumber,jdbcType=VARCHAR}, 
+        #{item.partNameCode,jdbcType=VARCHAR}, #{item.partTypeCode,jdbcType=VARCHAR}, #{item.recallNumber,jdbcType=VARCHAR}, 
+        #{item.refersToGroup,jdbcType=TINYINT}, #{item.refersToPartsList,jdbcType=TINYINT}, 
+        #{item.remark,jdbcType=VARCHAR}, #{item.replacingPartNumber,jdbcType=VARCHAR}, 
+        #{item.restrictionDescription,jdbcType=VARCHAR}, #{item.sectionId,jdbcType=VARCHAR}, 
+        #{item.sectionPath,jdbcType=VARCHAR}, #{item.source,jdbcType=VARCHAR}, #{item.usageDescription,jdbcType=VARCHAR}, 
+        #{item.type,jdbcType=VARCHAR}, #{item.notAvailable,jdbcType=VARCHAR}, #{item.treatAsNineties,jdbcType=TINYINT}, 
+        #{item.identificationNumbers,jdbcType=VARCHAR}, #{item.componentId,jdbcType=INTEGER}, 
+        #{item.componentSourceId,jdbcType=INTEGER}, #{item.notes,jdbcType=VARCHAR}, #{item.sections,jdbcType=VARCHAR}, 
+        #{item.calloutKeys,jdbcType=VARCHAR}, #{item.localProduct,jdbcType=TINYINT}, #{item.markets,jdbcType=VARCHAR}, 
+        #{item.sectionApplicability,jdbcType=TINYINT}, #{item.alternatePartList,jdbcType=VARCHAR}, 
+        #{item.catalogCode,jdbcType=VARCHAR}, #{item.partCode,jdbcType=VARCHAR}, #{item.description,jdbcType=VARCHAR}, 
+        #{item.quantity,jdbcType=VARCHAR}, #{item.supersessionCode,jdbcType=VARCHAR}, #{item.supersessionCodeDescription,jdbcType=VARCHAR}, 
+        #{item.supersessionAbbreviation,jdbcType=VARCHAR}, #{item.supersessionAbbreviationDescription,jdbcType=VARCHAR}, 
+        #{item.supersessionAbbreviationLexicon,jdbcType=VARCHAR}, #{item.hashcode,jdbcType=INTEGER}, 
+        #{item.automakerDescription,jdbcType=VARCHAR}, #{item.applicable,jdbcType=TINYINT}, 
+        #{item.excluded,jdbcType=TINYINT})
+    </foreach>
+  </insert>
+
+<!--auto generated by MybatisCodeHelper on 2024-04-23-->
+  <select id="selectByCatalogCodeAndSectionId" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from vin_part_option
+        <where>
+            <if test="catalogCode != null">
+                and catalogCode=#{catalogCode,jdbcType=VARCHAR}
+            </if>
+          <if test="sectionId != null">
+            and sectionId=#{sectionId,jdbcType=VARCHAR}
+          </if>
+        </where>
+    </select>
+</mapper>

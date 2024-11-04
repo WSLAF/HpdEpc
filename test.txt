@@ -1,0 +1,1 @@
+AHMAP0B21 <interpretation catalog="AHMAP0B21" type="EBOM" isDefaultApplicability="0" attributeValidationRequired="0"><avs data="S4" type="01"/></interpretation>

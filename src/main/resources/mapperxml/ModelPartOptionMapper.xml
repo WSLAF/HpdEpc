@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.mybatismapper.ModelPartOptionMapper">
+  <resultMap id="BaseResultMap" type="com.domain.ModelPartOption">
+    <!--@mbg.generated-->
+    <!--@Table model_part_option-->
+    <result column="partNumber" jdbcType="VARCHAR" property="partNumber" />
+    <result column="type01" jdbcType="VARCHAR" property="type01" />
+    <result column="type02" jdbcType="VARCHAR" property="type02" />
+    <result column="type03" jdbcType="VARCHAR" property="type03" />
+    <result column="type04" jdbcType="VARCHAR" property="type04" />
+    <result column="type05" jdbcType="VARCHAR" property="type05" />
+    <result column="type06" jdbcType="VARCHAR" property="type06" />
+    <result column="typeWT" jdbcType="VARCHAR" property="typeWT" />
+    <result column="typeDT" jdbcType="VARCHAR" property="typeDT" />
+    <result column="catalogCode" jdbcType="VARCHAR" property="catalogCode" />
+    <result column="sectionCode" jdbcType="VARCHAR" property="sectionCode" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    partNumber, type01, type02, type03, type04, type05, type06, typeWT, typeDT, catalogCode,
+    sectionCode
+  </sql>
+  <insert id="insert" parameterType="com.domain.ModelPartOption">
+    <!--@mbg.generated-->
+    insert into model_part_option (partNumber, type01, type02, 
+      type03, type04, type05, type06,
+      typeWT, typeDT, catalogCode, 
+      sectionCode)
+    values (#{partNumber,jdbcType=VARCHAR}, #{type01,jdbcType=VARCHAR}, #{type02,jdbcType=VARCHAR}, 
+      #{type03,jdbcType=VARCHAR}, #{type04,jdbcType=VARCHAR}, #{type05,jdbcType=VARCHAR}, #{type06,jdbcType=VARCHAR}
+      #{typeWT,jdbcType=VARCHAR}, #{typeDT,jdbcType=VARCHAR}, #{catalogCode,jdbcType=VARCHAR}, 
+      #{sectionCode,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.domain.ModelPartOption">
+    <!--@mbg.generated-->
+    insert into model_part_option
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="partNumber != null">
+        partNumber,
+      </if>
+      <if test="type01 != null">
+        type01,
+      </if>
+      <if test="type02 != null">
+        type02,
+      </if>
+      <if test="type03 != null">
+        type03,
+      </if>
+      <if test="type04 != null">
+        type04,
+      </if>
+      <if test="type05 != null">
+        type05,
+      </if>
+      <if test="type06 != null">
+        type06,
+      </if>
+      <if test="typeWT != null">
+        typeWT,
+      </if>
+      <if test="typeDT != null">
+        typeDT,
+      </if>
+      <if test="catalogCode != null">
+        catalogCode,
+      </if>
+      <if test="sectionCode != null">
+        sectionCode,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="partNumber != null">
+        #{partNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="type01 != null">
+        #{type01,jdbcType=VARCHAR},
+      </if>
+      <if test="type02 != null">
+        #{type02,jdbcType=VARCHAR},
+      </if>
+      <if test="type03 != null">
+        #{type03,jdbcType=VARCHAR},
+      </if>
+      <if test="type04 != null">
+        #{type04,jdbcType=VARCHAR},
+      </if>
+      <if test="type05 != null">
+        #{type05,jdbcType=VARCHAR},
+      </if>
+      <if test="type06 != null">
+        #{type06,jdbcType=VARCHAR},
+      </if>
+      <if test="typeWT != null">
+        #{typeWT,jdbcType=VARCHAR},
+      </if>
+      <if test="typeDT != null">
+        #{typeDT,jdbcType=VARCHAR},
+      </if>
+      <if test="catalogCode != null">
+        #{catalogCode,jdbcType=VARCHAR},
+      </if>
+      <if test="sectionCode != null">
+        #{sectionCode,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <insert id="batchInsert2" parameterType="map">
+    <!--@mbg.generated-->
+    insert into model_part_option_temp2
+    (partNumber, type01, type02, type03, type04, type05, type06, typeWT, typeDT, catalogCode,
+      sectionCode)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.partNumber,jdbcType=VARCHAR}, #{item.type01,jdbcType=VARCHAR}, #{item.type02,jdbcType=VARCHAR}, 
+        #{item.type03,jdbcType=VARCHAR}, #{item.type04,jdbcType=VARCHAR}, #{item.type05,jdbcType=VARCHAR},
+        #{item.type06,jdbcType=VARCHAR},
+        #{item.typeWT,jdbcType=VARCHAR}, #{item.typeDT,jdbcType=VARCHAR}, #{item.catalogCode,jdbcType=VARCHAR}, 
+        #{item.sectionCode,jdbcType=VARCHAR})
+    </foreach>
+  </insert>
+
+  <insert id="batchInsert3" parameterType="map">
+    <!--@mbg.generated-->
+    insert into model_part_option_temp3
+    (partNumber, type01, type02, type03, type04, type05, type06, typeWT, typeDT, catalogCode,
+    sectionCode)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.partNumber,jdbcType=VARCHAR}, #{item.type01,jdbcType=VARCHAR}, #{item.type02,jdbcType=VARCHAR},
+      #{item.type03,jdbcType=VARCHAR}, #{item.type04,jdbcType=VARCHAR}, #{item.type05,jdbcType=VARCHAR}, #{item.type06,jdbcType=VARCHAR},
+      #{item.typeWT,jdbcType=VARCHAR}, #{item.typeDT,jdbcType=VARCHAR}, #{item.catalogCode,jdbcType=VARCHAR},
+      #{item.sectionCode,jdbcType=VARCHAR})
+    </foreach>
+  </insert>
+
+  <insert id="batchInsert4" parameterType="map">
+    <!--@mbg.generated-->
+    insert into model_part_option_temp4
+    (partNumber, type01, type02, type03, type04, type05, type06, typeWT, typeDT, catalogCode,
+    sectionCode)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.partNumber,jdbcType=VARCHAR}, #{item.type01,jdbcType=VARCHAR}, #{item.type02,jdbcType=VARCHAR},
+      #{item.type03,jdbcType=VARCHAR}, #{item.type04,jdbcType=VARCHAR}, #{item.type05,jdbcType=VARCHAR},
+      #{item.type06,jdbcType=VARCHAR},
+      #{item.typeWT,jdbcType=VARCHAR}, #{item.typeDT,jdbcType=VARCHAR}, #{item.catalogCode,jdbcType=VARCHAR},
+      #{item.sectionCode,jdbcType=VARCHAR})
+    </foreach>
+  </insert>
+
+  <insert id="batchInsert5" parameterType="map">
+    <!--@mbg.generated-->
+    insert into model_part_option_temp5
+    (partNumber, type01, type02, type03, type04, type05, type06, typeWT, typeDT, catalogCode,
+    sectionCode)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.partNumber,jdbcType=VARCHAR}, #{item.type01,jdbcType=VARCHAR}, #{item.type02,jdbcType=VARCHAR},
+      #{item.type03,jdbcType=VARCHAR}, #{item.type04,jdbcType=VARCHAR}, #{item.type05,jdbcType=VARCHAR},
+      #{item.type06,jdbcType=VARCHAR},
+      #{item.typeWT,jdbcType=VARCHAR}, #{item.typeDT,jdbcType=VARCHAR}, #{item.catalogCode,jdbcType=VARCHAR},
+      #{item.sectionCode,jdbcType=VARCHAR})
+    </foreach>
+  </insert>
+
+  <insert id="batchInsert6" parameterType="map">
+    <!--@mbg.generated-->
+    insert into model_part_option_temp6
+    (partNumber, type01, type02, type03, type04, type05, type06, typeWT, typeDT, catalogCode,
+    sectionCode)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.partNumber,jdbcType=VARCHAR}, #{item.type01,jdbcType=VARCHAR}, #{item.type02,jdbcType=VARCHAR},
+      #{item.type03,jdbcType=VARCHAR}, #{item.type04,jdbcType=VARCHAR}, #{item.type05,jdbcType=VARCHAR},
+      #{item.type06,jdbcType=VARCHAR},
+      #{item.typeWT,jdbcType=VARCHAR}, #{item.typeDT,jdbcType=VARCHAR}, #{item.catalogCode,jdbcType=VARCHAR},
+      #{item.sectionCode,jdbcType=VARCHAR})
+    </foreach>
+  </insert>
+
+  <insert id="batchInsert7" parameterType="map">
+    <!--@mbg.generated-->
+    insert into model_part_option_temp7
+    (partNumber, type01, type02, type03, type04, type05, type06, typeWT, typeDT, catalogCode,
+    sectionCode)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.partNumber,jdbcType=VARCHAR}, #{item.type01,jdbcType=VARCHAR}, #{item.type02,jdbcType=VARCHAR},
+      #{item.type03,jdbcType=VARCHAR}, #{item.type04,jdbcType=VARCHAR}, #{item.type05,jdbcType=VARCHAR},
+      #{item.type06,jdbcType=VARCHAR},
+      #{item.typeWT,jdbcType=VARCHAR}, #{item.typeDT,jdbcType=VARCHAR}, #{item.catalogCode,jdbcType=VARCHAR},
+      #{item.sectionCode,jdbcType=VARCHAR})
+    </foreach>
+  </insert>
+
+  <insert id="batchInsert8" parameterType="map">
+    <!--@mbg.generated-->
+    insert into model_part_option_temp8
+    (partNumber, type01, type02, type03, type04, type05, type06, typeWT, typeDT, catalogCode,
+    sectionCode)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.partNumber,jdbcType=VARCHAR}, #{item.type01,jdbcType=VARCHAR}, #{item.type02,jdbcType=VARCHAR},
+      #{item.type03,jdbcType=VARCHAR}, #{item.type04,jdbcType=VARCHAR}, #{item.type05,jdbcType=VARCHAR},
+      #{item.type06,jdbcType=VARCHAR},
+      #{item.typeWT,jdbcType=VARCHAR}, #{item.typeDT,jdbcType=VARCHAR}, #{item.catalogCode,jdbcType=VARCHAR},
+      #{item.sectionCode,jdbcType=VARCHAR})
+    </foreach>
+  </insert>
+
+  <insert id="batchInsert9" parameterType="map">
+    <!--@mbg.generated-->
+    insert into model_part_option_temp9
+    (partNumber, type01, type02, type03, type04, type05, type06, typeWT, typeDT, catalogCode,
+    sectionCode)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.partNumber,jdbcType=VARCHAR}, #{item.type01,jdbcType=VARCHAR}, #{item.type02,jdbcType=VARCHAR},
+      #{item.type03,jdbcType=VARCHAR}, #{item.type04,jdbcType=VARCHAR}, #{item.type05,jdbcType=VARCHAR},
+      #{item.type06,jdbcType=VARCHAR},
+      #{item.typeWT,jdbcType=VARCHAR}, #{item.typeDT,jdbcType=VARCHAR}, #{item.catalogCode,jdbcType=VARCHAR},
+      #{item.sectionCode,jdbcType=VARCHAR})
+    </foreach>
+  </insert>
+
+  <insert id="batchInsert10" parameterType="map">
+    <!--@mbg.generated-->
+    insert into model_part_option_temp10
+    (partNumber, type01, type02, type03, type04, type05, type06, typeWT, typeDT, catalogCode,
+    sectionCode)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.partNumber,jdbcType=VARCHAR}, #{item.type01,jdbcType=VARCHAR}, #{item.type02,jdbcType=VARCHAR},
+      #{item.type03,jdbcType=VARCHAR}, #{item.type04,jdbcType=VARCHAR}, #{item.type05,jdbcType=VARCHAR},
+      #{item.type06,jdbcType=VARCHAR},
+      #{item.typeWT,jdbcType=VARCHAR}, #{item.typeDT,jdbcType=VARCHAR}, #{item.catalogCode,jdbcType=VARCHAR},
+      #{item.sectionCode,jdbcType=VARCHAR})
+    </foreach>
+  </insert>
+
+  <insert id="batchInsert11" parameterType="map">
+    <!--@mbg.generated-->
+    insert into model_part_option_temp11
+    (partNumber, type01, type02, type03, type04, type05, type06, typeWT, typeDT, catalogCode,
+    sectionCode)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.partNumber,jdbcType=VARCHAR}, #{item.type01,jdbcType=VARCHAR}, #{item.type02,jdbcType=VARCHAR},
+      #{item.type03,jdbcType=VARCHAR}, #{item.type04,jdbcType=VARCHAR}, #{item.type05,jdbcType=VARCHAR},
+      #{item.type06,jdbcType=VARCHAR},
+      #{item.typeWT,jdbcType=VARCHAR}, #{item.typeDT,jdbcType=VARCHAR}, #{item.catalogCode,jdbcType=VARCHAR},
+      #{item.sectionCode,jdbcType=VARCHAR})
+    </foreach>
+  </insert>
+
+  <insert id="batchInsert12" parameterType="map">
+    <!--@mbg.generated-->
+    insert into model_part_option_temp12
+    (partNumber, type01, type02, type03, type04, type05, type06, typeWT, typeDT, catalogCode,
+    sectionCode)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.partNumber,jdbcType=VARCHAR}, #{item.type01,jdbcType=VARCHAR}, #{item.type02,jdbcType=VARCHAR},
+      #{item.type03,jdbcType=VARCHAR}, #{item.type04,jdbcType=VARCHAR}, #{item.type05,jdbcType=VARCHAR},
+      #{item.type06,jdbcType=VARCHAR},
+      #{item.typeWT,jdbcType=VARCHAR}, #{item.typeDT,jdbcType=VARCHAR}, #{item.catalogCode,jdbcType=VARCHAR},
+      #{item.sectionCode,jdbcType=VARCHAR})
+    </foreach>
+  </insert>
+
+  <insert id="batchInsert13" parameterType="map">
+    <!--@mbg.generated-->
+    insert into model_part_option_temp13
+    (partNumber, type01, type02, type03, type04, type05, type06, typeWT, typeDT, catalogCode,
+    sectionCode)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.partNumber,jdbcType=VARCHAR}, #{item.type01,jdbcType=VARCHAR}, #{item.type02,jdbcType=VARCHAR},
+      #{item.type03,jdbcType=VARCHAR}, #{item.type04,jdbcType=VARCHAR}, #{item.type05,jdbcType=VARCHAR},
+      #{item.type06,jdbcType=VARCHAR},
+      #{item.typeWT,jdbcType=VARCHAR}, #{item.typeDT,jdbcType=VARCHAR}, #{item.catalogCode,jdbcType=VARCHAR},
+      #{item.sectionCode,jdbcType=VARCHAR})
+    </foreach>
+  </insert>
+
+  <insert id="batchInsert14" parameterType="map">
+    <!--@mbg.generated-->
+    insert into model_part_option_temp14
+    (partNumber, type01, type02, type03, type04, type05, type06, typeWT, typeDT, catalogCode,
+    sectionCode)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.partNumber,jdbcType=VARCHAR}, #{item.type01,jdbcType=VARCHAR}, #{item.type02,jdbcType=VARCHAR},
+      #{item.type03,jdbcType=VARCHAR}, #{item.type04,jdbcType=VARCHAR}, #{item.type05,jdbcType=VARCHAR},
+      #{item.type06,jdbcType=VARCHAR},
+      #{item.typeWT,jdbcType=VARCHAR}, #{item.typeDT,jdbcType=VARCHAR}, #{item.catalogCode,jdbcType=VARCHAR},
+      #{item.sectionCode,jdbcType=VARCHAR})
+    </foreach>
+  </insert>
+
+  <insert id="batchInsert15" parameterType="map">
+    <!--@mbg.generated-->
+    insert into model_part_option_temp15
+    (partNumber, type01, type02, type03, type04, type05, type06, typeWT, typeDT, catalogCode,
+    sectionCode)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.partNumber,jdbcType=VARCHAR}, #{item.type01,jdbcType=VARCHAR}, #{item.type02,jdbcType=VARCHAR},
+      #{item.type03,jdbcType=VARCHAR}, #{item.type04,jdbcType=VARCHAR}, #{item.type05,jdbcType=VARCHAR},
+      #{item.type06,jdbcType=VARCHAR},
+      #{item.typeWT,jdbcType=VARCHAR}, #{item.typeDT,jdbcType=VARCHAR}, #{item.catalogCode,jdbcType=VARCHAR},
+      #{item.sectionCode,jdbcType=VARCHAR})
+    </foreach>
+  </insert>
+
+  <insert id="batchInsert" parameterType="map">
+    <!--@mbg.generated-->
+    insert into model_part_option_temp
+    (partNumber, type01, type02, type03, type04, type05, type06, typeWT, typeDT, catalogCode,
+    sectionCode)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.partNumber,jdbcType=VARCHAR}, #{item.type01,jdbcType=VARCHAR}, #{item.type02,jdbcType=VARCHAR},
+      #{item.type03,jdbcType=VARCHAR}, #{item.type04,jdbcType=VARCHAR}, #{item.type05,jdbcType=VARCHAR},
+      #{item.type06,jdbcType=VARCHAR},
+      #{item.typeWT,jdbcType=VARCHAR}, #{item.typeDT,jdbcType=VARCHAR}, #{item.catalogCode,jdbcType=VARCHAR},
+      #{item.sectionCode,jdbcType=VARCHAR})
+    </foreach>
+  </insert>
+
+  <select id = "selectMaxId" resultType = "java.lang.Long">
+    select max(id)
+    from model_part_option_newest_temp78
+  </select>
+
+  <select id = "selectMaxId2" resultType = "java.lang.Long">
+    select max(id)
+    from model_part_option_newest_temp45
+  </select>
+</mapper>

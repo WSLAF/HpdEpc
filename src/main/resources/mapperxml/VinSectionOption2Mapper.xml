@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.mybatismapper.VinSectionOption2Mapper">
+  <resultMap id="BaseResultMap" type="com.domain.VinSectionOption2">
+    <!--@mbg.generated-->
+    <!--@Table vin_section_option2-->
+    <result column="driveType" jdbcType="VARCHAR" property="driveType" />
+    <result column="weatherType" jdbcType="VARCHAR" property="weatherType" />
+    <result column="uccCodes" jdbcType="VARCHAR" property="uccCodes" />
+    <result column="optionCodes" jdbcType="VARCHAR" property="optionCodes" />
+    <result column="excludedOptionCodes" jdbcType="VARCHAR" property="excludedOptionCodes" />
+    <result column="nationCodes" jdbcType="VARCHAR" property="nationCodes" />
+    <result column="excludedNationCodes" jdbcType="VARCHAR" property="excludedNationCodes" />
+    <result column="catalogCode" jdbcType="VARCHAR" property="catalogCode" />
+    <result column="sectionNumberDisplay" jdbcType="VARCHAR" property="sectionNumberDisplay" />
+    <result column="pageDisplay" jdbcType="VARCHAR" property="pageDisplay" />
+    <result column="indexLevel" jdbcType="VARCHAR" property="indexLevel" />
+    <result column="sectionCode" jdbcType="VARCHAR" property="sectionCode" />
+    <result column="sectionID" jdbcType="VARCHAR" property="sectionId" />
+    <result column="parentInterpretationStream" jdbcType="VARCHAR" property="parentInterpretationStream" />
+    <result column="topInterpretationStream" jdbcType="VARCHAR" property="topInterpretationStream" />
+    <result column="illustrations" jdbcType="VARCHAR" property="illustrations" />
+    <result column="anyParts" jdbcType="TINYINT" property="anyParts" />
+    <result column="sections" jdbcType="VARCHAR" property="sections" />
+    <result column="sectionClientData" jdbcType="VARCHAR" property="sectionClientData" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    driveType, weatherType, uccCodes, optionCodes, excludedOptionCodes, nationCodes, 
+    excludedNationCodes, catalogCode, sectionNumberDisplay, pageDisplay, indexLevel, 
+    sectionCode, sectionID, parentInterpretationStream, topInterpretationStream, illustrations, 
+    anyParts, sections, sectionClientData
+  </sql>
+  <insert id="insert" parameterType="com.domain.VinSectionOption2">
+    <!--@mbg.generated-->
+    insert into vin_section_option2 (driveType, weatherType, uccCodes, 
+      optionCodes, excludedOptionCodes, nationCodes, 
+      excludedNationCodes, catalogCode, sectionNumberDisplay, 
+      pageDisplay, indexLevel, sectionCode, 
+      sectionID, parentInterpretationStream, 
+      topInterpretationStream, illustrations, 
+      anyParts, sections, sectionClientData
+      )
+    values (#{driveType,jdbcType=VARCHAR}, #{weatherType,jdbcType=VARCHAR}, #{uccCodes,jdbcType=VARCHAR},
+      #{optionCodes,jdbcType=VARCHAR}, #{excludedOptionCodes,jdbcType=VARCHAR}, #{nationCodes,jdbcType=VARCHAR},
+      #{excludedNationCodes,jdbcType=VARCHAR}, #{catalogCode,jdbcType=VARCHAR}, #{sectionNumberDisplay,jdbcType=VARCHAR},
+      #{pageDisplay,jdbcType=VARCHAR}, #{indexLevel,jdbcType=VARCHAR}, #{sectionCode,jdbcType=VARCHAR},
+      #{sectionId,jdbcType=VARCHAR}, #{parentInterpretationStream,jdbcType=VARCHAR},
+      #{topInterpretationStream,jdbcType=VARCHAR}, #{illustrations,jdbcType=VARCHAR},
+      #{anyParts,jdbcType=TINYINT}, #{sections,jdbcType=VARCHAR}, #{sectionClientData,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.domain.VinSectionOption2">
+    <!--@mbg.generated-->
+    insert into vin_section_option2
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="driveType != null">
+        driveType,
+      </if>
+      <if test="weatherType != null">
+        weatherType,
+      </if>
+      <if test="uccCodes != null">
+        uccCodes,
+      </if>
+      <if test="optionCodes != null">
+        optionCodes,
+      </if>
+      <if test="excludedOptionCodes != null">
+        excludedOptionCodes,
+      </if>
+      <if test="nationCodes != null">
+        nationCodes,
+      </if>
+      <if test="excludedNationCodes != null">
+        excludedNationCodes,
+      </if>
+      <if test="catalogCode != null">
+        catalogCode,
+      </if>
+      <if test="sectionNumberDisplay != null">
+        sectionNumberDisplay,
+      </if>
+      <if test="pageDisplay != null">
+        pageDisplay,
+      </if>
+      <if test="indexLevel != null">
+        indexLevel,
+      </if>
+      <if test="sectionCode != null">
+        sectionCode,
+      </if>
+      <if test="sectionId != null">
+        sectionID,
+      </if>
+      <if test="parentInterpretationStream != null">
+        parentInterpretationStream,
+      </if>
+      <if test="topInterpretationStream != null">
+        topInterpretationStream,
+      </if>
+      <if test="illustrations != null">
+        illustrations,
+      </if>
+      <if test="anyParts != null">
+        anyParts,
+      </if>
+      <if test="sections != null">
+        sections,
+      </if>
+      <if test="sectionClientData != null">
+        sectionClientData,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="driveType != null">
+        #{driveType,jdbcType=VARCHAR},
+      </if>
+      <if test="weatherType != null">
+        #{weatherType,jdbcType=VARCHAR},
+      </if>
+      <if test="uccCodes != null">
+        #{uccCodes,jdbcType=VARCHAR},
+      </if>
+      <if test="optionCodes != null">
+        #{optionCodes,jdbcType=VARCHAR},
+      </if>
+      <if test="excludedOptionCodes != null">
+        #{excludedOptionCodes,jdbcType=VARCHAR},
+      </if>
+      <if test="nationCodes != null">
+        #{nationCodes,jdbcType=VARCHAR},
+      </if>
+      <if test="excludedNationCodes != null">
+        #{excludedNationCodes,jdbcType=VARCHAR},
+      </if>
+      <if test="catalogCode != null">
+        #{catalogCode,jdbcType=VARCHAR},
+      </if>
+      <if test="sectionNumberDisplay != null">
+        #{sectionNumberDisplay,jdbcType=VARCHAR},
+      </if>
+      <if test="pageDisplay != null">
+        #{pageDisplay,jdbcType=VARCHAR},
+      </if>
+      <if test="indexLevel != null">
+        #{indexLevel,jdbcType=VARCHAR},
+      </if>
+      <if test="sectionCode != null">
+        #{sectionCode,jdbcType=VARCHAR},
+      </if>
+      <if test="sectionId != null">
+        #{sectionId,jdbcType=VARCHAR},
+      </if>
+      <if test="parentInterpretationStream != null">
+        #{parentInterpretationStream,jdbcType=VARCHAR},
+      </if>
+      <if test="topInterpretationStream != null">
+        #{topInterpretationStream,jdbcType=VARCHAR},
+      </if>
+      <if test="illustrations != null">
+        #{illustrations,jdbcType=VARCHAR},
+      </if>
+      <if test="anyParts != null">
+        #{anyParts,jdbcType=TINYINT},
+      </if>
+      <if test="sections != null">
+        #{sections,jdbcType=VARCHAR},
+      </if>
+      <if test="sectionClientData != null">
+        #{sectionClientData,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <insert id="batchInsert" parameterType="map">
+    <!--@mbg.generated-->
+    insert into vin_section_option2
+    (driveType, weatherType, uccCodes, optionCodes, excludedOptionCodes, nationCodes, 
+      excludedNationCodes, catalogCode, sectionNumberDisplay, pageDisplay, indexLevel, 
+      sectionCode, sectionID, parentInterpretationStream, topInterpretationStream, illustrations, 
+      anyParts, sections, sectionClientData)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.driveType,jdbcType=VARCHAR}, #{item.weatherType,jdbcType=VARCHAR}, #{item.uccCodes,jdbcType=VARCHAR},
+        #{item.optionCodes,jdbcType=VARCHAR}, #{item.excludedOptionCodes,jdbcType=VARCHAR},
+        #{item.nationCodes,jdbcType=VARCHAR}, #{item.excludedNationCodes,jdbcType=VARCHAR},
+        #{item.catalogCode,jdbcType=VARCHAR}, #{item.sectionNumberDisplay,jdbcType=VARCHAR},
+        #{item.pageDisplay,jdbcType=VARCHAR}, #{item.indexLevel,jdbcType=VARCHAR}, #{item.sectionCode,jdbcType=VARCHAR},
+        #{item.sectionId,jdbcType=VARCHAR}, #{item.parentInterpretationStream,jdbcType=VARCHAR},
+        #{item.topInterpretationStream,jdbcType=VARCHAR}, #{item.illustrations,jdbcType=VARCHAR},
+        #{item.anyParts,jdbcType=TINYINT}, #{item.sections,jdbcType=VARCHAR}, #{item.sectionClientData,jdbcType=VARCHAR}
+        )
+    </foreach>
+  </insert>
+
+<!--auto generated by MybatisCodeHelper on 2024-04-13-->
+  <select id="selectByUccCodesAndCatalogCodeAndSectionCode" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from vin_section_option2
+        <where>
+
+<!--          id IN-->
+<!--          <foreach collection="list" item="id" index="index" open="(" close=")" separator=",">-->
+<!--            #{id}-->
+<!--          </foreach>-->
+            <if test="uccCodes != null">
+                and uccCodes in
+              <foreach collection="uccCodes" item="uccCode" index="index" open="(" close=")" separator=",">
+                  #{uccCode,jdbcType=VARCHAR}
+              </foreach>
+            </if>
+            <if test="catalogCode != null">
+                and catalogCode=#{catalogCode,jdbcType=VARCHAR}
+            </if>
+            <if test="sectionCode != null">
+                and sectionCode=#{sectionCode,jdbcType=VARCHAR}
+            </if>
+        </where>
+    </select>
+</mapper>

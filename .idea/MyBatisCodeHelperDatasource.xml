@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MyBatisCodeHelperDatasource">
+    <option name="projectProfile">
+      <ProjectProfile>
+        <option name="batchInsert" value="true" />
+        <option name="controllerTemplateString" value="&#10;#* @vtlvariable name=&quot;tableName&quot; type=&quot;java.lang.String&quot; *#&#10;#* @vtlvariable name=&quot;entityPackageName&quot; type=&quot;java.lang.String&quot; *#&#10;#* @vtlvariable name=&quot;entityClassName&quot; type=&quot;java.lang.String&quot; *#&#10;#* @vtlvariable name=&quot;servicePackageName&quot; type=&quot;java.lang.String&quot; *#&#10;#* @vtlvariable name=&quot;serviceInterfacePackage&quot; type=&quot;java.lang.String&quot; *#&#10;#* @vtlvariable name=&quot;serviceClassName&quot; type=&quot;java.lang.String&quot; *#&#10;#* @vtlvariable name=&quot;serviceInterfaceClassName&quot; type=&quot;java.lang.String&quot; *#&#10;#* @vtlvariable name=&quot;mapperPackageName&quot; type=&quot;java.lang.String&quot; *#&#10;#* @vtlvariable name=&quot;mapperClassName&quot; type=&quot;java.lang.String&quot; *#&#10;#* @vtlvariable name=&quot;controllerPackage&quot; type=&quot;java.lang.String&quot; *#&#10;#* @vtlvariable name=&quot;tableRemark&quot; type=&quot;java.lang.String&quot; *#&#10;#* @vtlvariable name=&quot;myDate&quot; type=&quot;java.util.Date&quot; *#&#10;#* @vtlvariable name=&quot;simpleDateFormat&quot; type=&quot;java.text.SimpleDateFormat&quot; *#&#10;package $!{controllerPackage};&#10;import $!{entityPackageName}.$!{entityClassName};&#10;###set($realServiceName = $!{serviceClassName}+'Impl')&#10;import $!{servicePackageName}.$!{serviceClassName};&#10;import org.springframework.web.bind.annotation.*;&#10;&#10;#set($serviceFirstLower = $!{serviceClassName.substring(0,1).toLowerCase()}+$!{serviceClassName.substring(1,$!{serviceClassName.length()})})&#10;import javax.annotation.Resource;&#10;&#10;/**&#10;* $!{tableRemark}($!{tableName})表控制层&#10;*&#10;* @author xxxxx&#10;*/&#10;@RestController&#10;@RequestMapping(&quot;/$!{tableName}&quot;)&#10;public class $!{entityClassName}Controller {&#10;/**&#10;* 服务对象&#10;*/&#10;@Resource&#10;private $!{serviceClassName} $!{serviceFirstLower};&#10;&#10;/**&#10;* 通过主键查询单条数据&#10;*&#10;* @param id 主键&#10;* @return 单条数据&#10;*/&#10;@GetMapping(&quot;selectOne&quot;)&#10;public $!{entityClassName} selectOne(Integer id) {&#10;return $!{serviceFirstLower}.selectByPrimaryKey(id);&#10;}&#10;&#10;}" />
+        <option name="generatedClassPathList">
+          <list>
+            <option value="C:\Users\admin\IdeaProjects\HpdEpc\src\main\java\org\example\model" />
+          </list>
+        </option>
+        <option name="javaMapperPackage" value="com.mapper" />
+        <option name="javaMapperPath" value="$PROJECT_DIR$/src/main/java" />
+        <option name="javaModelPackage" value="com.domain" />
+        <option name="javaModelPath" value="$PROJECT_DIR$/src/main/java" />
+        <option name="lastDatabaseCrudChooseModuleName" value="HpdEpc" />
+        <option name="moduleNameToPackageAndPathMap">
+          <map>
+            <entry key="HpdEpc">
+              <value>
+                <UserPackageAndPathInfoByModule>
+                  <option name="javaMapperPackage" value="com.mapper" />
+                  <option name="javaMapperPath" value="$PROJECT_DIR$/src/main/java" />
+                  <option name="javaModelPacakge" value="com.domain" />
+                  <option name="javaModelPath" value="$PROJECT_DIR$/src/main/java" />
+                  <option name="javaServiceInterfacePath" value="$PROJECT_DIR$/src/main/java" />
+                  <option name="javaServicePath" value="$PROJECT_DIR$/src/main/java" />
+                  <option name="xmlPackage" value="mapperxml" />
+                  <option name="xmlPath" value="$PROJECT_DIR$/src/main/resources" />
+                </UserPackageAndPathInfoByModule>
+              </value>
+            </entry>
+          </map>
+        </option>
+        <option name="mybatisPlusIdType" value="AUTO" />
+        <option name="tableGenerateConfigs">
+          <map>
+            <entry key="dbo:model_part_option_temp_sqlserver">
+              <value>
+                <TableGenerateConfig>
+                  <option name="batchInsert" value="true" />
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="ModelPartOptionTempSqlserver" />
+                  <option name="moduleName" value="HpdEpc" />
+                  <option name="mybatisplusIdType" value="AUTO" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="true" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="dbo:section_parts_temp_sqlserver">
+              <value>
+                <TableGenerateConfig>
+                  <option name="batchInsert" value="true" />
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="SectionPartsTempSqlserver" />
+                  <option name="moduleName" value="HpdEpc" />
+                  <option name="mybatisplusIdType" value="AUTO" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="true" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="sam:catalog">
+              <value>
+                <TableGenerateConfig>
+                  <option name="batchInsert" value="true" />
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="Catalog" />
+                  <option name="moduleName" value="HpdEpc" />
+                  <option name="mybatisplusIdType" value="AUTO" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="true" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="sam:epc_section">
+              <value>
+                <TableGenerateConfig>
+                  <option name="batchInsert" value="true" />
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="EpcSection" />
+                  <option name="moduleName" value="HpdEpc" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="sam:flat_sections">
+              <value>
+                <TableGenerateConfig>
+                  <option name="batchInsert" value="true" />
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="FlatSections" />
+                  <option name="moduleName" value="HpdEpc" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="sam:model_part_option">
+              <value>
+                <TableGenerateConfig>
+                  <option name="batchInsert" value="true" />
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="ModelPartOption" />
+                  <option name="moduleName" value="HpdEpc" />
+                  <option name="mybatisplusIdType" value="AUTO" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="true" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="sam:model_part_option_new_temp1">
+              <value>
+                <TableGenerateConfig>
+                  <option name="batchInsert" value="true" />
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="ModelPartOptionNewTemp1" />
+                  <option name="moduleName" value="HpdEpc" />
+                  <option name="mybatisplusIdType" value="AUTO" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="true" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="sam:model_section_parts_temp1">
+              <value>
+                <TableGenerateConfig>
+                  <option name="batchInsert" value="true" />
+                  <option name="generatedKey" value="id" />
+                  <option name="javaModelName" value="ModelSectionPartsTemp1" />
+                  <option name="moduleName" value="HpdEpc" />
+                  <option name="mybatisplusIdType" value="AUTO" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="true" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="sam:modelfileinfo">
+              <value>
+                <TableGenerateConfig>
+                  <option name="batchInsert" value="true" />
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="Modelfileinfo" />
+                  <option name="moduleName" value="HpdEpc" />
+                  <option name="mybatisplusIdType" value="AUTO" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="true" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="sam:section_option_applicability">
+              <value>
+                <TableGenerateConfig>
+                  <option name="batchInsert" value="true" />
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="SectionOptionApplicability" />
+                  <option name="moduleName" value="HpdEpc" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="sam:section_parts">
+              <value>
+                <TableGenerateConfig>
+                  <option name="batchInsert" value="true" />
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="SectionParts" />
+                  <option name="moduleName" value="HpdEpc" />
+                  <option name="mybatisplusIdType" value="AUTO" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="true" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="sam:section_parts_by_vin2">
+              <value>
+                <TableGenerateConfig>
+                  <option name="batchInsert" value="true" />
+                  <option name="generatedKey" value="id" />
+                  <option name="javaModelName" value="SectionPartsByVin2" />
+                  <option name="moduleName" value="HpdEpc" />
+                  <option name="mybatisplusIdType" value="AUTO" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="true" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="sam:section_parts_by_vin2_aggregate_option_id">
+              <value>
+                <TableGenerateConfig>
+                  <option name="batchInsert" value="true" />
+                  <option name="generatedKey" value="id" />
+                  <option name="javaModelName" value="SectionPartsByVin2AggregateOptionId" />
+                  <option name="moduleName" value="HpdEpc" />
+                  <option name="mybatisplusIdType" value="AUTO" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="true" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="sam:vehicle_info">
+              <value>
+                <TableGenerateConfig>
+                  <option name="batchInsert" value="true" />
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="VehicleInfo" />
+                  <option name="moduleName" value="HpdEpc" />
+                  <option name="mybatisplusIdType" value="AUTO" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="true" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="sam:vin">
+              <value>
+                <TableGenerateConfig>
+                  <option name="batchInsert" value="true" />
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="Vin" />
+                  <option name="moduleName" value="HpdEpc" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="sam:vin_data">
+              <value>
+                <TableGenerateConfig>
+                  <option name="batchInsert" value="true" />
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="VinData" />
+                  <option name="moduleName" value="HpdEpc" />
+                  <option name="mybatisplusIdType" value="AUTO" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="true" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="sam:vin_decode_newest">
+              <value>
+                <TableGenerateConfig>
+                  <option name="batchInsert" value="true" />
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="VinDecodeNewest" />
+                  <option name="moduleName" value="HpdEpc" />
+                  <option name="mybatisplusIdType" value="AUTO" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="true" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="sam:vin_part_option">
+              <value>
+                <TableGenerateConfig>
+                  <option name="batchInsert" value="true" />
+                  <option name="generatedKey" value="id" />
+                  <option name="javaModelName" value="VinPartOption" />
+                  <option name="moduleName" value="HpdEpc" />
+                  <option name="mybatisplusIdType" value="AUTO" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="true" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="sam:vin_part_option_new">
+              <value>
+                <TableGenerateConfig>
+                  <option name="batchInsert" value="true" />
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="VinPartOptionNew" />
+                  <option name="moduleName" value="HpdEpc" />
+                  <option name="mybatisplusIdType" value="AUTO" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="true" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="sam:vin_part_option_newest_copy2">
+              <value>
+                <TableGenerateConfig>
+                  <option name="batchInsert" value="true" />
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="VinPartOptionNewestCopy2" />
+                  <option name="moduleName" value="HpdEpc" />
+                  <option name="mybatisplusIdType" value="AUTO" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="true" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="sam:vin_section_option">
+              <value>
+                <TableGenerateConfig>
+                  <option name="batchInsert" value="true" />
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="VinSectionOption" />
+                  <option name="moduleName" value="HpdEpc" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="sam:vin_section_option2">
+              <value>
+                <TableGenerateConfig>
+                  <option name="batchInsert" value="true" />
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="VinSectionOption2" />
+                  <option name="moduleName" value="HpdEpc" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+          </map>
+        </option>
+        <option name="useActualColumnNames" value="true" />
+        <option name="xmlMapperPackage" value="mapperxml" />
+        <option name="xmlMapperPath" value="$PROJECT_DIR$/src/main/resources" />
+      </ProjectProfile>
+    </option>
+  </component>
+</project>

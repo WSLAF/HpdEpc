@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.mybatismapper.EpcSectionMapper">
+  <resultMap id="selectParentuniqueidAndCatalogcodeAndApplicableResult"
+             type="org.example.mybatismapper.SelectParentuniqueidAndCatalogcodeAndApplicableResult">
+    <result column="parentUniqueId" property="parentuniqueid"/>
+    <result column="catalogCode" property="catalogcode"/>
+    <result column="applicable" property="applicable"/>
+  </resultMap>
+  <resultMap id="BaseResultMap" type="com.domain.EpcSection">
+    <!--@mbg.generated-->
+    <!--@Table epc_section-->
+    <result column="code" jdbcType="VARCHAR" property="code" />
+    <result column="data" jdbcType="VARCHAR" property="data" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="image" jdbcType="VARCHAR" property="image" />
+    <result column="label" jdbcType="VARCHAR" property="label" />
+    <result column="notes" jdbcType="VARCHAR" property="notes" />
+    <result column="folder" jdbcType="VARCHAR" property="folder" />
+    <result column="endDate" jdbcType="TIMESTAMP" property="enddate" />
+    <result column="comments" jdbcType="VARCHAR" property="comments" />
+    <result column="sections" jdbcType="VARCHAR" property="sections" />
+    <result column="uniqueId" jdbcType="VARCHAR" property="uniqueid" />
+    <result column="beginDate" jdbcType="TIMESTAMP" property="begindate" />
+    <result column="imagePath" jdbcType="VARCHAR" property="imagepath" />
+    <result column="applicable" jdbcType="VARCHAR" property="applicable" />
+    <result column="dateFormat" jdbcType="TIMESTAMP" property="dateformat" />
+    <result column="diagnostic" jdbcType="VARCHAR" property="diagnostic" />
+    <result column="objectType" jdbcType="VARCHAR" property="objecttype" />
+    <result column="catalogCode" jdbcType="VARCHAR" property="catalogcode" />
+    <result column="parentIndex" jdbcType="VARCHAR" property="parentindex" />
+    <result column="childrenIndex" jdbcType="VARCHAR" property="childrenindex" />
+    <result column="parentUniqueId" jdbcType="VARCHAR" property="parentuniqueid" />
+    <result column="additionalLabel" jdbcType="VARCHAR" property="additionallabel" />
+    <result column="largeImagePaths" jdbcType="VARCHAR" property="largeimagepaths" />
+    <result column="showsectionimage" jdbcType="VARCHAR" property="showsectionimage" />
+    <result column="notesReferenceKeys" jdbcType="VARCHAR" property="notesreferencekeys" />
+    <result column="thumbnailImagePath" jdbcType="VARCHAR" property="thumbnailimagepath" />
+    <result column="featureDescriptions" jdbcType="VARCHAR" property="featuredescriptions" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    code, `data`, `type`, image, `label`, notes, folder, endDate, comments, sections, 
+    uniqueId, beginDate, imagePath, applicable, dateFormat, diagnostic, objectType, catalogCode, 
+    parentIndex, childrenIndex, parentUniqueId, additionalLabel, largeImagePaths, showsectionimage, 
+    notesReferenceKeys, thumbnailImagePath, featureDescriptions
+  </sql>
+  <insert id="insert" parameterType="com.domain.EpcSection">
+    <!--@mbg.generated-->
+    insert into epc_section (code, `data`, `type`, 
+      image, `label`, notes, 
+      folder, endDate, comments, 
+      sections, uniqueId, beginDate, 
+      imagePath, applicable, dateFormat, 
+      diagnostic, objectType, catalogCode, 
+      parentIndex, childrenIndex, parentUniqueId, 
+      additionalLabel, largeImagePaths, showsectionimage, 
+      notesReferenceKeys, thumbnailImagePath, 
+      featureDescriptions)
+    values (#{code,jdbcType=VARCHAR}, #{data,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR}, 
+      #{image,jdbcType=VARCHAR}, #{label,jdbcType=VARCHAR}, #{notes,jdbcType=VARCHAR}, 
+      #{folder,jdbcType=VARCHAR}, #{enddate,jdbcType=TIMESTAMP}, #{comments,jdbcType=VARCHAR}, 
+      #{sections,jdbcType=VARCHAR}, #{uniqueid,jdbcType=VARCHAR}, #{begindate,jdbcType=TIMESTAMP}, 
+      #{imagepath,jdbcType=VARCHAR}, #{applicable,jdbcType=VARCHAR}, #{dateformat,jdbcType=TIMESTAMP}, 
+      #{diagnostic,jdbcType=VARCHAR}, #{objecttype,jdbcType=VARCHAR}, #{catalogcode,jdbcType=VARCHAR}, 
+      #{parentindex,jdbcType=VARCHAR}, #{childrenindex,jdbcType=VARCHAR}, #{parentuniqueid,jdbcType=VARCHAR}, 
+      #{additionallabel,jdbcType=VARCHAR}, #{largeimagepaths,jdbcType=VARCHAR}, #{showsectionimage,jdbcType=VARCHAR}, 
+      #{notesreferencekeys,jdbcType=VARCHAR}, #{thumbnailimagepath,jdbcType=VARCHAR}, 
+      #{featuredescriptions,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.domain.EpcSection">
+    <!--@mbg.generated-->
+    insert into epc_section
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="code != null">
+        code,
+      </if>
+      <if test="data != null">
+        `data`,
+      </if>
+      <if test="type != null">
+        `type`,
+      </if>
+      <if test="image != null">
+        image,
+      </if>
+      <if test="label != null">
+        `label`,
+      </if>
+      <if test="notes != null">
+        notes,
+      </if>
+      <if test="folder != null">
+        folder,
+      </if>
+      <if test="enddate != null">
+        endDate,
+      </if>
+      <if test="comments != null">
+        comments,
+      </if>
+      <if test="sections != null">
+        sections,
+      </if>
+      <if test="uniqueid != null">
+        uniqueId,
+      </if>
+      <if test="begindate != null">
+        beginDate,
+      </if>
+      <if test="imagepath != null">
+        imagePath,
+      </if>
+      <if test="applicable != null">
+        applicable,
+      </if>
+      <if test="dateformat != null">
+        dateFormat,
+      </if>
+      <if test="diagnostic != null">
+        diagnostic,
+      </if>
+      <if test="objecttype != null">
+        objectType,
+      </if>
+      <if test="catalogcode != null">
+        catalogCode,
+      </if>
+      <if test="parentindex != null">
+        parentIndex,
+      </if>
+      <if test="childrenindex != null">
+        childrenIndex,
+      </if>
+      <if test="parentuniqueid != null">
+        parentUniqueId,
+      </if>
+      <if test="additionallabel != null">
+        additionalLabel,
+      </if>
+      <if test="largeimagepaths != null">
+        largeImagePaths,
+      </if>
+      <if test="showsectionimage != null">
+        showsectionimage,
+      </if>
+      <if test="notesreferencekeys != null">
+        notesReferenceKeys,
+      </if>
+      <if test="thumbnailimagepath != null">
+        thumbnailImagePath,
+      </if>
+      <if test="featuredescriptions != null">
+        featureDescriptions,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="code != null">
+        #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="data != null">
+        #{data,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="image != null">
+        #{image,jdbcType=VARCHAR},
+      </if>
+      <if test="label != null">
+        #{label,jdbcType=VARCHAR},
+      </if>
+      <if test="notes != null">
+        #{notes,jdbcType=VARCHAR},
+      </if>
+      <if test="folder != null">
+        #{folder,jdbcType=VARCHAR},
+      </if>
+      <if test="enddate != null">
+        #{enddate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="comments != null">
+        #{comments,jdbcType=VARCHAR},
+      </if>
+      <if test="sections != null">
+        #{sections,jdbcType=VARCHAR},
+      </if>
+      <if test="uniqueid != null">
+        #{uniqueid,jdbcType=VARCHAR},
+      </if>
+      <if test="begindate != null">
+        #{begindate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="imagepath != null">
+        #{imagepath,jdbcType=VARCHAR},
+      </if>
+      <if test="applicable != null">
+        #{applicable,jdbcType=VARCHAR},
+      </if>
+      <if test="dateformat != null">
+        #{dateformat,jdbcType=TIMESTAMP},
+      </if>
+      <if test="diagnostic != null">
+        #{diagnostic,jdbcType=VARCHAR},
+      </if>
+      <if test="objecttype != null">
+        #{objecttype,jdbcType=VARCHAR},
+      </if>
+      <if test="catalogcode != null">
+        #{catalogcode,jdbcType=VARCHAR},
+      </if>
+      <if test="parentindex != null">
+        #{parentindex,jdbcType=VARCHAR},
+      </if>
+      <if test="childrenindex != null">
+        #{childrenindex,jdbcType=VARCHAR},
+      </if>
+      <if test="parentuniqueid != null">
+        #{parentuniqueid,jdbcType=VARCHAR},
+      </if>
+      <if test="additionallabel != null">
+        #{additionallabel,jdbcType=VARCHAR},
+      </if>
+      <if test="largeimagepaths != null">
+        #{largeimagepaths,jdbcType=VARCHAR},
+      </if>
+      <if test="showsectionimage != null">
+        #{showsectionimage,jdbcType=VARCHAR},
+      </if>
+      <if test="notesreferencekeys != null">
+        #{notesreferencekeys,jdbcType=VARCHAR},
+      </if>
+      <if test="thumbnailimagepath != null">
+        #{thumbnailimagepath,jdbcType=VARCHAR},
+      </if>
+      <if test="featuredescriptions != null">
+        #{featuredescriptions,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <insert id="batchInsert" parameterType="map">
+    <!--@mbg.generated-->
+    insert into epc_section
+    (code, `data`, `type`, image, `label`, notes, folder, endDate, comments, sections, 
+      uniqueId, beginDate, imagePath, applicable, dateFormat, diagnostic, objectType, 
+      catalogCode, parentIndex, childrenIndex, parentUniqueId, additionalLabel, largeImagePaths, 
+      showsectionimage, notesReferenceKeys, thumbnailImagePath, featureDescriptions)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.code,jdbcType=VARCHAR}, #{item.data,jdbcType=VARCHAR}, #{item.type,jdbcType=VARCHAR}, 
+        #{item.image,jdbcType=VARCHAR}, #{item.label,jdbcType=VARCHAR}, #{item.notes,jdbcType=VARCHAR}, 
+        #{item.folder,jdbcType=VARCHAR}, #{item.enddate,jdbcType=TIMESTAMP}, #{item.comments,jdbcType=VARCHAR}, 
+        #{item.sections,jdbcType=VARCHAR}, #{item.uniqueid,jdbcType=VARCHAR}, #{item.begindate,jdbcType=TIMESTAMP}, 
+        #{item.imagepath,jdbcType=VARCHAR}, #{item.applicable,jdbcType=VARCHAR}, #{item.dateformat,jdbcType=TIMESTAMP}, 
+        #{item.diagnostic,jdbcType=VARCHAR}, #{item.objecttype,jdbcType=VARCHAR}, #{item.catalogcode,jdbcType=VARCHAR}, 
+        #{item.parentindex,jdbcType=VARCHAR}, #{item.childrenindex,jdbcType=VARCHAR}, #{item.parentuniqueid,jdbcType=VARCHAR}, 
+        #{item.additionallabel,jdbcType=VARCHAR}, #{item.largeimagepaths,jdbcType=VARCHAR}, 
+        #{item.showsectionimage,jdbcType=VARCHAR}, #{item.notesreferencekeys,jdbcType=VARCHAR}, 
+        #{item.thumbnailimagepath,jdbcType=VARCHAR}, #{item.featuredescriptions,jdbcType=VARCHAR}
+        )
+    </foreach>
+  </insert>
+
+<!--auto generated by MybatisCodeHelper on 2024-04-13-->
+  <select id="selectParentuniqueidAndCatalogcodeAndApplicable"
+          resultMap="selectParentuniqueidAndCatalogcodeAndApplicableResult">
+    select parentUniqueId, catalogCode, applicable
+    from epc_section
+  </select>
+
+<!--auto generated by MybatisCodeHelper on 2024-04-13-->
+  <select id="selectByCatalogcodeAndApplicableAndParentuniqueid" resultMap="BaseResultMap">
+    select
+    <!--<include refid="Base_Column_List"/>
+    a.uniqueId, a.childrenIndex-->
+    distinct b.catalogCode, b.sectionCode as code
+    from epc_section a inner join vin_section_option2 b on a.catalogCode = b.catalogCode and a.uniqueId = b.sectioncode
+    <where>
+      <if test="catalogcode != null">
+        and a.catalogCode=#{catalogcode,jdbcType=VARCHAR}
+      </if>
+      <if test="applicable != null">
+        and a.applicable=#{applicable,jdbcType=VARCHAR}
+      </if>
+      <if test="parentuniqueid != null">
+        and a.parentUniqueId=#{parentuniqueid,jdbcType=VARCHAR}
+      </if>
+        and JSON_LENGTH(a.childrenIndex) = 0
+<!--        and b.uccCodes = '[ "", "", "", "", "", "", "", "", "", "" ]'-->
+    </where>
+  </select>
+
+<!--auto generated by MybatisCodeHelper on 2024-04-24-->
+  <select id="selectCatalogcode" resultType="java.lang.String">
+    select distinct catalogCode
+    from epc_section
+  </select>
+
+  <!--auto generated by MybatisCodeHelper on 2024-04-13-->
+</mapper>

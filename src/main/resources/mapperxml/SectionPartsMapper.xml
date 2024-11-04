@@ -1,0 +1,1159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.mybatismapper.SectionPartsMapper">
+  <resultMap id="BaseResultMap" type="com.domain.SectionParts">
+    <!--@mbg.generated-->
+    <!--@Table section_parts-->
+    <result column="catalogCode" jdbcType="VARCHAR" property="catalogCode" />
+    <result column="sectionCode" jdbcType="VARCHAR" property="sectionCode" />
+    <result column="applicable" jdbcType="VARCHAR" property="applicable" />
+    <result column="beginDate" jdbcType="VARCHAR" property="beginDate" />
+    <result column="callout" jdbcType="VARCHAR" property="callout" />
+    <result column="data" jdbcType="VARCHAR" property="data" />
+    <result column="endDate" jdbcType="VARCHAR" property="endDate" />
+    <result column="hasImage" jdbcType="VARCHAR" property="hasImage" />
+    <result column="label" jdbcType="VARCHAR" property="label" />
+    <result column="automakerLabel" jdbcType="VARCHAR" property="automakerLabel" />
+    <result column="qty" jdbcType="VARCHAR" property="qty" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="sourceType" jdbcType="VARCHAR" property="sourceType" />
+    <result column="hasNotes" jdbcType="BIT" property="hasNotes" />
+    <result column="userNote" jdbcType="VARCHAR" property="userNote" />
+    <result column="pdfLinks" jdbcType="VARCHAR" property="pdfLinks" />
+    <result column="hasTSB" jdbcType="BIT" property="hasTSB" />
+    <result column="hasAccNote" jdbcType="BIT" property="hasAccNote" />
+    <result column="hasPANT" jdbcType="BIT" property="hasPANT" />
+    <result column="isTranslatePart" jdbcType="BIT" property="isTranslatePart" />
+    <result column="hasHistoricalParts" jdbcType="BIT" property="hasHistoricalParts" />
+    <result column="selectiveFit" jdbcType="BIT" property="selectiveFit" />
+    <result column="partSequenceNo" jdbcType="VARCHAR" property="partSequenceNo" />
+    <result column="brand" jdbcType="VARCHAR" property="brand" />
+    <result column="selectiveFitGroupId" jdbcType="INTEGER" property="selectiveFitGroupId" />
+    <result column="avsCodes" jdbcType="VARCHAR" property="avsCodes" />
+    <result column="modelCodes" jdbcType="VARCHAR" property="modelCodes" />
+    <result column="revisionRef" jdbcType="VARCHAR" property="revisionRef" />
+    <result column="labelLanguage" jdbcType="VARCHAR" property="labelLanguage" />
+    <result column="notes" jdbcType="VARCHAR" property="notes" />
+    <result column="price" jdbcType="VARCHAR" property="price" />
+    <result column="lookups" jdbcType="VARCHAR" property="lookups" />
+    <result column="fitmentInstructions" jdbcType="VARCHAR" property="fitmentInstructions" />
+    <result column="clientIdentificationData" jdbcType="VARCHAR" property="clientIdentificationData" />
+    <result column="sections" jdbcType="VARCHAR" property="sections" />
+    <result column="basePart" jdbcType="VARCHAR" property="basePart" />
+    <result column="notesReferenceKeys" jdbcType="VARCHAR" property="notesReferenceKeys" />
+    <result column="jwfPartMasterNextPartNumber" jdbcType="INTEGER" property="jwfPartMasterNextPartNumber" />
+    <result column="openPartPrice" jdbcType="BIT" property="openPartPrice" />
+    <result column="applicability" jdbcType="VARCHAR" property="applicability" />
+    <result column="optionId" jdbcType="BIGINT" property="optionId" />
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    catalogCode, sectionCode, applicable, beginDate, callout, `data`, endDate, hasImage, 
+    `label`, automakerLabel, qty, remark, `type`, sourceType, hasNotes, userNote, pdfLinks, 
+    hasTSB, hasAccNote, hasPANT, isTranslatePart, hasHistoricalParts, selectiveFit, partSequenceNo, 
+    brand, selectiveFitGroupId, avsCodes, modelCodes, revisionRef, labelLanguage, notes, 
+    price, lookups, fitmentInstructions, clientIdentificationData, sections, basePart, 
+    notesReferenceKeys, jwfPartMasterNextPartNumber, openPartPrice, applicability, optionId
+  </sql>
+  <insert id="insert" parameterType="com.domain.SectionParts">
+    <!--@mbg.generated-->
+    insert into section_parts (catalogCode, sectionCode, applicable, 
+      beginDate, callout, `data`, 
+      endDate, hasImage, `label`, 
+      automakerLabel, qty, remark, 
+      `type`, sourceType, hasNotes, 
+      userNote, pdfLinks, hasTSB, 
+      hasAccNote, hasPANT, isTranslatePart, 
+      hasHistoricalParts, selectiveFit, partSequenceNo, 
+      brand, selectiveFitGroupId, avsCodes, 
+      modelCodes, revisionRef, labelLanguage, 
+      notes, price, lookups, 
+      fitmentInstructions, clientIdentificationData, 
+      sections, basePart, notesReferenceKeys, 
+      jwfPartMasterNextPartNumber, openPartPrice, 
+      applicability, optionId)
+    values (#{catalogCode,jdbcType=VARCHAR}, #{sectionCode,jdbcType=VARCHAR}, #{applicable,jdbcType=VARCHAR}, 
+      #{beginDate,jdbcType=VARCHAR}, #{callout,jdbcType=VARCHAR}, #{data,jdbcType=VARCHAR}, 
+      #{endDate,jdbcType=VARCHAR}, #{hasImage,jdbcType=VARCHAR}, #{label,jdbcType=VARCHAR}, 
+      #{automakerLabel,jdbcType=VARCHAR}, #{qty,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, 
+      #{type,jdbcType=VARCHAR}, #{sourceType,jdbcType=VARCHAR}, #{hasNotes,jdbcType=BIT}, 
+      #{userNote,jdbcType=VARCHAR}, #{pdfLinks,jdbcType=VARCHAR}, #{hasTSB,jdbcType=BIT}, 
+      #{hasAccNote,jdbcType=BIT}, #{hasPANT,jdbcType=BIT}, #{isTranslatePart,jdbcType=BIT}, 
+      #{hasHistoricalParts,jdbcType=BIT}, #{selectiveFit,jdbcType=BIT}, #{partSequenceNo,jdbcType=VARCHAR}, 
+      #{brand,jdbcType=VARCHAR}, #{selectiveFitGroupId,jdbcType=INTEGER}, #{avsCodes,jdbcType=VARCHAR}, 
+      #{modelCodes,jdbcType=VARCHAR}, #{revisionRef,jdbcType=VARCHAR}, #{labelLanguage,jdbcType=VARCHAR}, 
+      #{notes,jdbcType=VARCHAR}, #{price,jdbcType=VARCHAR}, #{lookups,jdbcType=VARCHAR}, 
+      #{fitmentInstructions,jdbcType=VARCHAR}, #{clientIdentificationData,jdbcType=VARCHAR}, 
+      #{sections,jdbcType=VARCHAR}, #{basePart,jdbcType=VARCHAR}, #{notesReferenceKeys,jdbcType=VARCHAR}, 
+      #{jwfPartMasterNextPartNumber,jdbcType=INTEGER}, #{openPartPrice,jdbcType=BIT}, 
+      #{applicability,jdbcType=VARCHAR}, #{optionId,jdbcType=BIGINT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.domain.SectionParts">
+    <!--@mbg.generated-->
+    insert into section_parts
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="catalogCode != null">
+        catalogCode,
+      </if>
+      <if test="sectionCode != null">
+        sectionCode,
+      </if>
+      <if test="applicable != null">
+        applicable,
+      </if>
+      <if test="beginDate != null">
+        beginDate,
+      </if>
+      <if test="callout != null">
+        callout,
+      </if>
+      <if test="data != null">
+        `data`,
+      </if>
+      <if test="endDate != null">
+        endDate,
+      </if>
+      <if test="hasImage != null">
+        hasImage,
+      </if>
+      <if test="label != null">
+        `label`,
+      </if>
+      <if test="automakerLabel != null">
+        automakerLabel,
+      </if>
+      <if test="qty != null">
+        qty,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+      <if test="type != null">
+        `type`,
+      </if>
+      <if test="sourceType != null">
+        sourceType,
+      </if>
+      <if test="hasNotes != null">
+        hasNotes,
+      </if>
+      <if test="userNote != null">
+        userNote,
+      </if>
+      <if test="pdfLinks != null">
+        pdfLinks,
+      </if>
+      <if test="hasTSB != null">
+        hasTSB,
+      </if>
+      <if test="hasAccNote != null">
+        hasAccNote,
+      </if>
+      <if test="hasPANT != null">
+        hasPANT,
+      </if>
+      <if test="isTranslatePart != null">
+        isTranslatePart,
+      </if>
+      <if test="hasHistoricalParts != null">
+        hasHistoricalParts,
+      </if>
+      <if test="selectiveFit != null">
+        selectiveFit,
+      </if>
+      <if test="partSequenceNo != null">
+        partSequenceNo,
+      </if>
+      <if test="brand != null">
+        brand,
+      </if>
+      <if test="selectiveFitGroupId != null">
+        selectiveFitGroupId,
+      </if>
+      <if test="avsCodes != null">
+        avsCodes,
+      </if>
+      <if test="modelCodes != null">
+        modelCodes,
+      </if>
+      <if test="revisionRef != null">
+        revisionRef,
+      </if>
+      <if test="labelLanguage != null">
+        labelLanguage,
+      </if>
+      <if test="notes != null">
+        notes,
+      </if>
+      <if test="price != null">
+        price,
+      </if>
+      <if test="lookups != null">
+        lookups,
+      </if>
+      <if test="fitmentInstructions != null">
+        fitmentInstructions,
+      </if>
+      <if test="clientIdentificationData != null">
+        clientIdentificationData,
+      </if>
+      <if test="sections != null">
+        sections,
+      </if>
+      <if test="basePart != null">
+        basePart,
+      </if>
+      <if test="notesReferenceKeys != null">
+        notesReferenceKeys,
+      </if>
+      <if test="jwfPartMasterNextPartNumber != null">
+        jwfPartMasterNextPartNumber,
+      </if>
+      <if test="openPartPrice != null">
+        openPartPrice,
+      </if>
+      <if test="applicability != null">
+        applicability,
+      </if>
+      <if test="optionId != null">
+        optionId
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="catalogCode != null">
+        #{catalogCode,jdbcType=VARCHAR},
+      </if>
+      <if test="sectionCode != null">
+        #{sectionCode,jdbcType=VARCHAR},
+      </if>
+      <if test="applicable != null">
+        #{applicable,jdbcType=VARCHAR},
+      </if>
+      <if test="beginDate != null">
+        #{beginDate,jdbcType=VARCHAR},
+      </if>
+      <if test="callout != null">
+        #{callout,jdbcType=VARCHAR},
+      </if>
+      <if test="data != null">
+        #{data,jdbcType=VARCHAR},
+      </if>
+      <if test="endDate != null">
+        #{endDate,jdbcType=VARCHAR},
+      </if>
+      <if test="hasImage != null">
+        #{hasImage,jdbcType=VARCHAR},
+      </if>
+      <if test="label != null">
+        #{label,jdbcType=VARCHAR},
+      </if>
+      <if test="automakerLabel != null">
+        #{automakerLabel,jdbcType=VARCHAR},
+      </if>
+      <if test="qty != null">
+        #{qty,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="sourceType != null">
+        #{sourceType,jdbcType=VARCHAR},
+      </if>
+      <if test="hasNotes != null">
+        #{hasNotes,jdbcType=BIT},
+      </if>
+      <if test="userNote != null">
+        #{userNote,jdbcType=VARCHAR},
+      </if>
+      <if test="pdfLinks != null">
+        #{pdfLinks,jdbcType=VARCHAR},
+      </if>
+      <if test="hasTSB != null">
+        #{hasTSB,jdbcType=BIT},
+      </if>
+      <if test="hasAccNote != null">
+        #{hasAccNote,jdbcType=BIT},
+      </if>
+      <if test="hasPANT != null">
+        #{hasPANT,jdbcType=BIT},
+      </if>
+      <if test="isTranslatePart != null">
+        #{isTranslatePart,jdbcType=BIT},
+      </if>
+      <if test="hasHistoricalParts != null">
+        #{hasHistoricalParts,jdbcType=BIT},
+      </if>
+      <if test="selectiveFit != null">
+        #{selectiveFit,jdbcType=BIT},
+      </if>
+      <if test="partSequenceNo != null">
+        #{partSequenceNo,jdbcType=VARCHAR},
+      </if>
+      <if test="brand != null">
+        #{brand,jdbcType=VARCHAR},
+      </if>
+      <if test="selectiveFitGroupId != null">
+        #{selectiveFitGroupId,jdbcType=INTEGER},
+      </if>
+      <if test="avsCodes != null">
+        #{avsCodes,jdbcType=VARCHAR},
+      </if>
+      <if test="modelCodes != null">
+        #{modelCodes,jdbcType=VARCHAR},
+      </if>
+      <if test="revisionRef != null">
+        #{revisionRef,jdbcType=VARCHAR},
+      </if>
+      <if test="labelLanguage != null">
+        #{labelLanguage,jdbcType=VARCHAR},
+      </if>
+      <if test="notes != null">
+        #{notes,jdbcType=VARCHAR},
+      </if>
+      <if test="price != null">
+        #{price,jdbcType=VARCHAR},
+      </if>
+      <if test="lookups != null">
+        #{lookups,jdbcType=VARCHAR},
+      </if>
+      <if test="fitmentInstructions != null">
+        #{fitmentInstructions,jdbcType=VARCHAR},
+      </if>
+      <if test="clientIdentificationData != null">
+        #{clientIdentificationData,jdbcType=VARCHAR},
+      </if>
+      <if test="sections != null">
+        #{sections,jdbcType=VARCHAR},
+      </if>
+      <if test="basePart != null">
+        #{basePart,jdbcType=VARCHAR},
+      </if>
+      <if test="notesReferenceKeys != null">
+        #{notesReferenceKeys,jdbcType=VARCHAR},
+      </if>
+      <if test="jwfPartMasterNextPartNumber != null">
+        #{jwfPartMasterNextPartNumber,jdbcType=INTEGER},
+      </if>
+      <if test="openPartPrice != null">
+        #{openPartPrice,jdbcType=BIT},
+      </if>
+      <if test="applicability != null">
+        #{applicability,jdbcType=VARCHAR},
+      </if>
+      <if test="optionId != null">
+        #{optionId,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <insert id="batchInsert" parameterType="map">
+    <!--@mbg.generated-->
+    insert into section_parts_temp
+    (catalogCode, sectionCode, applicable, beginDate, callout, `data`, endDate, hasImage, 
+      `label`, automakerLabel, qty, remark, `type`, sourceType, hasNotes, userNote, pdfLinks, 
+      hasTSB, hasAccNote, hasPANT, isTranslatePart, hasHistoricalParts, selectiveFit, 
+      partSequenceNo, brand, selectiveFitGroupId, avsCodes, modelCodes, revisionRef, 
+      labelLanguage, notes, price, lookups, fitmentInstructions, clientIdentificationData, 
+      sections, basePart, notesReferenceKeys, jwfPartMasterNextPartNumber, openPartPrice, 
+      applicability, optionId) values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.catalogCode,jdbcType=VARCHAR}, #{item.sectionCode,jdbcType=VARCHAR}, #{item.applicable,jdbcType=VARCHAR}, 
+        #{item.beginDate,jdbcType=VARCHAR}, #{item.callout,jdbcType=VARCHAR}, #{item.data,jdbcType=VARCHAR}, 
+        #{item.endDate,jdbcType=VARCHAR}, #{item.hasImage,jdbcType=VARCHAR}, #{item.label,jdbcType=VARCHAR}, 
+        #{item.automakerLabel,jdbcType=VARCHAR}, #{item.qty,jdbcType=VARCHAR}, #{item.remark,jdbcType=VARCHAR}, 
+        #{item.type,jdbcType=VARCHAR}, #{item.sourceType,jdbcType=VARCHAR}, #{item.hasNotes,jdbcType=BIT}, 
+        #{item.userNote,jdbcType=VARCHAR}, #{item.pdfLinks,jdbcType=VARCHAR}, #{item.hasTSB,jdbcType=BIT}, 
+        #{item.hasAccNote,jdbcType=BIT}, #{item.hasPANT,jdbcType=BIT}, #{item.isTranslatePart,jdbcType=BIT}, 
+        #{item.hasHistoricalParts,jdbcType=BIT}, #{item.selectiveFit,jdbcType=BIT}, #{item.partSequenceNo,jdbcType=VARCHAR}, 
+        #{item.brand,jdbcType=VARCHAR}, #{item.selectiveFitGroupId,jdbcType=INTEGER}, #{item.avsCodes,jdbcType=VARCHAR}, 
+        #{item.modelCodes,jdbcType=VARCHAR}, #{item.revisionRef,jdbcType=VARCHAR}, #{item.labelLanguage,jdbcType=VARCHAR}, 
+        #{item.notes,jdbcType=VARCHAR}, #{item.price,jdbcType=VARCHAR}, #{item.lookups,jdbcType=VARCHAR}, 
+        #{item.fitmentInstructions,jdbcType=VARCHAR}, #{item.clientIdentificationData,jdbcType=VARCHAR}, 
+        #{item.sections,jdbcType=VARCHAR}, #{item.basePart,jdbcType=VARCHAR}, #{item.notesReferenceKeys,jdbcType=VARCHAR}, 
+        #{item.jwfPartMasterNextPartNumber,jdbcType=INTEGER}, #{item.openPartPrice,jdbcType=BIT}, 
+        #{item.applicability,jdbcType=VARCHAR}, #{item.optionId,jdbcType=BIGINT})
+    </foreach>
+  </insert>
+
+  <insert id="batchInsert2" parameterType="map">
+    <!--@mbg.generated-->
+    insert into section_parts_temp2
+    (catalogCode, sectionCode, applicable, beginDate, callout, `data`, endDate, hasImage,
+    `label`, automakerLabel, qty, remark, `type`, sourceType, hasNotes, userNote, pdfLinks,
+    hasTSB, hasAccNote, hasPANT, isTranslatePart, hasHistoricalParts, selectiveFit,
+    partSequenceNo, brand, selectiveFitGroupId, avsCodes, modelCodes, revisionRef,
+    labelLanguage, notes, price, lookups, fitmentInstructions, clientIdentificationData,
+    sections, basePart, notesReferenceKeys, jwfPartMasterNextPartNumber, openPartPrice,
+    applicability, optionId)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.catalogCode,jdbcType=VARCHAR}, #{item.sectionCode,jdbcType=VARCHAR}, #{item.applicable,jdbcType=VARCHAR},
+      #{item.beginDate,jdbcType=VARCHAR}, #{item.callout,jdbcType=VARCHAR}, #{item.data,jdbcType=VARCHAR},
+      #{item.endDate,jdbcType=VARCHAR}, #{item.hasImage,jdbcType=VARCHAR}, #{item.label,jdbcType=VARCHAR},
+      #{item.automakerLabel,jdbcType=VARCHAR}, #{item.qty,jdbcType=VARCHAR}, #{item.remark,jdbcType=VARCHAR},
+      #{item.type,jdbcType=VARCHAR}, #{item.sourceType,jdbcType=VARCHAR}, #{item.hasNotes,jdbcType=BIT},
+      #{item.userNote,jdbcType=VARCHAR}, #{item.pdfLinks,jdbcType=VARCHAR}, #{item.hasTSB,jdbcType=BIT},
+      #{item.hasAccNote,jdbcType=BIT}, #{item.hasPANT,jdbcType=BIT}, #{item.isTranslatePart,jdbcType=BIT},
+      #{item.hasHistoricalParts,jdbcType=BIT}, #{item.selectiveFit,jdbcType=BIT}, #{item.partSequenceNo,jdbcType=VARCHAR},
+      #{item.brand,jdbcType=VARCHAR}, #{item.selectiveFitGroupId,jdbcType=INTEGER}, #{item.avsCodes,jdbcType=VARCHAR},
+      #{item.modelCodes,jdbcType=VARCHAR}, #{item.revisionRef,jdbcType=VARCHAR}, #{item.labelLanguage,jdbcType=VARCHAR},
+      #{item.notes,jdbcType=VARCHAR}, #{item.price,jdbcType=VARCHAR}, #{item.lookups,jdbcType=VARCHAR},
+      #{item.fitmentInstructions,jdbcType=VARCHAR}, #{item.clientIdentificationData,jdbcType=VARCHAR},
+      #{item.sections,jdbcType=VARCHAR}, #{item.basePart,jdbcType=VARCHAR}, #{item.notesReferenceKeys,jdbcType=VARCHAR},
+      #{item.jwfPartMasterNextPartNumber,jdbcType=INTEGER}, #{item.openPartPrice,jdbcType=BIT},
+      #{item.applicability,jdbcType=VARCHAR}, #{item.optionId,jdbcType=BIGINT})
+    </foreach>
+  </insert>
+
+  <insert id="batchInsert3" parameterType="map">
+    <!--@mbg.generated-->
+    insert into section_parts_temp3
+    (catalogCode, sectionCode, applicable, beginDate, callout, `data`, endDate, hasImage,
+    `label`, automakerLabel, qty, remark, `type`, sourceType, hasNotes, userNote, pdfLinks,
+    hasTSB, hasAccNote, hasPANT, isTranslatePart, hasHistoricalParts, selectiveFit,
+    partSequenceNo, brand, selectiveFitGroupId, avsCodes, modelCodes, revisionRef,
+    labelLanguage, notes, price, lookups, fitmentInstructions, clientIdentificationData,
+    sections, basePart, notesReferenceKeys, jwfPartMasterNextPartNumber, openPartPrice,
+    applicability, optionId)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.catalogCode,jdbcType=VARCHAR}, #{item.sectionCode,jdbcType=VARCHAR}, #{item.applicable,jdbcType=VARCHAR},
+      #{item.beginDate,jdbcType=VARCHAR}, #{item.callout,jdbcType=VARCHAR}, #{item.data,jdbcType=VARCHAR},
+      #{item.endDate,jdbcType=VARCHAR}, #{item.hasImage,jdbcType=VARCHAR}, #{item.label,jdbcType=VARCHAR},
+      #{item.automakerLabel,jdbcType=VARCHAR}, #{item.qty,jdbcType=VARCHAR}, #{item.remark,jdbcType=VARCHAR},
+      #{item.type,jdbcType=VARCHAR}, #{item.sourceType,jdbcType=VARCHAR}, #{item.hasNotes,jdbcType=BIT},
+      #{item.userNote,jdbcType=VARCHAR}, #{item.pdfLinks,jdbcType=VARCHAR}, #{item.hasTSB,jdbcType=BIT},
+      #{item.hasAccNote,jdbcType=BIT}, #{item.hasPANT,jdbcType=BIT}, #{item.isTranslatePart,jdbcType=BIT},
+      #{item.hasHistoricalParts,jdbcType=BIT}, #{item.selectiveFit,jdbcType=BIT}, #{item.partSequenceNo,jdbcType=VARCHAR},
+      #{item.brand,jdbcType=VARCHAR}, #{item.selectiveFitGroupId,jdbcType=INTEGER}, #{item.avsCodes,jdbcType=VARCHAR},
+      #{item.modelCodes,jdbcType=VARCHAR}, #{item.revisionRef,jdbcType=VARCHAR}, #{item.labelLanguage,jdbcType=VARCHAR},
+      #{item.notes,jdbcType=VARCHAR}, #{item.price,jdbcType=VARCHAR}, #{item.lookups,jdbcType=VARCHAR},
+      #{item.fitmentInstructions,jdbcType=VARCHAR}, #{item.clientIdentificationData,jdbcType=VARCHAR},
+      #{item.sections,jdbcType=VARCHAR}, #{item.basePart,jdbcType=VARCHAR}, #{item.notesReferenceKeys,jdbcType=VARCHAR},
+      #{item.jwfPartMasterNextPartNumber,jdbcType=INTEGER}, #{item.openPartPrice,jdbcType=BIT},
+      #{item.applicability,jdbcType=VARCHAR}, #{item.optionId,jdbcType=BIGINT})
+    </foreach>
+  </insert>
+
+  <insert id="batchInsert4" parameterType="map">
+    <!--@mbg.generated-->
+    insert into section_parts_temp4
+    (catalogCode, sectionCode, applicable, beginDate, callout, `data`, endDate, hasImage,
+    `label`, automakerLabel, qty, remark, `type`, sourceType, hasNotes, userNote, pdfLinks,
+    hasTSB, hasAccNote, hasPANT, isTranslatePart, hasHistoricalParts, selectiveFit,
+    partSequenceNo, brand, selectiveFitGroupId, avsCodes, modelCodes, revisionRef,
+    labelLanguage, notes, price, lookups, fitmentInstructions, clientIdentificationData,
+    sections, basePart, notesReferenceKeys, jwfPartMasterNextPartNumber, openPartPrice,
+    applicability, optionId)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.catalogCode,jdbcType=VARCHAR}, #{item.sectionCode,jdbcType=VARCHAR}, #{item.applicable,jdbcType=VARCHAR},
+      #{item.beginDate,jdbcType=VARCHAR}, #{item.callout,jdbcType=VARCHAR}, #{item.data,jdbcType=VARCHAR},
+      #{item.endDate,jdbcType=VARCHAR}, #{item.hasImage,jdbcType=VARCHAR}, #{item.label,jdbcType=VARCHAR},
+      #{item.automakerLabel,jdbcType=VARCHAR}, #{item.qty,jdbcType=VARCHAR}, #{item.remark,jdbcType=VARCHAR},
+      #{item.type,jdbcType=VARCHAR}, #{item.sourceType,jdbcType=VARCHAR}, #{item.hasNotes,jdbcType=BIT},
+      #{item.userNote,jdbcType=VARCHAR}, #{item.pdfLinks,jdbcType=VARCHAR}, #{item.hasTSB,jdbcType=BIT},
+      #{item.hasAccNote,jdbcType=BIT}, #{item.hasPANT,jdbcType=BIT}, #{item.isTranslatePart,jdbcType=BIT},
+      #{item.hasHistoricalParts,jdbcType=BIT}, #{item.selectiveFit,jdbcType=BIT}, #{item.partSequenceNo,jdbcType=VARCHAR},
+      #{item.brand,jdbcType=VARCHAR}, #{item.selectiveFitGroupId,jdbcType=INTEGER}, #{item.avsCodes,jdbcType=VARCHAR},
+      #{item.modelCodes,jdbcType=VARCHAR}, #{item.revisionRef,jdbcType=VARCHAR}, #{item.labelLanguage,jdbcType=VARCHAR},
+      #{item.notes,jdbcType=VARCHAR}, #{item.price,jdbcType=VARCHAR}, #{item.lookups,jdbcType=VARCHAR},
+      #{item.fitmentInstructions,jdbcType=VARCHAR}, #{item.clientIdentificationData,jdbcType=VARCHAR},
+      #{item.sections,jdbcType=VARCHAR}, #{item.basePart,jdbcType=VARCHAR}, #{item.notesReferenceKeys,jdbcType=VARCHAR},
+      #{item.jwfPartMasterNextPartNumber,jdbcType=INTEGER}, #{item.openPartPrice,jdbcType=BIT},
+      #{item.applicability,jdbcType=VARCHAR}, #{item.optionId,jdbcType=BIGINT})
+    </foreach>
+  </insert>
+
+  <insert id="batchInsert5" parameterType="map">
+    <!--@mbg.generated-->
+    insert into section_parts_temp5
+    (catalogCode, sectionCode, applicable, beginDate, callout, `data`, endDate, hasImage,
+    `label`, automakerLabel, qty, remark, `type`, sourceType, hasNotes, userNote, pdfLinks,
+    hasTSB, hasAccNote, hasPANT, isTranslatePart, hasHistoricalParts, selectiveFit,
+    partSequenceNo, brand, selectiveFitGroupId, avsCodes, modelCodes, revisionRef,
+    labelLanguage, notes, price, lookups, fitmentInstructions, clientIdentificationData,
+    sections, basePart, notesReferenceKeys, jwfPartMasterNextPartNumber, openPartPrice,
+    applicability, optionId)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.catalogCode,jdbcType=VARCHAR}, #{item.sectionCode,jdbcType=VARCHAR}, #{item.applicable,jdbcType=VARCHAR},
+      #{item.beginDate,jdbcType=VARCHAR}, #{item.callout,jdbcType=VARCHAR}, #{item.data,jdbcType=VARCHAR},
+      #{item.endDate,jdbcType=VARCHAR}, #{item.hasImage,jdbcType=VARCHAR}, #{item.label,jdbcType=VARCHAR},
+      #{item.automakerLabel,jdbcType=VARCHAR}, #{item.qty,jdbcType=VARCHAR}, #{item.remark,jdbcType=VARCHAR},
+      #{item.type,jdbcType=VARCHAR}, #{item.sourceType,jdbcType=VARCHAR}, #{item.hasNotes,jdbcType=BIT},
+      #{item.userNote,jdbcType=VARCHAR}, #{item.pdfLinks,jdbcType=VARCHAR}, #{item.hasTSB,jdbcType=BIT},
+      #{item.hasAccNote,jdbcType=BIT}, #{item.hasPANT,jdbcType=BIT}, #{item.isTranslatePart,jdbcType=BIT},
+      #{item.hasHistoricalParts,jdbcType=BIT}, #{item.selectiveFit,jdbcType=BIT}, #{item.partSequenceNo,jdbcType=VARCHAR},
+      #{item.brand,jdbcType=VARCHAR}, #{item.selectiveFitGroupId,jdbcType=INTEGER}, #{item.avsCodes,jdbcType=VARCHAR},
+      #{item.modelCodes,jdbcType=VARCHAR}, #{item.revisionRef,jdbcType=VARCHAR}, #{item.labelLanguage,jdbcType=VARCHAR},
+      #{item.notes,jdbcType=VARCHAR}, #{item.price,jdbcType=VARCHAR}, #{item.lookups,jdbcType=VARCHAR},
+      #{item.fitmentInstructions,jdbcType=VARCHAR}, #{item.clientIdentificationData,jdbcType=VARCHAR},
+      #{item.sections,jdbcType=VARCHAR}, #{item.basePart,jdbcType=VARCHAR}, #{item.notesReferenceKeys,jdbcType=VARCHAR},
+      #{item.jwfPartMasterNextPartNumber,jdbcType=INTEGER}, #{item.openPartPrice,jdbcType=BIT},
+      #{item.applicability,jdbcType=VARCHAR},#{item.optionId, jdbcType=BIGINT})
+    </foreach>
+  </insert>
+
+  <insert id="batchInsert6" parameterType="map">
+    <!--@mbg.generated-->
+    insert into section_parts_temp6
+    (catalogCode, sectionCode, applicable, beginDate, callout, `data`, endDate, hasImage,
+    `label`, automakerLabel, qty, remark, `type`, sourceType, hasNotes, userNote, pdfLinks,
+    hasTSB, hasAccNote, hasPANT, isTranslatePart, hasHistoricalParts, selectiveFit,
+    partSequenceNo, brand, selectiveFitGroupId, avsCodes, modelCodes, revisionRef,
+    labelLanguage, notes, price, lookups, fitmentInstructions, clientIdentificationData,
+    sections, basePart, notesReferenceKeys, jwfPartMasterNextPartNumber, openPartPrice,
+    applicability,optionId)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.catalogCode,jdbcType=VARCHAR}, #{item.sectionCode,jdbcType=VARCHAR}, #{item.applicable,jdbcType=VARCHAR},
+      #{item.beginDate,jdbcType=VARCHAR}, #{item.callout,jdbcType=VARCHAR}, #{item.data,jdbcType=VARCHAR},
+      #{item.endDate,jdbcType=VARCHAR}, #{item.hasImage,jdbcType=VARCHAR}, #{item.label,jdbcType=VARCHAR},
+      #{item.automakerLabel,jdbcType=VARCHAR}, #{item.qty,jdbcType=VARCHAR}, #{item.remark,jdbcType=VARCHAR},
+      #{item.type,jdbcType=VARCHAR}, #{item.sourceType,jdbcType=VARCHAR}, #{item.hasNotes,jdbcType=BIT},
+      #{item.userNote,jdbcType=VARCHAR}, #{item.pdfLinks,jdbcType=VARCHAR}, #{item.hasTSB,jdbcType=BIT},
+      #{item.hasAccNote,jdbcType=BIT}, #{item.hasPANT,jdbcType=BIT}, #{item.isTranslatePart,jdbcType=BIT},
+      #{item.hasHistoricalParts,jdbcType=BIT}, #{item.selectiveFit,jdbcType=BIT}, #{item.partSequenceNo,jdbcType=VARCHAR},
+      #{item.brand,jdbcType=VARCHAR}, #{item.selectiveFitGroupId,jdbcType=INTEGER}, #{item.avsCodes,jdbcType=VARCHAR},
+      #{item.modelCodes,jdbcType=VARCHAR}, #{item.revisionRef,jdbcType=VARCHAR}, #{item.labelLanguage,jdbcType=VARCHAR},
+      #{item.notes,jdbcType=VARCHAR}, #{item.price,jdbcType=VARCHAR}, #{item.lookups,jdbcType=VARCHAR},
+      #{item.fitmentInstructions,jdbcType=VARCHAR}, #{item.clientIdentificationData,jdbcType=VARCHAR},
+      #{item.sections,jdbcType=VARCHAR}, #{item.basePart,jdbcType=VARCHAR}, #{item.notesReferenceKeys,jdbcType=VARCHAR},
+      #{item.jwfPartMasterNextPartNumber,jdbcType=INTEGER}, #{item.openPartPrice,jdbcType=BIT},
+      #{item.applicability,jdbcType=VARCHAR},#{item.optionId,jdbcType=BIGINT})
+    </foreach>
+  </insert>
+
+  <insert id="batchInsert7" parameterType="map">
+    <!--@mbg.generated-->
+    insert into section_parts_temp7
+    (catalogCode, sectionCode, applicable, beginDate, callout, `data`, endDate, hasImage,
+    `label`, automakerLabel, qty, remark, `type`, sourceType, hasNotes, userNote, pdfLinks,
+    hasTSB, hasAccNote, hasPANT, isTranslatePart, hasHistoricalParts, selectiveFit,
+    partSequenceNo, brand, selectiveFitGroupId, avsCodes, modelCodes, revisionRef,
+    labelLanguage, notes, price, lookups, fitmentInstructions, clientIdentificationData,
+    sections, basePart, notesReferenceKeys, jwfPartMasterNextPartNumber, openPartPrice,
+    applicability,optionId)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.catalogCode,jdbcType=VARCHAR}, #{item.sectionCode,jdbcType=VARCHAR}, #{item.applicable,jdbcType=VARCHAR},
+      #{item.beginDate,jdbcType=VARCHAR}, #{item.callout,jdbcType=VARCHAR}, #{item.data,jdbcType=VARCHAR},
+      #{item.endDate,jdbcType=VARCHAR}, #{item.hasImage,jdbcType=VARCHAR}, #{item.label,jdbcType=VARCHAR},
+      #{item.automakerLabel,jdbcType=VARCHAR}, #{item.qty,jdbcType=VARCHAR}, #{item.remark,jdbcType=VARCHAR},
+      #{item.type,jdbcType=VARCHAR}, #{item.sourceType,jdbcType=VARCHAR}, #{item.hasNotes,jdbcType=BIT},
+      #{item.userNote,jdbcType=VARCHAR}, #{item.pdfLinks,jdbcType=VARCHAR}, #{item.hasTSB,jdbcType=BIT},
+      #{item.hasAccNote,jdbcType=BIT}, #{item.hasPANT,jdbcType=BIT}, #{item.isTranslatePart,jdbcType=BIT},
+      #{item.hasHistoricalParts,jdbcType=BIT}, #{item.selectiveFit,jdbcType=BIT}, #{item.partSequenceNo,jdbcType=VARCHAR},
+      #{item.brand,jdbcType=VARCHAR}, #{item.selectiveFitGroupId,jdbcType=INTEGER}, #{item.avsCodes,jdbcType=VARCHAR},
+      #{item.modelCodes,jdbcType=VARCHAR}, #{item.revisionRef,jdbcType=VARCHAR}, #{item.labelLanguage,jdbcType=VARCHAR},
+      #{item.notes,jdbcType=VARCHAR}, #{item.price,jdbcType=VARCHAR}, #{item.lookups,jdbcType=VARCHAR},
+      #{item.fitmentInstructions,jdbcType=VARCHAR}, #{item.clientIdentificationData,jdbcType=VARCHAR},
+      #{item.sections,jdbcType=VARCHAR}, #{item.basePart,jdbcType=VARCHAR}, #{item.notesReferenceKeys,jdbcType=VARCHAR},
+      #{item.jwfPartMasterNextPartNumber,jdbcType=INTEGER}, #{item.openPartPrice,jdbcType=BIT},
+      #{item.applicability,jdbcType=VARCHAR},#{item.optionId,jdbcType=VARCHAR})
+    </foreach>
+  </insert>
+
+  <insert id="batchInsert8" parameterType="map">
+    <!--@mbg.generated-->
+    insert into section_parts_temp8_copy5
+    (catalogCode, sectionCode, applicable, beginDate, callout, `data`, endDate, hasImage,
+    `label`, automakerLabel, qty, remark, `type`, sourceType, hasNotes, userNote, pdfLinks,
+    hasTSB, hasAccNote, hasPANT, isTranslatePart, hasHistoricalParts, selectiveFit,
+    partSequenceNo, brand, selectiveFitGroupId, avsCodes, modelCodes, revisionRef,
+    labelLanguage, notes, price, lookups, fitmentInstructions, clientIdentificationData,
+    sections, basePart, notesReferenceKeys, jwfPartMasterNextPartNumber, openPartPrice,
+    applicability,optionId)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.catalogCode,jdbcType=VARCHAR}, #{item.sectionCode,jdbcType=VARCHAR}, #{item.applicable,jdbcType=VARCHAR},
+      #{item.beginDate,jdbcType=VARCHAR}, #{item.callout,jdbcType=VARCHAR}, #{item.data,jdbcType=VARCHAR},
+      #{item.endDate,jdbcType=VARCHAR}, #{item.hasImage,jdbcType=VARCHAR}, #{item.label,jdbcType=VARCHAR},
+      #{item.automakerLabel,jdbcType=VARCHAR}, #{item.qty,jdbcType=VARCHAR}, #{item.remark,jdbcType=VARCHAR},
+      #{item.type,jdbcType=VARCHAR}, #{item.sourceType,jdbcType=VARCHAR}, #{item.hasNotes,jdbcType=BIT},
+      #{item.userNote,jdbcType=VARCHAR}, #{item.pdfLinks,jdbcType=VARCHAR}, #{item.hasTSB,jdbcType=BIT},
+      #{item.hasAccNote,jdbcType=BIT}, #{item.hasPANT,jdbcType=BIT}, #{item.isTranslatePart,jdbcType=BIT},
+      #{item.hasHistoricalParts,jdbcType=BIT}, #{item.selectiveFit,jdbcType=BIT}, #{item.partSequenceNo,jdbcType=VARCHAR},
+      #{item.brand,jdbcType=VARCHAR}, #{item.selectiveFitGroupId,jdbcType=INTEGER}, #{item.avsCodes,jdbcType=VARCHAR},
+      #{item.modelCodes,jdbcType=VARCHAR}, #{item.revisionRef,jdbcType=VARCHAR}, #{item.labelLanguage,jdbcType=VARCHAR},
+      #{item.notes,jdbcType=VARCHAR}, #{item.price,jdbcType=VARCHAR}, #{item.lookups,jdbcType=VARCHAR},
+      #{item.fitmentInstructions,jdbcType=VARCHAR}, #{item.clientIdentificationData,jdbcType=VARCHAR},
+      #{item.sections,jdbcType=VARCHAR}, #{item.basePart,jdbcType=VARCHAR}, #{item.notesReferenceKeys,jdbcType=VARCHAR},
+      #{item.jwfPartMasterNextPartNumber,jdbcType=INTEGER}, #{item.openPartPrice,jdbcType=BIT},
+      #{item.applicability,jdbcType=VARCHAR},#{item.optionId,jdbcType=BIGINT})
+    </foreach>
+  </insert>
+
+  <insert id="batchInsert9" parameterType="map">
+    <!--@mbg.generated-->
+    insert into section_parts_temp9
+    (catalogCode, sectionCode, applicable, beginDate, callout, `data`, endDate, hasImage,
+    `label`, automakerLabel, qty, remark, `type`, sourceType, hasNotes, userNote, pdfLinks,
+    hasTSB, hasAccNote, hasPANT, isTranslatePart, hasHistoricalParts, selectiveFit,
+    partSequenceNo, brand, selectiveFitGroupId, avsCodes, modelCodes, revisionRef,
+    labelLanguage, notes, price, lookups, fitmentInstructions, clientIdentificationData,
+    sections, basePart, notesReferenceKeys, jwfPartMasterNextPartNumber, openPartPrice,
+    applicability,optionId)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.catalogCode,jdbcType=VARCHAR}, #{item.sectionCode,jdbcType=VARCHAR}, #{item.applicable,jdbcType=VARCHAR},
+      #{item.beginDate,jdbcType=VARCHAR}, #{item.callout,jdbcType=VARCHAR}, #{item.data,jdbcType=VARCHAR},
+      #{item.endDate,jdbcType=VARCHAR}, #{item.hasImage,jdbcType=VARCHAR}, #{item.label,jdbcType=VARCHAR},
+      #{item.automakerLabel,jdbcType=VARCHAR}, #{item.qty,jdbcType=VARCHAR}, #{item.remark,jdbcType=VARCHAR},
+      #{item.type,jdbcType=VARCHAR}, #{item.sourceType,jdbcType=VARCHAR}, #{item.hasNotes,jdbcType=BIT},
+      #{item.userNote,jdbcType=VARCHAR}, #{item.pdfLinks,jdbcType=VARCHAR}, #{item.hasTSB,jdbcType=BIT},
+      #{item.hasAccNote,jdbcType=BIT}, #{item.hasPANT,jdbcType=BIT}, #{item.isTranslatePart,jdbcType=BIT},
+      #{item.hasHistoricalParts,jdbcType=BIT}, #{item.selectiveFit,jdbcType=BIT}, #{item.partSequenceNo,jdbcType=VARCHAR},
+      #{item.brand,jdbcType=VARCHAR}, #{item.selectiveFitGroupId,jdbcType=INTEGER}, #{item.avsCodes,jdbcType=VARCHAR},
+      #{item.modelCodes,jdbcType=VARCHAR}, #{item.revisionRef,jdbcType=VARCHAR}, #{item.labelLanguage,jdbcType=VARCHAR},
+      #{item.notes,jdbcType=VARCHAR}, #{item.price,jdbcType=VARCHAR}, #{item.lookups,jdbcType=VARCHAR},
+      #{item.fitmentInstructions,jdbcType=VARCHAR}, #{item.clientIdentificationData,jdbcType=VARCHAR},
+      #{item.sections,jdbcType=VARCHAR}, #{item.basePart,jdbcType=VARCHAR}, #{item.notesReferenceKeys,jdbcType=VARCHAR},
+      #{item.jwfPartMasterNextPartNumber,jdbcType=INTEGER}, #{item.openPartPrice,jdbcType=BIT},
+      #{item.applicability,jdbcType=VARCHAR},#{item.optionId,jdbcType=BIGINT})
+    </foreach>
+  </insert>
+
+  <insert id="batchInsert10" parameterType="map">
+    <!--@mbg.generated-->
+    insert into section_parts_temp10
+    (catalogCode, sectionCode, applicable, beginDate, callout, `data`, endDate, hasImage,
+    `label`, automakerLabel, qty, remark, `type`, sourceType, hasNotes, userNote, pdfLinks,
+    hasTSB, hasAccNote, hasPANT, isTranslatePart, hasHistoricalParts, selectiveFit,
+    partSequenceNo, brand, selectiveFitGroupId, avsCodes, modelCodes, revisionRef,
+    labelLanguage, notes, price, lookups, fitmentInstructions, clientIdentificationData,
+    sections, basePart, notesReferenceKeys, jwfPartMasterNextPartNumber, openPartPrice,
+    applicability,optionId)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.catalogCode,jdbcType=VARCHAR}, #{item.sectionCode,jdbcType=VARCHAR}, #{item.applicable,jdbcType=VARCHAR},
+      #{item.beginDate,jdbcType=VARCHAR}, #{item.callout,jdbcType=VARCHAR}, #{item.data,jdbcType=VARCHAR},
+      #{item.endDate,jdbcType=VARCHAR}, #{item.hasImage,jdbcType=VARCHAR}, #{item.label,jdbcType=VARCHAR},
+      #{item.automakerLabel,jdbcType=VARCHAR}, #{item.qty,jdbcType=VARCHAR}, #{item.remark,jdbcType=VARCHAR},
+      #{item.type,jdbcType=VARCHAR}, #{item.sourceType,jdbcType=VARCHAR}, #{item.hasNotes,jdbcType=BIT},
+      #{item.userNote,jdbcType=VARCHAR}, #{item.pdfLinks,jdbcType=VARCHAR}, #{item.hasTSB,jdbcType=BIT},
+      #{item.hasAccNote,jdbcType=BIT}, #{item.hasPANT,jdbcType=BIT}, #{item.isTranslatePart,jdbcType=BIT},
+      #{item.hasHistoricalParts,jdbcType=BIT}, #{item.selectiveFit,jdbcType=BIT}, #{item.partSequenceNo,jdbcType=VARCHAR},
+      #{item.brand,jdbcType=VARCHAR}, #{item.selectiveFitGroupId,jdbcType=INTEGER}, #{item.avsCodes,jdbcType=VARCHAR},
+      #{item.modelCodes,jdbcType=VARCHAR}, #{item.revisionRef,jdbcType=VARCHAR}, #{item.labelLanguage,jdbcType=VARCHAR},
+      #{item.notes,jdbcType=VARCHAR}, #{item.price,jdbcType=VARCHAR}, #{item.lookups,jdbcType=VARCHAR},
+      #{item.fitmentInstructions,jdbcType=VARCHAR}, #{item.clientIdentificationData,jdbcType=VARCHAR},
+      #{item.sections,jdbcType=VARCHAR}, #{item.basePart,jdbcType=VARCHAR}, #{item.notesReferenceKeys,jdbcType=VARCHAR},
+      #{item.jwfPartMasterNextPartNumber,jdbcType=INTEGER}, #{item.openPartPrice,jdbcType=BIT},
+      #{item.applicability,jdbcType=VARCHAR},#{item.optionId,jdbcType=BIGINT})
+    </foreach>
+  </insert>
+
+  <insert id="batchInsert11" parameterType="map">
+    <!--@mbg.generated-->
+    insert into section_parts_temp11
+    (catalogCode, sectionCode, applicable, beginDate, callout, `data`, endDate, hasImage,
+    `label`, automakerLabel, qty, remark, `type`, sourceType, hasNotes, userNote, pdfLinks,
+    hasTSB, hasAccNote, hasPANT, isTranslatePart, hasHistoricalParts, selectiveFit,
+    partSequenceNo, brand, selectiveFitGroupId, avsCodes, modelCodes, revisionRef,
+    labelLanguage, notes, price, lookups, fitmentInstructions, clientIdentificationData,
+    sections, basePart, notesReferenceKeys, jwfPartMasterNextPartNumber, openPartPrice,
+    applicability,optionId)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.catalogCode,jdbcType=VARCHAR}, #{item.sectionCode,jdbcType=VARCHAR}, #{item.applicable,jdbcType=VARCHAR},
+      #{item.beginDate,jdbcType=VARCHAR}, #{item.callout,jdbcType=VARCHAR}, #{item.data,jdbcType=VARCHAR},
+      #{item.endDate,jdbcType=VARCHAR}, #{item.hasImage,jdbcType=VARCHAR}, #{item.label,jdbcType=VARCHAR},
+      #{item.automakerLabel,jdbcType=VARCHAR}, #{item.qty,jdbcType=VARCHAR}, #{item.remark,jdbcType=VARCHAR},
+      #{item.type,jdbcType=VARCHAR}, #{item.sourceType,jdbcType=VARCHAR}, #{item.hasNotes,jdbcType=BIT},
+      #{item.userNote,jdbcType=VARCHAR}, #{item.pdfLinks,jdbcType=VARCHAR}, #{item.hasTSB,jdbcType=BIT},
+      #{item.hasAccNote,jdbcType=BIT}, #{item.hasPANT,jdbcType=BIT}, #{item.isTranslatePart,jdbcType=BIT},
+      #{item.hasHistoricalParts,jdbcType=BIT}, #{item.selectiveFit,jdbcType=BIT}, #{item.partSequenceNo,jdbcType=VARCHAR},
+      #{item.brand,jdbcType=VARCHAR}, #{item.selectiveFitGroupId,jdbcType=INTEGER}, #{item.avsCodes,jdbcType=VARCHAR},
+      #{item.modelCodes,jdbcType=VARCHAR}, #{item.revisionRef,jdbcType=VARCHAR}, #{item.labelLanguage,jdbcType=VARCHAR},
+      #{item.notes,jdbcType=VARCHAR}, #{item.price,jdbcType=VARCHAR}, #{item.lookups,jdbcType=VARCHAR},
+      #{item.fitmentInstructions,jdbcType=VARCHAR}, #{item.clientIdentificationData,jdbcType=VARCHAR},
+      #{item.sections,jdbcType=VARCHAR}, #{item.basePart,jdbcType=VARCHAR}, #{item.notesReferenceKeys,jdbcType=VARCHAR},
+      #{item.jwfPartMasterNextPartNumber,jdbcType=INTEGER}, #{item.openPartPrice,jdbcType=BIT},
+      #{item.applicability,jdbcType=VARCHAR},#{item.optionId,jdbcType=BIGINT})
+    </foreach>
+    --执行程序吗，如果方便的话可以执行一下测试by-model的接口，先只测AHMAPCMA06就好
+  </insert>
+
+  <insert id="batchInsert12" parameterType="map">
+    <!--@mbg.generated-->
+    insert into section_parts_temp12
+    (catalogCode, sectionCode, applicable, beginDate, callout, `data`, endDate, hasImage,
+    `label`, automakerLabel, qty, remark, `type`, sourceType, hasNotes, userNote, pdfLinks,
+    hasTSB, hasAccNote, hasPANT, isTranslatePart, hasHistoricalParts, selectiveFit,
+    partSequenceNo, brand, selectiveFitGroupId, avsCodes, modelCodes, revisionRef,
+    labelLanguage, notes, price, lookups, fitmentInstructions, clientIdentificationData,
+    sections, basePart, notesReferenceKeys, jwfPartMasterNextPartNumber, openPartPrice,
+    applicability,optionId)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.catalogCode,jdbcType=VARCHAR}, #{item.sectionCode,jdbcType=VARCHAR}, #{item.applicable,jdbcType=VARCHAR},
+      #{item.beginDate,jdbcType=VARCHAR}, #{item.callout,jdbcType=VARCHAR}, #{item.data,jdbcType=VARCHAR},
+      #{item.endDate,jdbcType=VARCHAR}, #{item.hasImage,jdbcType=VARCHAR}, #{item.label,jdbcType=VARCHAR},
+      #{item.automakerLabel,jdbcType=VARCHAR}, #{item.qty,jdbcType=VARCHAR}, #{item.remark,jdbcType=VARCHAR},
+      #{item.type,jdbcType=VARCHAR}, #{item.sourceType,jdbcType=VARCHAR}, #{item.hasNotes,jdbcType=BIT},
+      #{item.userNote,jdbcType=VARCHAR}, #{item.pdfLinks,jdbcType=VARCHAR}, #{item.hasTSB,jdbcType=BIT},
+      #{item.hasAccNote,jdbcType=BIT}, #{item.hasPANT,jdbcType=BIT}, #{item.isTranslatePart,jdbcType=BIT},
+      #{item.hasHistoricalParts,jdbcType=BIT}, #{item.selectiveFit,jdbcType=BIT}, #{item.partSequenceNo,jdbcType=VARCHAR},
+      #{item.brand,jdbcType=VARCHAR}, #{item.selectiveFitGroupId,jdbcType=INTEGER}, #{item.avsCodes,jdbcType=VARCHAR},
+      #{item.modelCodes,jdbcType=VARCHAR}, #{item.revisionRef,jdbcType=VARCHAR}, #{item.labelLanguage,jdbcType=VARCHAR},
+      #{item.notes,jdbcType=VARCHAR}, #{item.price,jdbcType=VARCHAR}, #{item.lookups,jdbcType=VARCHAR},
+      #{item.fitmentInstructions,jdbcType=VARCHAR}, #{item.clientIdentificationData,jdbcType=VARCHAR},
+      #{item.sections,jdbcType=VARCHAR}, #{item.basePart,jdbcType=VARCHAR}, #{item.notesReferenceKeys,jdbcType=VARCHAR},
+      #{item.jwfPartMasterNextPartNumber,jdbcType=INTEGER}, #{item.openPartPrice,jdbcType=BIT},
+      #{item.applicability,jdbcType=VARCHAR},#{item.optionId,jdbcType=BIGINT})
+    </foreach>
+  </insert>
+
+  <insert id="batchInsert13" parameterType="map">
+    <!--@mbg.generated-->
+    insert into section_parts_temp13
+    (catalogCode, sectionCode, applicable, beginDate, callout, `data`, endDate, hasImage,
+    `label`, automakerLabel, qty, remark, `type`, sourceType, hasNotes, userNote, pdfLinks,
+    hasTSB, hasAccNote, hasPANT, isTranslatePart, hasHistoricalParts, selectiveFit,
+    partSequenceNo, brand, selectiveFitGroupId, avsCodes, modelCodes, revisionRef,
+    labelLanguage, notes, price, lookups, fitmentInstructions, clientIdentificationData,
+    sections, basePart, notesReferenceKeys, jwfPartMasterNextPartNumber, openPartPrice,
+    applicability)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.catalogCode,jdbcType=VARCHAR}, #{item.sectionCode,jdbcType=VARCHAR}, #{item.applicable,jdbcType=VARCHAR},
+      #{item.beginDate,jdbcType=VARCHAR}, #{item.callout,jdbcType=VARCHAR}, #{item.data,jdbcType=VARCHAR},
+      #{item.endDate,jdbcType=VARCHAR}, #{item.hasImage,jdbcType=VARCHAR}, #{item.label,jdbcType=VARCHAR},
+      #{item.automakerLabel,jdbcType=VARCHAR}, #{item.qty,jdbcType=VARCHAR}, #{item.remark,jdbcType=VARCHAR},
+      #{item.type,jdbcType=VARCHAR}, #{item.sourceType,jdbcType=VARCHAR}, #{item.hasNotes,jdbcType=BIT},
+      #{item.userNote,jdbcType=VARCHAR}, #{item.pdfLinks,jdbcType=VARCHAR}, #{item.hasTSB,jdbcType=BIT},
+      #{item.hasAccNote,jdbcType=BIT}, #{item.hasPANT,jdbcType=BIT}, #{item.isTranslatePart,jdbcType=BIT},
+      #{item.hasHistoricalParts,jdbcType=BIT}, #{item.selectiveFit,jdbcType=BIT}, #{item.partSequenceNo,jdbcType=VARCHAR},
+      #{item.brand,jdbcType=VARCHAR}, #{item.selectiveFitGroupId,jdbcType=INTEGER}, #{item.avsCodes,jdbcType=VARCHAR},
+      #{item.modelCodes,jdbcType=VARCHAR}, #{item.revisionRef,jdbcType=VARCHAR}, #{item.labelLanguage,jdbcType=VARCHAR},
+      #{item.notes,jdbcType=VARCHAR}, #{item.price,jdbcType=VARCHAR}, #{item.lookups,jdbcType=VARCHAR},
+      #{item.fitmentInstructions,jdbcType=VARCHAR}, #{item.clientIdentificationData,jdbcType=VARCHAR},
+      #{item.sections,jdbcType=VARCHAR}, #{item.basePart,jdbcType=VARCHAR}, #{item.notesReferenceKeys,jdbcType=VARCHAR},
+      #{item.jwfPartMasterNextPartNumber,jdbcType=INTEGER}, #{item.openPartPrice,jdbcType=BIT},
+      #{item.applicability,jdbcType=VARCHAR})
+    </foreach>
+  </insert>
+
+  <insert id="batchInsert14" parameterType="map">
+    <!--@mbg.generated-->
+    insert into section_parts_temp14
+    (catalogCode, sectionCode, applicable, beginDate, callout, `data`, endDate, hasImage,
+    `label`, automakerLabel, qty, remark, `type`, sourceType, hasNotes, userNote, pdfLinks,
+    hasTSB, hasAccNote, hasPANT, isTranslatePart, hasHistoricalParts, selectiveFit,
+    partSequenceNo, brand, selectiveFitGroupId, avsCodes, modelCodes, revisionRef,
+    labelLanguage, notes, price, lookups, fitmentInstructions, clientIdentificationData,
+    sections, basePart, notesReferenceKeys, jwfPartMasterNextPartNumber, openPartPrice,
+    applicability,optionId)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.catalogCode,jdbcType=VARCHAR}, #{item.sectionCode,jdbcType=VARCHAR}, #{item.applicable,jdbcType=VARCHAR},
+      #{item.beginDate,jdbcType=VARCHAR}, #{item.callout,jdbcType=VARCHAR}, #{item.data,jdbcType=VARCHAR},
+      #{item.endDate,jdbcType=VARCHAR}, #{item.hasImage,jdbcType=VARCHAR}, #{item.label,jdbcType=VARCHAR},
+      #{item.automakerLabel,jdbcType=VARCHAR}, #{item.qty,jdbcType=VARCHAR}, #{item.remark,jdbcType=VARCHAR},
+      #{item.type,jdbcType=VARCHAR}, #{item.sourceType,jdbcType=VARCHAR}, #{item.hasNotes,jdbcType=BIT},
+      #{item.userNote,jdbcType=VARCHAR}, #{item.pdfLinks,jdbcType=VARCHAR}, #{item.hasTSB,jdbcType=BIT},
+      #{item.hasAccNote,jdbcType=BIT}, #{item.hasPANT,jdbcType=BIT}, #{item.isTranslatePart,jdbcType=BIT},
+      #{item.hasHistoricalParts,jdbcType=BIT}, #{item.selectiveFit,jdbcType=BIT}, #{item.partSequenceNo,jdbcType=VARCHAR},
+      #{item.brand,jdbcType=VARCHAR}, #{item.selectiveFitGroupId,jdbcType=INTEGER}, #{item.avsCodes,jdbcType=VARCHAR},
+      #{item.modelCodes,jdbcType=VARCHAR}, #{item.revisionRef,jdbcType=VARCHAR}, #{item.labelLanguage,jdbcType=VARCHAR},
+      #{item.notes,jdbcType=VARCHAR}, #{item.price,jdbcType=VARCHAR}, #{item.lookups,jdbcType=VARCHAR},
+      #{item.fitmentInstructions,jdbcType=VARCHAR}, #{item.clientIdentificationData,jdbcType=VARCHAR},
+      #{item.sections,jdbcType=VARCHAR}, #{item.basePart,jdbcType=VARCHAR}, #{item.notesReferenceKeys,jdbcType=VARCHAR},
+      #{item.jwfPartMasterNextPartNumber,jdbcType=INTEGER}, #{item.openPartPrice,jdbcType=BIT},
+      #{item.applicability,jdbcType=VARCHAR},#{item.optionId,jdbcType=BIGINT})
+    </foreach>
+  </insert>
+
+  <insert id="batchInsert15" parameterType="map">
+    <!--@mbg.generated-->
+    insert into section_parts_temp15
+    (catalogCode, sectionCode, applicable, beginDate, callout, `data`, endDate, hasImage,
+    `label`, automakerLabel, qty, remark, `type`, sourceType, hasNotes, userNote, pdfLinks,
+    hasTSB, hasAccNote, hasPANT, isTranslatePart, hasHistoricalParts, selectiveFit,
+    partSequenceNo, brand, selectiveFitGroupId, avsCodes, modelCodes, revisionRef,
+    labelLanguage, notes, price, lookups, fitmentInstructions, clientIdentificationData,
+    sections, basePart, notesReferenceKeys, jwfPartMasterNextPartNumber, openPartPrice,
+    applicability,optionId)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.catalogCode,jdbcType=VARCHAR}, #{item.sectionCode,jdbcType=VARCHAR}, #{item.applicable,jdbcType=VARCHAR},
+      #{item.beginDate,jdbcType=VARCHAR}, #{item.callout,jdbcType=VARCHAR}, #{item.data,jdbcType=VARCHAR},
+      #{item.endDate,jdbcType=VARCHAR}, #{item.hasImage,jdbcType=VARCHAR}, #{item.label,jdbcType=VARCHAR},
+      #{item.automakerLabel,jdbcType=VARCHAR}, #{item.qty,jdbcType=VARCHAR}, #{item.remark,jdbcType=VARCHAR},
+      #{item.type,jdbcType=VARCHAR}, #{item.sourceType,jdbcType=VARCHAR}, #{item.hasNotes,jdbcType=BIT},
+      #{item.userNote,jdbcType=VARCHAR}, #{item.pdfLinks,jdbcType=VARCHAR}, #{item.hasTSB,jdbcType=BIT},
+      #{item.hasAccNote,jdbcType=BIT}, #{item.hasPANT,jdbcType=BIT}, #{item.isTranslatePart,jdbcType=BIT},
+      #{item.hasHistoricalParts,jdbcType=BIT}, #{item.selectiveFit,jdbcType=BIT}, #{item.partSequenceNo,jdbcType=VARCHAR},
+      #{item.brand,jdbcType=VARCHAR}, #{item.selectiveFitGroupId,jdbcType=INTEGER}, #{item.avsCodes,jdbcType=VARCHAR},
+      #{item.modelCodes,jdbcType=VARCHAR}, #{item.revisionRef,jdbcType=VARCHAR}, #{item.labelLanguage,jdbcType=VARCHAR},
+      #{item.notes,jdbcType=VARCHAR}, #{item.price,jdbcType=VARCHAR}, #{item.lookups,jdbcType=VARCHAR},
+      #{item.fitmentInstructions,jdbcType=VARCHAR}, #{item.clientIdentificationData,jdbcType=VARCHAR},
+      #{item.sections,jdbcType=VARCHAR}, #{item.basePart,jdbcType=VARCHAR}, #{item.notesReferenceKeys,jdbcType=VARCHAR},
+      #{item.jwfPartMasterNextPartNumber,jdbcType=INTEGER}, #{item.openPartPrice,jdbcType=BIT},
+      #{item.applicability,jdbcType=VARCHAR},#{item.optionId,jdbcType=BIGINT})
+    </foreach>
+  </insert>
+
+  <insert id="batchInsertUltimate" parameterType="map">
+    <!--@mbg.generated-->
+    insert into model_section_parts_ultimate_real
+    (catalogCode, sectionCode, applicable, beginDate, callout, `data`, endDate, hasImage,
+    `label`, automakerLabel, qty, remark, `type`, sourceType, hasNotes, userNote, pdfLinks,
+    hasTSB, hasAccNote, hasPANT, isTranslatePart, hasHistoricalParts, selectiveFit,
+    partSequenceNo, brand, selectiveFitGroupId, avsCodes, modelCodes, revisionRef,
+    labelLanguage, notes, price, lookups, fitmentInstructions, clientIdentificationData,
+    sections, basePart, notesReferenceKeys, jwfPartMasterNextPartNumber, openPartPrice,
+    applicability,partNumber,optionIds)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.catalogCode,jdbcType=VARCHAR}, #{item.sectionCode,jdbcType=VARCHAR}, #{item.applicable,jdbcType=VARCHAR},
+      #{item.beginDate,jdbcType=VARCHAR}, #{item.callout,jdbcType=VARCHAR}, #{item.data,jdbcType=VARCHAR},
+      #{item.endDate,jdbcType=VARCHAR}, #{item.hasImage,jdbcType=VARCHAR}, #{item.label,jdbcType=VARCHAR},
+      #{item.automakerLabel,jdbcType=VARCHAR}, #{item.qty,jdbcType=VARCHAR}, #{item.remark,jdbcType=VARCHAR},
+      #{item.type,jdbcType=VARCHAR}, #{item.sourceType,jdbcType=VARCHAR}, #{item.hasNotes,jdbcType=BIT},
+      #{item.userNote,jdbcType=VARCHAR}, #{item.pdfLinks,jdbcType=VARCHAR}, #{item.hasTSB,jdbcType=BIT},
+      #{item.hasAccNote,jdbcType=BIT}, #{item.hasPANT,jdbcType=BIT}, #{item.isTranslatePart,jdbcType=BIT},
+      #{item.hasHistoricalParts,jdbcType=BIT}, #{item.selectiveFit,jdbcType=BIT}, #{item.partSequenceNo,jdbcType=VARCHAR},
+      #{item.brand,jdbcType=VARCHAR}, #{item.selectiveFitGroupId,jdbcType=INTEGER}, #{item.avsCodes,jdbcType=VARCHAR},
+      #{item.modelCodes,jdbcType=VARCHAR}, #{item.revisionRef,jdbcType=VARCHAR}, #{item.labelLanguage,jdbcType=VARCHAR},
+      #{item.notes,jdbcType=VARCHAR}, #{item.price,jdbcType=VARCHAR}, #{item.lookups,jdbcType=VARCHAR},
+      #{item.fitmentInstructions,jdbcType=VARCHAR}, #{item.clientIdentificationData,jdbcType=VARCHAR},
+      #{item.sections,jdbcType=VARCHAR}, #{item.basePart,jdbcType=VARCHAR}, #{item.notesReferenceKeys,jdbcType=VARCHAR},
+      #{item.jwfPartMasterNextPartNumber,jdbcType=INTEGER}, #{item.openPartPrice,jdbcType=BIT},
+      #{item.applicability,jdbcType=VARCHAR},#{item.partNumber,jdbcType=VARCHAR},#{item.optionIds,jdbcType=VARCHAR})
+    </foreach>
+  </insert>
+
+  <resultMap id = "hpdEpcPartMap" type="com.domain.HpdEpcPartDto">
+    <id column="id" property="id"></id>
+    <result column="catalogCode" property="catalogCode"></result>
+    <result column="sectionCode" property="sectionCode"></result>
+    <result column="applicable" property="applicable"></result>
+    <result column="beginDate" property="beginDate"></result>
+    <result column="callout" property="callout"></result>
+    <result column="data" property="data"></result>
+    <result column="endDate" property="endDate"></result>
+    <result column="hasImage" property="hasImage"></result>
+    <result column="label" property="label"></result>
+    <result column="automakerLabel" property="automakerLabel"></result>
+    <result column="qty" property="qty"></result>
+    <result column="remark" property="remark"></result>
+    <result column="type" property="type"></result>
+    <result column="sourceType" property="sourceType"></result>
+    <result column="hasNotes" property="hasNotes"></result>
+    <result column="userNote2" property="userNote2"></result>
+    <result column="pdfLinks" property="pdfLinks"></result>
+    <result column="hasTSB" property="hasTSB"></result>
+    <result column="hasAccNote" property="hasAccNote"></result>
+    <result column="hasPANT" property="hasPANT"></result>
+    <result column="isTranslatePart" property="isTranslatePart"></result>
+    <result column="hasHistoricalParts" property="hasHistoricalParts"></result>
+    <result column="selectiveFit" property="selectiveFit"></result>
+    <result column="partSequenceNo" property="partSequenceNo"></result>
+    <result column="brand" property="brand"></result>
+    <result column="selectiveFitGroupId" property="selectiveFitGroupId"></result>
+    <result column="avsCodes" property="avsCodes"></result>
+    <result column="modelCodes" property="modelCodes"></result>
+    <result column="revisionRef" property="revisionRef"></result>
+    <result column="labelLanguage" property="labelLanguage"></result>
+    <result column="notes2" property="notes2"></result>
+    <result column="price2" property="price2"></result>
+    <result column="lookups2" property="lookups2"></result>
+    <result column="fitmentInstructions" property="fitmentInstructions"></result>
+    <result column="clientIdentificationData2" property="clientIdentificationData2"></result>
+    <result column="sections2" property="sections2"></result>
+    <result column="basePart" property="basePart"></result>
+    <result column="notesReferenceKeys2" property="notesReferenceKeys2"></result>
+    <result column="jwfPartMasterNextPartNumber" property="jwfPartMasterNextPartNumber"></result>
+    <result column="openPartPrice" property="openPartPrice"></result>
+    <result column="applicability" property="applicability"></result>
+    <collection property="modelPartOptionList" ofType="com.domain.ModelPartOption">
+<!--      <result column="partNumber" property="partNumber"></result>-->
+      <result column="type01" property="type01"></result>
+      <result column="type02" property="type02"></result>
+      <result column="type03" property="type03"></result>
+      <result column="type04" property="type04"></result>
+      <result column="type05" property="type05"></result>
+      <result column="typeWT" property="typeWT"></result>
+      <result column="typeDT" property="typeDT"></result>
+<!--      <result column="catalogCode" property="catalogCode"></result>-->
+<!--      <result column="sectionCode" property="sectionCode"></result>-->
+    </collection>
+  </resultMap>
+
+  <resultMap id = "hpdEpcPartByVinMap" type="com.domain.HpdEpcPartByVinDto">
+    <id column="id" property="id"></id>
+    <result column="catalogCode" property="catalogCode"></result>
+    <result column="partNumber" property="partNumber"></result>
+    <result column="sectionCode" property="sectionCode"></result>
+    <result column="applicable" property="applicable"></result>
+    <result column="beginDate" property="beginDate"></result>
+    <result column="callout" property="callout"></result>
+    <result column="data" property="data"></result>
+    <result column="endDate" property="endDate"></result>
+    <result column="hasImage" property="hasImage"></result>
+    <result column="label" property="label"></result>
+    <result column="automakerLabel" property="automakerLabel"></result>
+    <result column="qty" property="qty"></result>
+    <result column="remark" property="remark"></result>
+    <result column="type" property="type"></result>
+    <result column="sourceType" property="sourceType"></result>
+    <result column="hasNotes" property="hasNotes"></result>
+    <result column="userNote2" property="userNote2"></result>
+    <result column="pdfLinks" property="pdfLinks"></result>
+    <result column="hasTSB" property="hasTSB"></result>
+    <result column="hasAccNote" property="hasAccNote"></result>
+    <result column="hasPANT" property="hasPANT"></result>
+    <result column="isTranslatePart" property="isTranslatePart"></result>
+    <result column="hasHistoricalParts" property="hasHistoricalParts"></result>
+    <result column="selectiveFit" property="selectiveFit"></result>
+    <result column="partSequenceNo" property="partSequenceNo"></result>
+    <result column="brand" property="brand"></result>
+    <result column="selectiveFitGroupId" property="selectiveFitGroupId"></result>
+    <result column="avsCodes" property="avsCodes"></result>
+    <result column="modelCodes" property="modelCodes"></result>
+    <result column="revisionRef" property="revisionRef"></result>
+    <result column="labelLanguage" property="labelLanguage"></result>
+    <result column="notes2" property="notes2"></result>
+    <result column="price2" property="price2"></result>
+    <result column="lookups2" property="lookups2"></result>
+    <result column="fitmentInstructions" property="fitmentInstructions"></result>
+    <result column="clientIdentificationData2" property="clientIdentificationData2"></result>
+    <result column="sections2" property="sections2"></result>
+    <result column="basePart" property="basePart"></result>
+    <result column="notesReferenceKeys2" property="notesReferenceKeys2"></result>
+    <result column="jwfPartMasterNextPartNumber" property="jwfPartMasterNextPartNumber"></result>
+    <result column="openPartPrice" property="openPartPrice"></result>
+    <result column="applicability" property="applicability"></result>
+    <result column="optionIds2" property="optionIds2"></result>
+<!--    <collection property="modelPartOptionList" ofType="com.domain.ModelPartOption">-->
+<!--      &lt;!&ndash;      <result column="partNumber" property="partNumber"></result>&ndash;&gt;-->
+<!--      <result column="type01" property="type01"></result>-->
+<!--      <result column="type02" property="type02"></result>-->
+<!--      <result column="type03" property="type03"></result>-->
+<!--      <result column="type04" property="type04"></result>-->
+<!--      <result column="type05" property="type05"></result>-->
+<!--      <result column="typeWT" property="typeWT"></result>-->
+<!--      <result column="typeDT" property="typeDT"></result>-->
+<!--      <result column="modelCode" property="modelCode"></result>-->
+<!--      <result column="buildDate" property="buildDate"></result>-->
+<!--      <result column="area" property="area"></result>-->
+<!--      <result column="fullSpecificationCode" property="fullSpecificationCode"></result>-->
+<!--      <result column="plant" property="plant"></result>-->
+<!--      <result column="transmissionMipCode" property="transmissionMipCode"></result>-->
+<!--      <result column="engineMipCode" property="engineMipCode"></result>-->
+<!--      <result column="exteriorKeyColorCode" property="exteriorKeyColorCode"></result>-->
+<!--      <result column="vinTag" property="vinTag"></result>-->
+<!--      <result column="optionCodes" property="optionCodes"></result>-->
+<!--      <result column="interiorKeyColorCode" property="interiorKeyColorCode"></result>-->
+<!--      &lt;!&ndash;      <result column="catalogCode" property="catalogCode"></result>&ndash;&gt;-->
+<!--      &lt;!&ndash;      <result column="sectionCode" property="sectionCode"></result>&ndash;&gt;-->
+<!--    </collection>-->
+<!--        <collection property="optionIds" ofType="com.domain.OptionId">-->
+<!--          <result column="optionIds" property = "optionId" javaType="java.lang.Long"></result>-->
+<!--        </collection>-->
+<!--    ofType="java.lang.Long-->
+
+<!--            <result column="partNumber" property="partNumber"></result>-->
+<!--      <result column="optionId" property="optionId"></result>-->
+<!--      <result column="type01" property="type01"></result>-->
+<!--      <result column="type02" property="type02"></result>-->
+<!--      <result column="type03" property="type03"></result>-->
+<!--      <result column="type04" property="type04"></result>-->
+<!--      <result column="type05" property="type05"></result>-->
+<!--      <result column="type06" property="type06"></result>-->
+<!--      <result column="typeWT" property="typeWT"></result>-->
+<!--      <result column="typeDT" property="typeDT"></result>-->
+<!--      <result column="partNumber" property="partNumber"></result>-->
+<!--      <result column="modelCode" property="modelCode"></result>-->
+<!--      <result column="buildDate" property="buildDate"></result>-->
+<!--      <result column="area" property="area"></result>-->
+<!--      <result column="fullSpecificationCode" property="fullSpecificationCode"></result>-->
+<!--      <result column="plant" property="plant"></result>-->
+<!--      <result column="transmissionMipCode" property="transmissionMipCode"></result>-->
+<!--      <result column="engineMipCode" property="engineMipCode"></result>-->
+<!--      <result column="exteriorKeyColorCode" property="exteriorKeyColorCode"></result>-->
+<!--      <result column="vinTag" property="vinTag"></result>-->
+<!--      <result column="optionCodes" property="optionCodes"></result>-->
+<!--      <result column="interiorKeyColorCode" property="interiorKeyColorCode"></result>-->
+      <!--      <result column="catalogCode" property="catalogCode"></result>-->
+      <!--      <result column="sectionCode" property="sectionCode"></result>-->
+<!--    </result>-->
+  </resultMap>
+
+<!--auto generated by MybatisCodeHelper on 2024-05-29-->
+  <select id="select" resultMap="hpdEpcPartMap">
+    select
+    a.id,a.catalogCode,a.sectionCode,a.applicable,a.beginDate,a.callout,a.data,a.endDate,
+      a.hasImage,a.label,a.automakerLabel,a.qty,a.remark,a.type,a.sourceType,a.hasNotes,
+      a.userNote as userNote2,a.pdfLinks,a.hasTSB,a.hasAccNote,a.hasPANT,a.isTranslatePart,a.hasHistoricalParts,
+      a.selectiveFit,a.partSequenceNo,a.brand,a.selectiveFitGroupId,a.avsCodes,a.modelCodes,
+      a.revisionRef,a.labelLanguage,a.notes as notes2,a.price as price2,a.lookups as lookups2, a.fitmentInstructions,a.clientIdentificationData as clientIdentificationData2,
+      a.sections as sections2,a.basePart,a.notesReferenceKeys as notesReferenceKeys2,a.jwfPartMasterNextPartNumber,a.openPartPrice,
+    a.applicability,b.type01,b.type02,b.type03,b.type04,b.type05,b.typeWT,b.typeDT
+    from section_parts a
+    inner join model_part_option b
+    on a.catalogcode = b.catalogcode and a.partnumber = b.partnumber
+    <where>
+      <if test = "catalog != null and catalog != ''">
+        and catalog = #{catalog,jdbcType=VARCHAR}
+      </if>
+      <if test = "start != null">
+        and id <![CDATA[>]]> #{start,jdbcType=INTEGER}
+      </if>
+    </where>
+    order by id asc
+    limit 5000
+  </select>
+
+<!--  ,b.type01,b.type02,b.type03,b.type04,b.type05,b.type06,b.typeWT,b.typeDT,b.optionCodes,b.exteriorKeyColorCode,-->
+<!--  b.interiorKeyColorCode,b.modelCode,-->
+<!--  b.buildDate,b.area,b.fullSpecificationCode,b.plant,b.vinTag,b.engineMipCode,b.transmissionMipCode-->
+
+  <!--    inner join vin_part_option_newest_copy2 b-->
+  <!--    on a.catalogcode = b.catalog and a.partnumber = b.partnumber-->
+  <select id="selectPartByVin" resultMap="hpdEpcPartByVinMap">
+    select
+    id,partnumber,catalogCode,sectionCode,applicable,beginDate,callout,data,endDate,
+    hasImage,label,automakerLabel,qty,remark,type,sourceType,hasNotes,
+    userNote as userNote2,pdfLinks,hasTSB,hasAccNote,hasPANT,isTranslatePart,hasHistoricalParts,
+    selectiveFit,partSequenceNo,brand,selectiveFitGroupId,avsCodes,modelCodes,
+    revisionRef,labelLanguage,notes as notes2,price as price2,lookups as lookups2, fitmentInstructions,clientIdentificationData as clientIdentificationData2,
+    sections as sections2,basePart,notesReferenceKeys as notesReferenceKeys2,jwfPartMasterNextPartNumber,openPartPrice,
+    applicability,optionIds as optionIds2
+    from section_parts_temp8_copy5_aggregate_option_id
+    <where>
+      <if test = "catalog != null and catalog != ''">
+        and catalog = #{catalog,jdbcType=VARCHAR}
+      </if>
+      <if test = "start != null">
+        and id <![CDATA[>]]> #{start,jdbcType=INTEGER}
+      </if>
+    </where>
+    order by id asc
+    limit 1000
+  </select>
+
+  <select id="selectPartByVinNew" resultMap="hpdEpcPartByVinMap">
+    select
+    id,partnumber,catalogCode,sectionCode,applicable,beginDate,callout,data,endDate,
+    hasImage,label,automakerLabel,qty,remark,type,sourceType,hasNotes,
+    userNote as userNote2,pdfLinks,hasTSB,hasAccNote,hasPANT,isTranslatePart,hasHistoricalParts,
+    selectiveFit,partSequenceNo,brand,selectiveFitGroupId,avsCodes,modelCodes,
+    revisionRef,labelLanguage,notes as notes2,price as price2,lookups as lookups2, fitmentInstructions,clientIdentificationData as clientIdentificationData2,
+    sections as sections2,basePart,notesReferenceKeys as notesReferenceKeys2,jwfPartMasterNextPartNumber,openPartPrice,
+    applicability,optionIds as optionIds2
+    from section_parts_by_vin2_aggregate_option_id
+    <where>
+      <if test = "catalog != null and catalog != ''">
+        and catalog = #{catalog,jdbcType=VARCHAR}
+      </if>
+      <if test = "start != null">
+        and id <![CDATA[>]]> #{start,jdbcType=INTEGER}
+      </if>
+    </where>
+    order by id asc
+    limit 1000
+  </select>
+
+  <select id="selectPartByModel" resultType="org.example.model.SectionPartDto">
+    select
+    id,partnumber,catalogCode,sectionCode,applicable,beginDate,callout,data,endDate,
+    hasImage,label,automakerLabel,qty,remark,type,sourceType,hasNotes,
+    userNote as userNote2,pdfLinks,hasTSB,hasAccNote,hasPANT,isTranslatePart,hasHistoricalParts,
+    selectiveFit,partSequenceNo,brand,selectiveFitGroupId,avsCodes,modelCodes,
+    revisionRef,labelLanguage,notes as notes2,price as price2,lookups as lookups2, fitmentInstructions,clientIdentificationData as clientIdentificationData2,
+    sections as sections2,basePart,notesReferenceKeys as notesReferenceKeys2,jwfPartMasterNextPartNumber,openPartPrice,
+    applicability,optionId
+    from model_section_parts_temp21
+    <where>
+      <if test = "catalog != null and catalog != ''">
+        and catalogCode = #{catalog,jdbcType=VARCHAR}
+      </if>
+      <if test = "start != null">
+        and id <![CDATA[>]]> #{start,jdbcType=INTEGER}
+      </if>
+    </where>
+    order by id asc
+    limit 30000
+  </select>
+
+  <select id="selectPartByModelNew" resultType="org.example.model.SectionPartDto">
+    select
+    id,partnumber,catalogCode,sectionCode,applicable,beginDate,callout,data,endDate,
+    hasImage,label,automakerLabel,qty,remark,type,sourceType,hasNotes,
+    userNote as userNote2,pdfLinks,hasTSB,hasAccNote,hasPANT,isTranslatePart,hasHistoricalParts,
+    selectiveFit,partSequenceNo,brand,selectiveFitGroupId,avsCodes,modelCodes,
+    revisionRef,labelLanguage,notes as notes2,price as price2,lookups as lookups2, fitmentInstructions,clientIdentificationData as clientIdentificationData2,
+    sections as sections2,basePart,notesReferenceKeys as notesReferenceKeys2,jwfPartMasterNextPartNumber,openPartPrice,
+    applicability,optionId
+    from section_parts_by_model_new_temp78
+    <where>
+      <if test = "catalog != null and catalog != ''">
+        and catalogCode = #{catalog,jdbcType=VARCHAR}
+      </if>
+      <if test = "start != null">
+        and id <![CDATA[>]]> #{start,jdbcType=INTEGER}
+      </if>
+    </where>
+    order by id asc
+    limit 30000
+  </select>
+
+  <select id="selectPartByModelNew2" resultType="org.example.model.SectionPartDto">
+    select
+    id,partnumber,catalogCode,sectionCode,applicable,beginDate,callout,data,endDate,
+    hasImage,label,automakerLabel,qty,remark,type,sourceType,hasNotes,
+    userNote as userNote2,pdfLinks,hasTSB,hasAccNote,hasPANT,isTranslatePart,hasHistoricalParts,
+    selectiveFit,partSequenceNo,brand,selectiveFitGroupId,avsCodes,modelCodes,
+    revisionRef,labelLanguage,notes as notes2,price as price2,lookups as lookups2, fitmentInstructions,clientIdentificationData as clientIdentificationData2,
+    sections as sections2,basePart,notesReferenceKeys as notesReferenceKeys2,jwfPartMasterNextPartNumber,openPartPrice,
+    applicability,optionId
+    from section_parts_by_model_new_temp37
+    <where>
+      <if test = "catalog != null and catalog != ''">
+        and catalogCode = #{catalog,jdbcType=VARCHAR}
+      </if>
+      <if test = "start != null">
+        and id <![CDATA[>]]> #{start,jdbcType=INTEGER}
+      </if>
+    </where>
+    order by id asc
+    limit 30000
+  </select>
+
+  <select id="selectPartById" resultType="org.example.model.SectionPartDto">
+    select
+    id,partnumber,catalogCode,sectionCode,applicable,beginDate,callout,data,endDate,
+    hasImage,label,automakerLabel,qty,remark,type,sourceType,hasNotes,
+    userNote as userNote2,pdfLinks,hasTSB,hasAccNote,hasPANT,isTranslatePart,hasHistoricalParts,
+    selectiveFit,partSequenceNo,brand,selectiveFitGroupId,avsCodes,modelCodes,
+    revisionRef,labelLanguage,notes as notes2,price as price2,lookups as lookups2, fitmentInstructions,clientIdentificationData as clientIdentificationData2,
+    sections as sections2,basePart,notesReferenceKeys as notesReferenceKeys2,jwfPartMasterNextPartNumber,openPartPrice,
+    applicability
+<!--    ,optionId-->
+    from model_section_parts_ultimate
+    <where>
+      <if test = "id != null and id != ''">
+        and id = #{id,jdbcType=INTEGER}
+      </if>
+    </where>
+  </select>
+
+
+
+  <!--    GROUP BY-->
+  <!--    catalogCode,sectionCode,applicable,beginDate,callout,data,-->
+  <!--    endDate,hasImage,label,automakerLabel,qty,remark,type,sourceType,-->
+  <!--    hasNotes,userNote,pdfLinks,hasTSB,hasAccNote,hasPANT,isTranslatePart,-->
+  <!--    hasHistoricalParts,selectiveFit,partSequenceNo,brand,selectiveFitGroupId,-->
+  <!--    avsCodes,modelCodes,revisionRef,labelLanguage,notes,price,lookups,-->
+  <!--    fitmentInstructions,clientIdentificationData,sections,basePart,notesReferenceKeys,-->
+  <!--    jwfPartMasterNextPartNumber,openPartPrice,applicability,partNumber-->
+</mapper>

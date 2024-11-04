@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.mybatismapper.VinSectionOptionMapper">
+  <resultMap id="BaseResultMap" type="com.domain.VinSectionOption">
+    <!--@mbg.generated-->
+    <!--@Table vin_section_option-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="catalogCode" jdbcType="VARCHAR" property="catalogcode" />
+    <result column="sectionWithOption" jdbcType="VARCHAR" property="sectionwithoption" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, catalogCode, sectionWithOption
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from vin_section_option
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--@mbg.generated-->
+    delete from vin_section_option
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.domain.VinSectionOption">
+    <!--@mbg.generated-->
+    insert into vin_section_option (id, catalogCode, sectionWithOption
+      )
+    values (#{id,jdbcType=INTEGER}, #{catalogcode,jdbcType=VARCHAR}, #{sectionwithoption,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.domain.VinSectionOption">
+    <!--@mbg.generated-->
+    insert into vin_section_option
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="catalogcode != null">
+        catalogCode,
+      </if>
+      <if test="sectionwithoption != null">
+        sectionWithOption,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="catalogcode != null">
+        #{catalogcode,jdbcType=VARCHAR},
+      </if>
+      <if test="sectionwithoption != null">
+        #{sectionwithoption,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.domain.VinSectionOption">
+    <!--@mbg.generated-->
+    update vin_section_option
+    <set>
+      <if test="catalogcode != null">
+        catalogCode = #{catalogcode,jdbcType=VARCHAR},
+      </if>
+      <if test="sectionwithoption != null">
+        sectionWithOption = #{sectionwithoption,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.domain.VinSectionOption">
+    <!--@mbg.generated-->
+    update vin_section_option
+    set catalogCode = #{catalogcode,jdbcType=VARCHAR},
+      sectionWithOption = #{sectionwithoption,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <insert id="batchInsert" parameterType="map">
+    <!--@mbg.generated-->
+    insert into vin_section_option
+    (id, catalogCode, sectionWithOption)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.id,jdbcType=INTEGER}, #{item.catalogcode,jdbcType=VARCHAR}, #{item.sectionwithoption,jdbcType=VARCHAR}
+        )
+    </foreach>
+  </insert>
+</mapper>
