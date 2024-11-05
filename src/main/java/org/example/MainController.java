@@ -41,6 +41,7 @@ import org.example.mybatismapper.*;
 //import org.example.model.FlatSection;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.StopWatch;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -5711,8 +5712,479 @@ public class MainController {
     }
 
     //todo 生成一下新的by-vin参数
-    @PostMapping("/store-get-section-parts-param2")
-    public void storeGetSectionPartsParam2() throws IOException {
+//    @PostMapping("/store-get-section-parts-param2")
+//    public void storeGetSectionPartsParam2() throws IOException {
+//
+////        JsonParser parser = JsonParser.parseString();
+////        获取catalog fromyear toyear
+////        QueryWrapper catalogQuery = Wrappers.query();
+////        catalogQuery.select("catalogCode, catalogDataTypeDescription, fromYear, toYear");
+////        ObjectMapper mapper = new ObjectMapper();
+//        List<Catalog> catalogList = catalogMapper.selectAll();
+//        Map<String, String> catalogTypeMap = catalogList.stream().collect(Collectors.toMap(Catalog::getCatalogCode, Catalog::getCatalogDataTypeDescription));
+//
+////        FileWriter fileWriter = new FileWriter("E:\\hpdepc\\VinSectionPartParamsNewest", true);
+////        catalog开始年份
+////        改为lambda后不再npe
+////        Map<String, String> beginYearMap = catalogList.stream().collect(Collectors.toMap(Catalog::getCatalogcode, e -> e.getFromyear()));
+////
+////        catalog结束年份
+////        Map<String, String> endYearMap = catalogList.stream().collect(Collectors.toMap(Catalog::getCatalogcode, e -> e.getToyear()));
+////
+////        QueryWrapper sectionQuery = Wrappers.query();
+//
+////        选一条报错
+////        直接从文件读取
+////        sectionQuery.select("catalog_code, client_catalog_information");
+////        sectionQuery.ge("id", 1);
+////        sectionQuery.le("id", 41);
+////        sectionQuery.eq("catalog_code", "AHMAP0B21");
+////        sectionQuery.ne("catalog_code", "HREPAIRKIT");
+//
+////        List<FlatSections> sectionList = flatSectionsMapper.selectAllByCatalogCode(null);
+////        System.out.println("hhhh" + sectionList.size());
+////        参数
+////        List<String> parameters = new ArrayList<>();
+//
+//        //oom
+////        List<VinData> vinDatas = vinDataMapper.selectByCatalog("AHMAPHU21");
+////        System.out.println(9967);
+//
+//        //catalog
+//        //category
+//        //subcategory
+//        //part
+//        //option
+//
+////        KHMAPTMF12
+//
+////        AHMAPGFA10
+////        KHMAPB116
+////        KHMAPB816
+//
+////        KHMAPBB21
+////        KHMAPD318
+//        List<String> catalogCodes = new ArrayList<>();
+////        -- KHMAPCM06
+////                -- KHMAPD216
+////                -- KHMAPD219
+////                -- KHMAPD315
+////                -- KHMAPD318
+////                -- KHMAPDK08
+////                -- KHMAPDK12
+////                -- KHMAPDV19
+////                -- KHMAPE616
+////                -- KHMAPE617
+////                -- KHMAPEN07
+////                -- KHMAPEP06
+////                -- KHMAPF216
+////                -- KHMAPF219
+////                -- KHMAPG317
+////                -- KHMAPG716
+////                -- KHMAPG719
+////                -- KHMAPG917
+////                -- KHMAPG921
+////                -- KHMAPGFE11
+////                -- KHMAPGI21
+////                -- KHMAPGK07
+////                -- KHMAPGS11
+////                -- KHMAPGS15
+////                -- KHMAPGW21
+////                -- KHMAPHD06
+////                -- KHMAPHG11
+////                -- KHMAPHG15
+////                -- KHMAPI321
+////                -- KHMAPJ317
+////                -- KHMAPJ918
+////                -- KHMAPJ921
+////                -- KHMAPJD07
+////                -- KHMAPJI21
+////                -- KHMAPJJ20
+////                -- KHMAPJM04
+////                -- KHMAPJP22
+////                -- KHMAPJR20
+////                -- KHMAPM518
+////                -- KHMAPMC06
+////                -- KHMAPOSE19
+////                -- KHMAPOSE21
+////        catalogCodes.add("KHMAPCM06");
+////        catalogCodes.add("KHMAPD216");
+////        catalogCodes.add("KHMAPD219");
+////        catalogCodes.add("KHMAPD315");
+////        catalogCodes.add("KHMAPD318");
+////        catalogCodes.add("KHMAPDK08");
+////        catalogCodes.add("KHMAPDK12");
+////        catalogCodes.add("KHMAPDV19");
+////        catalogCodes.add("KHMAPE616");
+////        catalogCodes.add("KHMAPE617");
+////        catalogCodes.add("KHMAPEN07");
+////        catalogCodes.add("KHMAPEP06");
+////        catalogCodes.add("KHMAPF216");
+////        catalogCodes.add("KHMAPF219");
+////        catalogCodes.add("KHMAPG317");
+////        catalogCodes.add("KHMAPG716");
+////        catalogCodes.add("KHMAPG719");
+////        catalogCodes.add("KHMAPG917");
+////        catalogCodes.add("KHMAPG921");
+////        catalogCodes.add("KHMAPGFE11");
+////        catalogCodes.add("KHMAPGI21");
+////        catalogCodes.add("KHMAPGK07");
+////        catalogCodes.add("KHMAPGS11");
+////        catalogCodes.add("KHMAPGS15");
+////        catalogCodes.add("KHMAPGW21");
+////        catalogCodes.add("KHMAPHD06");
+////        catalogCodes.add("KHMAPHG11");
+////        catalogCodes.add("KHMAPHG15");
+////        catalogCodes.add("KHMAPI321");
+////        catalogCodes.add("KHMAPJ317");
+////        catalogCodes.add("KHMAPJ918");
+////        catalogCodes.add("KHMAPJ921");
+////        catalogCodes.add("KHMAPJD07");
+////        catalogCodes.add("KHMAPJI21");
+////        catalogCodes.add("KHMAPJJ20");
+////        catalogCodes.add("KHMAPJM04");
+////        catalogCodes.add("KHMAPJP22");
+////        catalogCodes.add("KHMAPJR20");
+////        catalogCodes.add("KHMAPM518");
+////        catalogCodes.add("KHMAPMC06");
+////        catalogCodes.add("KHMAPOSE19");
+////        catalogCodes.add("KHMAPOSE21");
+//
+////        catalogCodes.add("KHMAPS819");
+////        catalogCodes.add("KHMAPS822");
+////        catalogCodes.add("KHMAPSB11");
+////        catalogCodes.add("KHMAPSB15");
+////        catalogCodes.add("KHMAPSD11");
+////        catalogCodes.add("KHMAPSD14");
+////        catalogCodes.add("KHMAPSN19");
+////        catalogCodes.add("KHMAPTG05");
+////        catalogCodes.add("KHMAPTM10");
+////        catalogCodes.add("KHMAPTM14");
+////        catalogCodes.add("KHMAPTMF12");
+////        catalogCodes.add("MHMAPJ018");
+//
+////        catalogCodes.add("NAS2209500");
+////        catalogCodes.add("NAS2709700");
+////        catalogCodes.add("NAS2909600");
+////        catalogCodes.add("NAS3409500");
+////        catalogCodes.add("NAS3809900");
+////        http://localhost:8088/store-get-section-parts-param2
+////        catalogCodes.add("KHMAPHG11");
+////        catalogCodes.add("KHMAPSC20");
+////        HMA2B0PA06
+////        KHMAPBHL08
+//
+////        KHMAPGFE11
+//
+////        catalogCodes.add("KHMAPGFE11");
+//
+////        catalogCodes.add("HMA2B0PA06");
+//
+//        //发送方的带宽和接收方的带宽
+//        //形成一份模型，
+//
+//        //找一份数据量比较少的跑跑
+//
+//        for (String catalogCode : catalogCodes) {
+//            List<EpcSection> epcSections = epcSectionMapper.selectByCatalogcodeAndApplicableAndParentuniqueid(catalogCode, "1", null);
+//
+//            StringBuilder sb;
+//
+////        StringBuilder optionStringBuilder;
+//            //包含sectionCode、catalogCode和interpretation
+//            //获取section
+//
+//            int start = 0;
+//            //所以就第一个partandimages是好的
+//            StopWatch stopWatch = new StopWatch();
+//            List<VinDataDto> vinDataDtos = vinDataMapper.selectByCatalog2(catalogCode, start);
+//
+//            System.out.println("search:" + stopWatch.getTotalTimeSeconds());
+////        System.out.println("ssss" + vinDataDtos.size());
+////        System.out.println(catalogCode);
+////        System.out.println("sssss" + vinDataDtos.get(0).getFullSpecificationCode());
+//            //todo 从这里开始注释
+//            initializeNewFile(catalogCode);
+//            //todo 取消注释
+//                //怎样使查出来的结果少，搞一个阈值，但要防止把正确结果过滤掉
+//            //循环请求
+//            while (vinDataDtos.size() > 0) {
+////            initializeNewFile();
+//                for (VinDataDto vinDataDto : vinDataDtos) {
+//                    //正确的多，错误的少，过于模糊，自圆其说
+//                    //错误
+//
+////            System.out.println("vvv" + vinDataDto.toString());
+////            System.out.println("vvvv" + vinData.getVin());
+////            获取catalogcode
+////            FlatSections item = sectionList.get(0);
+////            rawElementList.clear();
+////            elementList.clear();
+////            chooseMap.clear();
+//
+////            System.out.println("pppp" + catalogCode);
+//
+////            ArrayNode clientCatalogInformation = item.getClientCatalogInformation().withArray("clientCatalogAttributes");
+////            String clientCatalogInformation = item.getClientCatalogInformation();
+////            String clientSectionList = item.getClientSectionList();
+////            JsonNode sectionNode = mapper.readTree(clientSectionList);
+////            JsonNode sections = sectionNode.get("sections");
+////            JsonNode childrenIndex = sections.get("childrenIndex");
+////            Set<String> sectionSet = new HashSet<>();
+////            if (sections.isArray()) {
+////                for (JsonNode objnode : sections) {
+////                    if (objnode.get("childrenIndex").size() == 0) {
+////                        sectionSet.add(objnode.get("code").toString().substring(1, objnode.get("code").toString().length() - 1));
+////                    }
+////                }
+////            }
+//
+////            JsonNode sectionNode = item.get("clientSectionList").get("sections");
+////            sectionNode.get("childrenIndex");
+//
+////        JsonNode clientCatalogInformationNode = mapper.readTree(clientCatalogInformation);
+////        ArrayNode arrNode = clientCatalogInformationNode.withArray("clientCatalogAttributes");
+////        List<OptionBrief> optionAll = new ArrayList<>();
+//
+////        if (arrNode.isArray()) {
+////                Map<String, List<String>> optionMap = new HashMap<>();
+////
+////            Iterator<JsonNode> it = arrNode.iterator();
+//
+////            遍历所有可选项类型
+////            先获取第一个
+////            while (it.hasNext()) {
+////                JsonNode optionInfoNode = it.next();
+////                String optionType = optionInfoNode.get("data").toString();
+////                JsonNode options = optionInfoNode.get("options");
+////                Iterator<JsonNode> optionIt = options.iterator();
+////                List<OptionBrief> optionData = new ArrayList<>();
+////                //遍历当前类型的option，存到数组里
+////                while (optionIt.hasNext()) {
+////                    JsonNode optionNode = optionIt.next();
+////                    String data = optionNode.get("data").toString();
+////                    OptionBrief optionBrief = new OptionBrief(optionType.replace("\"", ""), data.replace("\"", ""));
+////                    optionData.add(optionBrief);
+////                }
+//////                    optionMap.put(optionType, optionData);
+////
+////                optionAll.addAll(optionData);
+//
+//
+////                List<Element> element = new ArrayList<>();
+//
+////            attribute顺序有么有影响
+////
+////            从集合A中取一个元素(可不取)，集合B中取一个元素，...，返回所有结果
+////            每次循环之前都要将当前集合复制一份
+////            组合，所有子集，回溯，第一个取/不取，比组合更复杂，因为取的话还涉及到取哪个。
+////            所有子集有个index
+////
+////            拆出去
+////            可以
+////                    if (optionMap.get(catalogCode) != null) {
+////                        List<Element> curElement = new ArrayList<>(element);
+//////                        curElement.add();
+////                        for (Map.Entry<String, List<String>> entry : optionMap.entrySet()) {
+//////                            System.out.println("key = " + entry.getKey() + ", value = " + entry.getValue());
+////                            List<String> values = entry.getValue();
+////                            for () {
+////
+////                            }
+////                        }
+////                    }
+////
+////
+////                    public void recurse(List<Element> result, int index1, int index2, List<List<OptionBrief>> option)
+////                    recurse(new ArrayList<>(), 0, 0, optionBriefListAll);
+////                }
+////            }
+//                    List<Modelfileinfo> modelFileInfos = modelfileinfoMapper.selectAllByCataloguecode(catalogCode);
+//
+//                    String modelCode = generateModelCode(catalogCode, vinDataDto.getFullSpecificationCode());
+//                    for (Modelfileinfo modelfileinfo : modelFileInfos) {
+//                        if (vinDataDto.getFullSpecificationCode().contains(modelfileinfo.getModelCode())) {
+//                            modelCode = modelfileinfo.getModelCode();
+//                        }
+//                    }
+//
+//                    //todo 开始
+//                    Element rootElement = DocumentHelper.createElement("interpretation");
+//                    rootElement.addAttribute("catalog", catalogCode);
+//                    //todo 不同catalog不一样
+////                    rootElement.addAttribute("modelcode", vinDataDto.getFullSpecificationCode().substring(4, 13));
+////                    rootElement.addAttribute("modelcode", vinDataDto.getFullSpecificationCode().substring(5, 11));
+//                    rootElement.addAttribute("modelcode", modelCode);
+//                    rootElement.addAttribute("builddate", vinDataDto.getProductionDate());
+//                    rootElement.addAttribute("area", vinDataDto.getArea());
+//                    //todo 不传vin试试
+////            rootElement.addAttribute("vin", );
+////            rootElement.addAttribute("displaybuilddate", vinData.getProductionDate());
+//                    rootElement.addAttribute("fullSpecificationCode", vinDataDto.getFullSpecificationCode());
+//
+//                    String optioncode1 = vinDataDto.getOptionCode1();
+////                System.out.println("oooccc1" + optioncode1);
+//                    String optioncode2 = vinDataDto.getOptionCode2();
+////                System.out.println("oooccc2" + optioncode2);
+////                if (!optioncode1.isEmpty()) {
+////                    optionStringBuilder = new StringBuilder();
+////                    int index = 5;
+////                    optioncode1 += optioncode2;
+////                    optionStringBuilder.append(optioncode1.substring(0, 5));
+////                    index++;
+////                    while (index + 6 <= optioncode1.length()) {
+////                        optionStringBuilder.append("|").append(optioncode1.substring(index, index + 6));
+////                        index += 6;
+////                    }
+////                    String optionStr = optionStringBuilder.toString();
+////                    //optioncodes排列也不一样
+////                    rootElement.addAttribute("optioncodes", optionStr);
+////                }
+//                    String optionStr = generateOptionCode(catalogCode, optioncode1, optioncode2);
+//                    rootElement.addAttribute("optioncodes", optionStr);
+//                    rootElement.addAttribute("builddate", vinDataDto.getProductionDate());
+//                    rootElement.addAttribute("exteriorkeycolorcode", vinDataDto.getExtColor());
+//                    rootElement.addAttribute("interiorkeycolorcode", vinDataDto.getIntColor());
+//                    rootElement.addAttribute("plant", vinDataDto.getArea());
+//                    rootElement.addAttribute("vintag", vinDataDto.getVinTag());
+//                    rootElement.addAttribute("enginemipcode", vinDataDto.getEngineMipCode());
+//                    rootElement.addAttribute("transmissionMipCode", vinDataDto.getTransmissionMipCode());
+//                    rootElement.addAttribute("weathertype", vinDataDto.getWeatherType());
+////            rootElement.addAttribute("enginenumber", vinData.getEngineNumber());
+//                    rootElement.addAttribute("type", catalogTypeMap.get(catalogCode));
+////            rootElement.addAttribute();
+//
+//                    //vin、modelid、color
+//                    rootElement.addAttribute("level", "2");
+//
+//                    //todo 结束
+//                    //正确的生成方式是调用vin
+//                    //不同catalog,可选项的截取规则不同
+//                    //vin对应的可选项
+//                    //根据catalogCode、fullSpecificationCode可以找到对应的对应的可选项
+//                    //下面这一块要改改
+//                    //抽一个生成可选项的方法generateOption
+//
+//                    List<Modelfileinfo> modelfileinfos = modelfileinfoMapper.selectAllByCataloguecode(catalogCode);
+//                    Modelfileinfo modelfileinfo = null;
+//
+//                    for (Modelfileinfo item : modelfileinfos) {
+//                        if (item.getM1().equals(vinDataDto.getPlant()) && item.getModelCode().equals(modelCode)) {
+//                            modelfileinfo = item;
+//                        }
+//                    }
+//
+////                    String catalogCode, String weatherType, String driveType, String fullSpecificationCode, Modelfileinfo modelfileinfo
+//                    MajorAttributes majorAttributes = generateMajorAttributes(catalogCode, vinDataDto.getFullSpecificationCode(), vinDataDto.getWeatherType(), vinDataDto.getDriveType(), modelfileinfo);
+//
+//                    Element avsElement = rootElement.addElement("avs");
+//                    avsElement.addAttribute("data", majorAttributes.getType01());
+//                    avsElement.addAttribute("type", "01");
+//
+//                    Element avsElement2 = rootElement.addElement("avs");
+//                    avsElement2.addAttribute("data", majorAttributes.getType02());
+//                    avsElement2.addAttribute("type", "02");
+//
+//                    Element avsElement3 = rootElement.addElement("avs");
+//                    avsElement3.addAttribute("data", majorAttributes.getType03());
+//                    avsElement3.addAttribute("type", "03");
+//
+//                    Element avsElement4 = rootElement.addElement("avs");
+//                    avsElement4.addAttribute("data", majorAttributes.getType04());
+//                    avsElement4.addAttribute("type", "04");
+//
+//                    Element avsElement5 = rootElement.addElement("avs");
+//                    avsElement5.addAttribute("data", majorAttributes.getType05());
+//                    avsElement5.addAttribute("type", "05");
+//
+//                    Element avsElement6 = rootElement.addElement("avs");
+//                    avsElement6.addAttribute("data", majorAttributes.getType06());
+//                    avsElement6.addAttribute("type", "06");
+//
+////              todo 参数文件记得带上type06
+//                    Element avsElement7 = rootElement.addElement("avs");
+//                    avsElement7.addAttribute("data", majorAttributes.getTypeDT());
+//                    avsElement7.addAttribute("type", "DT");
+//
+//                    Element avsElement8 = rootElement.addElement("avs");
+//                    avsElement8.addAttribute("data", majorAttributes.getTypeWT());
+//                    avsElement8.addAttribute("type", "WT");
+//
+////                List<String> sectionList = new ArrayList<>();
+//                    sb = new StringBuilder();
+//                    JSONArray arr = new JSONArray();
+//                    for (EpcSection epcSection : epcSections) {
+////                System.out.println(epcSection.getCode());
+//
+//                        //todo 开始注释
+////                    sectionList.add(epcSection.getCode());
+//                        arr.add(epcSection.getCode());
+//                        // writeToFile(sb.toString(), catalogCode);
+//                        //todo 取消注释
+//
+//                    }
+//
+//                    sb.append(catalogCode).append(" ").append(arr).append(" ").append(rootElement.asXML()).append("\n");
+//                    stopWatch.start("写入耗时");
+//                    writeToFile(sb.toString(), catalogCode);
+//                    stopWatch.stop();
+////                rootElement.addAttribute("isDefaultApplicability", "0");
+////                rootElement.addAttribute("attributeValidationRequired", "0");
+////                elementList.add(rootElement);
+////            rawElementList.add(rootElement);
+//
+////            String a = "";
+//
+//
+////                if (beginYearMap.containsKey(catalogCode)) {
+////                    Integer endYear = "".equals(endYearMap.get(catalogCode)) ? 2025 : Integer.valueOf(endYearMap.get(catalogCode));
+////                    List<String> dateList = generateDateParam(Integer.parseInt(beginYearMap.get(catalogCode)), endYear);
+////                    //添加element
+////                    for (String date : dateList) {
+////                        Element element = rootElement.createCopy();
+////                        element.addAttribute("builddate", date);
+////                        element.addAttribute("displaybuilddate", date);
+////                        rawElementList.add(element);
+////                    }
+////                }
+//
+////            某个时刻elementlist为空
+////            for (Element element : rawElementList) {
+////                recurse(element, 0, optionAll);
+////            }
+////            elementList.add(rootElement);
+//
+//                    //缺少sectioncode
+//
+////            for (Element element : elementList) {
+////                for (String sectionCode : sectionSet) {
+////                    String row = catalogCode + " " + sectionCode + " " + element.asXML() + " " + 0 + " " + 1;
+////                    fileWriter.println(row);
+////                }
+////            }
+//
+//                }
+//                start = vinDataDtos.get(vinDataDtos.size() - 1).getRowNum();
+////            System.out.println("aaa" + start);
+//                stopWatch.start("查询耗时");
+//                vinDataDtos = vinDataMapper.selectByCatalog2(catalogCode, start);
+//                stopWatch.stop();
+////            System.out.println("bbb" + vinDataDtos.size());
+////            if (vinDataDtos.size() > 0) {
+////                System.out.println("kkk" + vinDataDtos.get(vinDataDtos.size() - 1).toString());
+////            }
+//            }
+//
+//            closeWriter();
+//            System.out.println(stopWatch.prettyPrint());
+//            //todo 结束注释
+//            //允许有一定的延迟
+//            System.out.println("Finished:" + catalogCode);
+//        }
+//    }
+
+    @GetMapping("/store-get-section-parts-param2")
+    public void storeGetSectionPartsParam2(String catalog) throws IOException {
 
 //        JsonParser parser = JsonParser.parseString();
 //        获取catalog fromyear toyear
@@ -5878,13 +6350,16 @@ public class MainController {
 //        catalogCodes.add("KHMAPGFE11");
 
 //        catalogCodes.add("HMA2B0PA06");
+//        catalogCodes.addAll(catalogCodes);
 
         //发送方的带宽和接收方的带宽
         //形成一份模型，
 
         //找一份数据量比较少的跑跑
+        catalogCodes.add(catalog);
 
         for (String catalogCode : catalogCodes) {
+            System.out.println(catalogCode);
             List<EpcSection> epcSections = epcSectionMapper.selectByCatalogcodeAndApplicableAndParentuniqueid(catalogCode, "1", null);
 
             StringBuilder sb;
@@ -5905,11 +6380,14 @@ public class MainController {
             //todo 从这里开始注释
             initializeNewFile(catalogCode);
             //todo 取消注释
-                //怎样使查出来的结果少，搞一个阈值，但要防止把正确结果过滤掉
+            //怎样使查出来的结果少，搞一个阈值，但要防止把正确结果过滤掉
             //循环请求
             while (vinDataDtos.size() > 0) {
 //            initializeNewFile();
                 for (VinDataDto vinDataDto : vinDataDtos) {
+//                    if (vinDataDto.getFullSpecificationCode().equals("") && vinDataDto.getBuildDate()) {
+//
+//                    }
                     //正确的多，错误的少，过于模糊，自圆其说
                     //错误
 
@@ -5998,12 +6476,21 @@ public class MainController {
 //                    recurse(new ArrayList<>(), 0, 0, optionBriefListAll);
 //                }
 //            }
-                    List<Modelfileinfo> modelFileInfos = modelfileinfoMapper.selectAllByCataloguecode(catalogCode);
+//                    List<Modelfileinfo> modelFileInfos = modelfileinfoMapper.selectAllByCataloguecode(catalogCode);
 
-                    String modelCode = generateModelCode(catalogCode, vinDataDto.getFullSpecificationCode());
-                    for (Modelfileinfo modelfileinfo : modelFileInfos) {
-                        if (vinDataDto.getFullSpecificationCode().contains(modelfileinfo.getModelCode())) {
-                            modelCode = modelfileinfo.getModelCode();
+//                    String modelCode = generateModelCode(catalogCode, vinDataDto.getFullSpecificationCode());
+//                    for (Modelfileinfo modelfileinfo : modelFileInfos) {
+//                        if (vinDataDto.getFullSpecificationCode().contains(modelfileinfo.getModelCode())) {
+//                            modelCode = modelfileinfo.getModelCode();
+//                        }
+//                    }
+                    List<Modelfileinfo> modelfileinfos = modelfileinfoMapper.selectAllByCataloguecode(catalogCode);
+                    Modelfileinfo modelfileinfo = null;
+
+                    modelfileinfos = modelfileinfos.stream().sorted(Comparator.comparing(e -> e.getModelCode().length())).collect(Collectors.toList());
+                    for (Modelfileinfo item : modelfileinfos) {
+                        if (item.getM1().equals(vinDataDto.getPlant()) && vinDataDto.getFullSpecificationCode().contains(item.getModelCode())) {
+                            modelfileinfo = item;
                         }
                     }
 
@@ -6013,8 +6500,9 @@ public class MainController {
                     //todo 不同catalog不一样
 //                    rootElement.addAttribute("modelcode", vinDataDto.getFullSpecificationCode().substring(4, 13));
 //                    rootElement.addAttribute("modelcode", vinDataDto.getFullSpecificationCode().substring(5, 11));
-                    rootElement.addAttribute("modelcode", modelCode);
-                    rootElement.addAttribute("builddate", vinDataDto.getProductionDate());
+//                    rootElement.addAttribute("modelcode", modelCode);
+                    rootElement.addAttribute("modelcode", modelfileinfo.getModelCode());
+                    rootElement.addAttribute("builddate", vinDataDto.getBuildDate());
                     rootElement.addAttribute("area", vinDataDto.getArea());
                     //todo 不传vin试试
 //            rootElement.addAttribute("vin", );
@@ -6039,9 +6527,10 @@ public class MainController {
 //                    //optioncodes排列也不一样
 //                    rootElement.addAttribute("optioncodes", optionStr);
 //                }
+
                     String optionStr = generateOptionCode(catalogCode, optioncode1, optioncode2);
                     rootElement.addAttribute("optioncodes", optionStr);
-                    rootElement.addAttribute("builddate", vinDataDto.getProductionDate());
+                    rootElement.addAttribute("builddate", vinDataDto.getBuildDate());
                     rootElement.addAttribute("exteriorkeycolorcode", vinDataDto.getExtColor());
                     rootElement.addAttribute("interiorkeycolorcode", vinDataDto.getIntColor());
                     rootElement.addAttribute("plant", vinDataDto.getArea());
@@ -6064,50 +6553,198 @@ public class MainController {
                     //下面这一块要改改
                     //抽一个生成可选项的方法generateOption
 
-                    List<Modelfileinfo> modelfileinfos = modelfileinfoMapper.selectAllByCataloguecode(catalogCode);
-                    Modelfileinfo modelfileinfo = null;
-
-                    for (Modelfileinfo item : modelfileinfos) {
-                        if (item.getM1().equals(vinDataDto.getPlant()) && item.getModelCode().equals(modelCode)) {
-                            modelfileinfo = item;
-                        }
-                    }
-
+                    List<FlatSections> flatSections = flatSectionsMapper.selectAllByCatalogCode(catalogCode);
+                    String clientCatalogInformation = flatSections.get(0).getClientCatalogInformation();
+                    com.alibaba.fastjson.JSONObject jsonObject = com.alibaba.fastjson.JSONObject.parseObject(clientCatalogInformation);
+                    com.alibaba.fastjson.JSONArray catalogAttributes = jsonObject.getJSONArray("clientCatalogAttributes");
 //                    String catalogCode, String weatherType, String driveType, String fullSpecificationCode, Modelfileinfo modelfileinfo
-                    MajorAttributes majorAttributes = generateMajorAttributes(catalogCode, vinDataDto.getFullSpecificationCode(), vinDataDto.getWeatherType(), vinDataDto.getDriveType(), modelfileinfo);
+                    List<ClientCatalogAttributes> clientCatalogAttributes = com.alibaba.fastjson.JSONArray.parseArray(catalogAttributes.toString(), ClientCatalogAttributes.class);
+                    //todo 从modelfile中获取majorAttributes
 
-                    Element avsElement = rootElement.addElement("avs");
-                    avsElement.addAttribute("data", majorAttributes.getType01());
-                    avsElement.addAttribute("type", "01");
+//                    Element avsElement7 = rootElement.addElement("avs");
+//                    avsElement7.addAttribute("data", majorAttributes.getTypeDT());
+//                    avsElement7.addAttribute("type", "DT");
+                    for (ClientCatalogAttributes attribute : clientCatalogAttributes) {
+                        if (attribute.getData().equals("01")) {
+////                System.out.println(6667);
+////                System.out.println(vinDataVo.getMajorAttributes().getType01());
+////                System.out.println(vinDataVo.getMajorAttributes().toString());
+                            if (modelfileinfo.getAttribute1().equals(".")) {
+                                if (attribute.getOptions().size() == 1) {
+////                                    jsonObject2.put(attribute.getLabel(), attribute.getOptions().get(0).getLabel());
+                                    Element avsElement01 = rootElement.addElement("avs");
+                                    avsElement01.addAttribute("data", attribute.getOptions().get(0).getData());
+                                    avsElement01.addAttribute("type", "01");
+//                                } else {
+//                                    jsonObject2.put(attribute.getLabel(), "Unknown");
+                                }
+                            } else {
+//                                jsonObject2.put(attribute.getLabel(), attribute.getOptions().stream().filter(e -> e.getData().equals(vinDataVo.getMajorAttributes().getType01())).map(Option::getLabel).findFirst().get());
+                                Element avsElement01 = rootElement.addElement("avs");
+                                avsElement01.addAttribute("data", modelfileinfo.getAttribute1());
+                                avsElement01.addAttribute("type", "01");
+                            }
+                        } else if (attribute.getData().equals("02")) {
+                            if (modelfileinfo.getAttribute2().equals(".")) {
+                                if (attribute.getOptions().size() == 1) {
+                                    Element avsElement02 = rootElement.addElement("avs");
+                                    avsElement02.addAttribute("data", attribute.getOptions().get(0).getData());
+                                    avsElement02.addAttribute("type", "02");
+//                                    System.out.println("pppp");
+//                                    jsonObject2.put("type02", attribute.getOptions().get(0).getLabel());
+//                                } else {
+//                                    jsonObject2.put(attribute.getLabel(), "Unknown");
+                                }
+                            } else {
+//                                jsonObject2.put(attribute.getLabel(), attribute.getOptions().stream().filter(e -> e.getData().equals(vinDataVo.getMajorAttributes().getType02())).map(Option::getLabel).findFirst().get());
+//                                jsonObject2.put("type02", vinDataVo.getMajorAttributes().getType02());
+                                Element avsElement02 = rootElement.addElement("avs");
+                                avsElement02.addAttribute("data", modelfileinfo.getAttribute2());
+                                avsElement02.addAttribute("type", "02");
+                            }
+                        } else if (attribute.getData().equals("03")) {
+                            if (modelfileinfo.getAttribute3().equals(".")) {
+                                if (attribute.getOptions().size() == 1) {
+//                                    jsonObject2.put(attribute.getLabel(), attribute.getOptions().get(0).getLabel());
+                                    Element avsElement03 = rootElement.addElement("avs");
+                                    avsElement03.addAttribute("data", attribute.getOptions().get(0).getData());
+                                    avsElement03.addAttribute("type", "03");
+//                                } else {
+//                                    jsonObject2.put(attribute.getLabel(), "Unknown");
+                                }
+                            } else {
+//                                jsonObject2.put(attribute.getLabel(), attribute.getOptions().stream().filter(e -> e.getData().equals(vinDataVo.getMajorAttributes().getType03())).map(Option::getLabel).findFirst().get());
+//                                jsonObject2.put("type03", vinDataVo.getMajorAttributes().getType03());
+                                Element avsElement03 = rootElement.addElement("avs");
+                                avsElement03.addAttribute("data", modelfileinfo.getAttribute3());
+                                avsElement03.addAttribute("type", "03");
+                            }
+                        } else if (attribute.getData().equals("04")) {
+                            if (modelfileinfo.getAttribute4().equals(".")) {
+                                if (attribute.getOptions().size() == 1) {
+//                                    jsonObject2.put(attribute.getLabel(), attribute.getOptions().get(0).getLabel());
+//                                    rootElement.addAttribute("type04", attribute.getOptions().get(0).getData());
+//                                } else {
+//                                    jsonObject2.put(attribute.getLabel(), "Unknown");
+                                    Element avsElement04 = rootElement.addElement("avs");
+                                    avsElement04.addAttribute("data", attribute.getOptions().get(0).getData());
+                                    avsElement04.addAttribute("type", "04");
+                                }
+                            } else {
+//                                jsonObject2.put(attribute.getLabel(), attribute.getOptions().stream().filter(e -> e.getData().equals(vinDataVo.getMajorAttributes().getType04())).map(Option::getLabel).findFirst().get());
+                                Element avsElement04 = rootElement.addElement("avs");
+                                avsElement04.addAttribute("data", modelfileinfo.getAttribute4());
+                                avsElement04.addAttribute("type", "04");
+                            }
+                        } else if (attribute.getData().equals("05")) {
+                            if (modelfileinfo.getAttribute5().equals(".")) {
+                                if (attribute.getOptions().size() == 1) {
+//                                    jsonObject2.put(attribute.getLabel(), attribute.getOptions().get(0).getLabel());
+                                    Element avsElement05 = rootElement.addElement("avs");
+                                    avsElement05.addAttribute("data", attribute.getOptions().get(0).getData());
+                                    avsElement05.addAttribute("type", "05");
+//                                } else {
+//                                    jsonObject2.put(attribute.getLabel(), "Unknown");
+                                }
+                            } else {
+//                                jsonObject2.put(attribute.getLabel(), attribute.getOptions().stream().filter(e -> e.getData().equals(vinDataVo.getMajorAttributes().getType05())).map(Option::getLabel).findFirst().get());
+                                Element avsElement05 = rootElement.addElement("avs");
+                                avsElement05.addAttribute("data", modelfileinfo.getAttribute5());
+                                avsElement05.addAttribute("type", "05");
+                            }
+                        } else if (attribute.getData().equals("06")) {
+                            if (modelfileinfo.getAttribute6().equals(".")) {
+                                if (attribute.getOptions().size() == 1) {
+//                                    jsonObject2.put(attribute.getLabel(), attribute.getOptions().get(0).getLabel());
+                                    Element avsElement06 = rootElement.addElement("avs");
+                                    avsElement06.addAttribute("data", attribute.getOptions().get(0).getData());
+                                    avsElement06.addAttribute("type", "06");
+//                                } else {
+//                                    jsonObject2.put(attribute.getLabel(), "Unknown");
+                                }
+                            } else {
+//                                jsonObject2.put(attribute.getLabel(), attribute.getOptions().stream().filter(e -> e.getData().equals(vinDataVo.getMajorAttributes().getType06())).map(Option::getLabel).findFirst().get());
+//                                jsonObject2.put("type06", vinDataVo.getMajorAttributes().getType06());
+                                Element avsElement06 = rootElement.addElement("avs");
+                                avsElement06.addAttribute("data", modelfileinfo.getAttribute6());
+                                avsElement06.addAttribute("type", "06");
+                            }
+                        }
+//                        } else if (attribute.getData().equals("WT")) {
+////                if (vinDataVo.getMajorAttributes().getTypeWT().equals(".")) {
+////                    if (attribute.getOptions().size() == 1) {
+////                        jsonObject.put(attribute.getLabel(), attribute.getOptions().get(0).getLabel());
+////                    } else {
+////                        jsonObject.put(attribute.getLabel(), "Unknown");
+////                    }
+////                } else {
+////                    jsonObject2.put(attribute.getLabel(), attribute.getOptions().stream().filter(e -> e.getData().equals(vinDataVo.getMajorAttributes().getTypeWT())).map(Option::getLabel).findFirst().get());
+////                }
+//                            jsonObject2.put(attribute.getLabel(), vinDataVo.getWeatherType().isEmpty() ? "Unknown" : vinDataVo.getWeatherType());
+//                        } else if (attribute.getData().equals("DT")) {
+////                if (vinDataVo.getMajorAttributes().getTypeDT().equals(".")) {
+////                    if (attribute.getOptions().size() == 1) {
+////                        jsonObject.put(attribute.getLabel(), attribute.getOptions().get(0).getLabel());
+////                    } else {
+////                        jsonObject.put(attribute.getLabel(), "Unknown");
+////                    }
+////                } else {
+////                    attribute.getOptions().stream().filter(e -> e.getData().equals(vinDataVo.getMajorAttributes().getTypeDT())).map(Option::getLabel).findFirst().get()
+//                            jsonObject2.put(attribute.getLabel(), vinDataVo.getDriveType().isEmpty() ? "Unknown" : vinDataVo.getDriveType());
+////                }
+                    }
+                    Element avsElementDT = rootElement.addElement("avs");
+                    avsElementDT.addAttribute("data", vinDataDto.getDriveType());
+                    avsElementDT.addAttribute("type", "DT");
 
-                    Element avsElement2 = rootElement.addElement("avs");
-                    avsElement2.addAttribute("data", majorAttributes.getType02());
-                    avsElement2.addAttribute("type", "02");
+                    Element avsElementWT = rootElement.addElement("avs");
+                    avsElementWT.addAttribute("data", vinDataDto.getWeatherType());
+                    avsElementWT.addAttribute("type", "WT");
 
-                    Element avsElement3 = rootElement.addElement("avs");
-                    avsElement3.addAttribute("data", majorAttributes.getType03());
-                    avsElement3.addAttribute("type", "03");
+//            jsonObject2.put("type02", vinDataVo.getMajorAttributes().getType02());
+//            jsonObject2.put("type03", vinDataVo.getMajorAttributes().getType03());
+//            jsonObject2.put("type04", vinDataVo.getMajorAttributes().getType04());
+//            jsonObject2.put("type05", vinDataVo.getMajorAttributes().getType05());
+//            jsonObject2.put("type06", vinDataVo.getMajorAttributes().getType06());
+//            jsonObject2.put("typeWT", vinDataVo.getMajorAttributes().getTypeWT());
+//            jsonObject2.put("typeDT", vinDataVo.getMajorAttributes().getTypeDT());
 
-                    Element avsElement4 = rootElement.addElement("avs");
-                    avsElement4.addAttribute("data", majorAttributes.getType04());
-                    avsElement4.addAttribute("type", "04");
-
-                    Element avsElement5 = rootElement.addElement("avs");
-                    avsElement5.addAttribute("data", majorAttributes.getType05());
-                    avsElement5.addAttribute("type", "05");
-
-                    Element avsElement6 = rootElement.addElement("avs");
-                    avsElement6.addAttribute("data", majorAttributes.getType06());
-                    avsElement6.addAttribute("type", "06");
-
-//              todo 参数文件记得带上type06
-                    Element avsElement7 = rootElement.addElement("avs");
-                    avsElement7.addAttribute("data", majorAttributes.getTypeDT());
-                    avsElement7.addAttribute("type", "DT");
-
-                    Element avsElement8 = rootElement.addElement("avs");
-                    avsElement8.addAttribute("data", majorAttributes.getTypeWT());
-                    avsElement8.addAttribute("type", "WT");
+//                        vinDataVo.setMajorAttributes2(jsonObject2);
+//                    }
+//                    MajorAttributes majorAttributes = generateMajorAttributes(catalogCode, vinDataDto.getFullSpecificationCode(), vinDataDto.getWeatherType(), vinDataDto.getDriveType(), modelfileinfo);
+//
+//                    Element avsElement = rootElement.addElement("avs");
+//                    avsElement.addAttribute("data", majorAttributes.getType01());
+//                    avsElement.addAttribute("type", "01");
+//
+//                    Element avsElement2 = rootElement.addElement("avs");
+//                    avsElement2.addAttribute("data", majorAttributes.getType02());
+//                    avsElement2.addAttribute("type", "02");
+//
+//                    Element avsElement3 = rootElement.addElement("avs");
+//                    avsElement3.addAttribute("data", majorAttributes.getType03());
+//                    avsElement3.addAttribute("type", "03");
+//
+//                    Element avsElement4 = rootElement.addElement("avs");
+//                    avsElement4.addAttribute("data", majorAttributes.getType04());
+//                    avsElement4.addAttribute("type", "04");
+//
+//                    Element avsElement5 = rootElement.addElement("avs");
+//                    avsElement5.addAttribute("data", majorAttributes.getType05());
+//                    avsElement5.addAttribute("type", "05");
+//
+//                    Element avsElement6 = rootElement.addElement("avs");
+//                    avsElement6.addAttribute("data", majorAttributes.getType06());
+//                    avsElement6.addAttribute("type", "06");
+//
+////              todo 参数文件记得带上type06
+//                    Element avsElement7 = rootElement.addElement("avs");
+//                    avsElement7.addAttribute("data", majorAttributes.getTypeDT());
+//                    avsElement7.addAttribute("type", "DT");
+//
+//                    Element avsElement8 = rootElement.addElement("avs");
+//                    avsElement8.addAttribute("data", majorAttributes.getTypeWT());
+//                    avsElement8.addAttribute("type", "WT");
 
 //                List<String> sectionList = new ArrayList<>();
                     sb = new StringBuilder();

@@ -37,6 +37,8 @@ public class VinDataDto {
 
     private String productionDate;
 
+    private String buildDate;
+
 //    public Integer getRowNum() {
 //        return rowNum;
 //    }

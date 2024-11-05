@@ -1,426 +1,513 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.example.mybatismapper.VinDataMapper">
-  <resultMap id="BaseResultMap" type="com.domain.VinData">
+  <!--  <resultMap id="BaseResultMap" type="com.domain.VinData">-->
+  <!--    &lt;!&ndash;@mbg.generated&ndash;&gt;-->
+  <!--    &lt;!&ndash;@Table vin_data&ndash;&gt;-->
+  <!--    <result column="vin" jdbcType="VARCHAR" property="vin" />-->
+  <!--    <result column="fullSpecificationCode" jdbcType="VARCHAR" property="fullSpecificationCode" />-->
+  <!--    <result column="productionDate" jdbcType="TIMESTAMP" property="productionDate" />-->
+  <!--    <result column="nation" jdbcType="VARCHAR" property="nation" />-->
+  <!--    <result column="plant" jdbcType="VARCHAR" property="plant" />-->
+  <!--    <result column="catalog" jdbcType="VARCHAR" property="catalog" />-->
+  <!--    <result column="column7" jdbcType="VARCHAR" property="column7" />-->
+  <!--    <result column="weatherType" jdbcType="VARCHAR" property="weatherType" />-->
+  <!--    <result column="column9" jdbcType="VARCHAR" property="column9" />-->
+  <!--    <result column="extColor" jdbcType="VARCHAR" property="extColor" />-->
+  <!--    <result column="intColor" jdbcType="VARCHAR" property="intColor" />-->
+  <!--    <result column="area" jdbcType="VARCHAR" property="area" />-->
+  <!--    <result column="orderNumber" jdbcType="VARCHAR" property="orderNumber" />-->
+  <!--    <result column="column14" jdbcType="VARCHAR" property="column14" />-->
+  <!--    <result column="driveType" jdbcType="VARCHAR" property="driveType" />-->
+  <!--    <result column="column16" jdbcType="VARCHAR" property="column16" />-->
+  <!--    <result column="optionCode1" jdbcType="VARCHAR" property="optionCode1" />-->
+  <!--    <result column="optionCode2" jdbcType="VARCHAR" property="optionCode2" />-->
+  <!--    <result column="vinTag" jdbcType="VARCHAR" property="vinTag" />-->
+  <!--    <result column="country2" jdbcType="VARCHAR" property="country2" />-->
+  <!--    <result column="column21" jdbcType="VARCHAR" property="column21" />-->
+  <!--    <result column="column22" jdbcType="VARCHAR" property="column22" />-->
+  <!--    <result column="column23" jdbcType="VARCHAR" property="column23" />-->
+  <!--    <result column="engineNumber" jdbcType="VARCHAR" property="engineNumber" />-->
+  <!--    <result column="column25" jdbcType="VARCHAR" property="column25" />-->
+  <!--    <result column="column26" jdbcType="VARCHAR" property="column26" />-->
+  <!--    <result column="column27" jdbcType="VARCHAR" property="column27" />-->
+  <!--    <result column="column28" jdbcType="VARCHAR" property="column28" />-->
+  <!--    <result column="column29" jdbcType="VARCHAR" property="column29" />-->
+  <!--    <result column="column30" jdbcType="VARCHAR" property="column30" />-->
+  <!--    <result column="column31" jdbcType="VARCHAR" property="column31" />-->
+  <!--    <result column="column32" jdbcType="VARCHAR" property="column32" />-->
+  <!--    <result column="column33" jdbcType="VARCHAR" property="column33" />-->
+  <!--    <result column="column34" jdbcType="VARCHAR" property="column34" />-->
+  <!--    <result column="column35" jdbcType="VARCHAR" property="column35" />-->
+  <!--    <result column="column36" jdbcType="VARCHAR" property="column36" />-->
+  <!--    <result column="site" jdbcType="VARCHAR" property="site" />-->
+  <!--    <result column="column38" jdbcType="VARCHAR" property="column38" />-->
+  <!--    <result column="column39" jdbcType="VARCHAR" property="column39" />-->
+  <!--    <result column="displayBuildDate" jdbcType="VARCHAR" property="displayBuildDate" />-->
+  <!--    <result column="column41" jdbcType="VARCHAR" property="column41" />-->
+  <!--    <result column="engineMipCode" jdbcType="VARCHAR" property="engineMipCode" />-->
+  <!--    <result column="transmissionMipCode" jdbcType="VARCHAR" property="transmissionMipCode" />-->
+  <!--    <result column="column44" jdbcType="VARCHAR" property="column44" />-->
+  <!--    <result column="column45" jdbcType="VARCHAR" property="column45" />-->
+  <!--    <result column="column46" jdbcType="VARCHAR" property="column46" />-->
+  <!--  </resultMap>-->
+  <!--  <sql id="Base_Column_List">-->
+  <!--    &lt;!&ndash;@mbg.generated&ndash;&gt;-->
+  <!--    vin, fullSpecificationCode, productionDate, nation, plant, `catalog`, column7, weatherType,-->
+  <!--    column9, extColor, intColor, area, orderNumber, column14, driveType, column16, optionCode1, -->
+  <!--    optionCode2, vinTag, country2, column21, column22, column23, engineNumber, column25,-->
+  <!--    column26, column27, column28, column29, column30, column31, column32, column33, column34, -->
+  <!--    column35, column36, site, column38, column39, displayBuildDate, column41, engineMipCode,-->
+  <!--    transmissionMipCode, column44, column45, column46-->
+  <!--  </sql>-->
+  <!--  <insert id="insert" parameterType="com.domain.VinData">-->
+  <!--    &lt;!&ndash;@mbg.generated&ndash;&gt;-->
+  <!--    insert into vin_data (vin, fullSpecificationCode, productionDate, -->
+  <!--      nation, plant, `catalog`, -->
+  <!--      column7, weatherType, column9,-->
+  <!--      extColor, intColor, area, -->
+  <!--      orderNumber, column14, driveType, -->
+  <!--      column16, optionCode1, optionCode2, -->
+  <!--      vinTag, country2, column21, -->
+  <!--      column22, column23, column24, -->
+  <!--      column25, column26, column27, -->
+  <!--      column28, column29, column30, -->
+  <!--      column31, column32, column33, -->
+  <!--      column34, column35, column36, -->
+  <!--      site, column38, column39, -->
+  <!--      displayBuildDate, column41, engineMipCode,-->
+  <!--      transmissionMipCode, column44, column45,-->
+  <!--      column46)-->
+  <!--    values (#{vin,jdbcType=VARCHAR}, #{fullSpecificationCode,jdbcType=VARCHAR}, #{productionDate,jdbcType=TIMESTAMP}, -->
+  <!--      #{nation,jdbcType=VARCHAR}, #{plant,jdbcType=VARCHAR}, #{catalog,jdbcType=VARCHAR}, -->
+  <!--      #{column7,jdbcType=VARCHAR}, #{weatherType,jdbcType=VARCHAR}, #{column9,jdbcType=VARCHAR},-->
+  <!--      #{extColor,jdbcType=VARCHAR}, #{intColor,jdbcType=VARCHAR}, #{area,jdbcType=VARCHAR}, -->
+  <!--      #{orderNumber,jdbcType=VARCHAR}, #{column14,jdbcType=VARCHAR}, #{driveType,jdbcType=VARCHAR}, -->
+  <!--      #{column16,jdbcType=VARCHAR}, #{optionCode1,jdbcType=VARCHAR}, #{optionCode2,jdbcType=VARCHAR}, -->
+  <!--      #{vinTag,jdbcType=VARCHAR}, #{country2,jdbcType=VARCHAR}, #{column21,jdbcType=VARCHAR}, -->
+  <!--      #{column22,jdbcType=VARCHAR}, #{column23,jdbcType=VARCHAR}, #{engineNumber,jdbcType=VARCHAR},-->
+  <!--      #{column25,jdbcType=VARCHAR}, #{column26,jdbcType=VARCHAR}, #{column27,jdbcType=VARCHAR}, -->
+  <!--      #{column28,jdbcType=VARCHAR}, #{column29,jdbcType=VARCHAR}, #{column30,jdbcType=VARCHAR}, -->
+  <!--      #{column31,jdbcType=VARCHAR}, #{column32,jdbcType=VARCHAR}, #{column33,jdbcType=VARCHAR}, -->
+  <!--      #{column34,jdbcType=VARCHAR}, #{column35,jdbcType=VARCHAR}, #{column36,jdbcType=VARCHAR}, -->
+  <!--      #{site,jdbcType=VARCHAR}, #{column38,jdbcType=VARCHAR}, #{column39,jdbcType=VARCHAR}, -->
+  <!--      #{displayBuildDate,jdbcType=VARCHAR}, #{column41,jdbcType=VARCHAR}, #{engineMipCode,jdbcType=VARCHAR},-->
+  <!--      #{transmissionMipCode,jdbcType=VARCHAR}, #{column44,jdbcType=VARCHAR}, #{column45,jdbcType=VARCHAR},-->
+  <!--      #{column46,jdbcType=VARCHAR})-->
+  <!--  </insert>-->
+  <!--  <insert id="insertSelective" parameterType="com.domain.VinData">-->
+  <!--    &lt;!&ndash;@mbg.generated&ndash;&gt;-->
+  <!--    insert into vin_data-->
+  <!--    <trim prefix="(" suffix=")" suffixOverrides=",">-->
+  <!--      <if test="vin != null">-->
+  <!--        vin,-->
+  <!--      </if>-->
+  <!--      <if test="fullSpecificationCode != null">-->
+  <!--        fullSpecificationCode,-->
+  <!--      </if>-->
+  <!--      <if test="productionDate != null">-->
+  <!--        productionDate,-->
+  <!--      </if>-->
+  <!--      <if test="nation != null">-->
+  <!--        nation,-->
+  <!--      </if>-->
+  <!--      <if test="plant != null">-->
+  <!--        plant,-->
+  <!--      </if>-->
+  <!--      <if test="catalog != null">-->
+  <!--        `catalog`,-->
+  <!--      </if>-->
+  <!--      <if test="column7 != null">-->
+  <!--        column7,-->
+  <!--      </if>-->
+  <!--      <if test="weatherType != null">-->
+  <!--        weatherType,-->
+  <!--      </if>-->
+  <!--      <if test="column9 != null">-->
+  <!--        column9,-->
+  <!--      </if>-->
+  <!--      <if test="extColor != null">-->
+  <!--        extColor,-->
+  <!--      </if>-->
+  <!--      <if test="intColor != null">-->
+  <!--        intColor,-->
+  <!--      </if>-->
+  <!--      <if test="area != null">-->
+  <!--        area,-->
+  <!--      </if>-->
+  <!--      <if test="orderNumber != null">-->
+  <!--        orderNumber,-->
+  <!--      </if>-->
+  <!--      <if test="column14 != null">-->
+  <!--        column14,-->
+  <!--      </if>-->
+  <!--      <if test="driveType != null">-->
+  <!--        driveType,-->
+  <!--      </if>-->
+  <!--      <if test="column16 != null">-->
+  <!--        column16,-->
+  <!--      </if>-->
+  <!--      <if test="optionCode1 != null">-->
+  <!--        optionCode1,-->
+  <!--      </if>-->
+  <!--      <if test="optionCode2 != null">-->
+  <!--        optionCode2,-->
+  <!--      </if>-->
+  <!--      <if test="vinTag != null">-->
+  <!--        vinTag,-->
+  <!--      </if>-->
+  <!--      <if test="country2 != null">-->
+  <!--        country2,-->
+  <!--      </if>-->
+  <!--      <if test="column21 != null">-->
+  <!--        column21,-->
+  <!--      </if>-->
+  <!--      <if test="column22 != null">-->
+  <!--        column22,-->
+  <!--      </if>-->
+  <!--      <if test="column23 != null">-->
+  <!--        column23,-->
+  <!--      </if>-->
+  <!--      <if test="engineNumber != null">-->
+  <!--        engineNumber,-->
+  <!--      </if>-->
+  <!--      <if test="column25 != null">-->
+  <!--        column25,-->
+  <!--      </if>-->
+  <!--      <if test="column26 != null">-->
+  <!--        column26,-->
+  <!--      </if>-->
+  <!--      <if test="column27 != null">-->
+  <!--        column27,-->
+  <!--      </if>-->
+  <!--      <if test="column28 != null">-->
+  <!--        column28,-->
+  <!--      </if>-->
+  <!--      <if test="column29 != null">-->
+  <!--        column29,-->
+  <!--      </if>-->
+  <!--      <if test="column30 != null">-->
+  <!--        column30,-->
+  <!--      </if>-->
+  <!--      <if test="column31 != null">-->
+  <!--        column31,-->
+  <!--      </if>-->
+  <!--      <if test="column32 != null">-->
+  <!--        column32,-->
+  <!--      </if>-->
+  <!--      <if test="column33 != null">-->
+  <!--        column33,-->
+  <!--      </if>-->
+  <!--      <if test="column34 != null">-->
+  <!--        column34,-->
+  <!--      </if>-->
+  <!--      <if test="column35 != null">-->
+  <!--        column35,-->
+  <!--      </if>-->
+  <!--      <if test="column36 != null">-->
+  <!--        column36,-->
+  <!--      </if>-->
+  <!--      <if test="site != null">-->
+  <!--        site,-->
+  <!--      </if>-->
+  <!--      <if test="column38 != null">-->
+  <!--        column38,-->
+  <!--      </if>-->
+  <!--      <if test="column39 != null">-->
+  <!--        column39,-->
+  <!--      </if>-->
+  <!--      <if test="displayBuildDate != null">-->
+  <!--        displayBuildDate,-->
+  <!--      </if>-->
+  <!--      <if test="column41 != null">-->
+  <!--        column41,-->
+  <!--      </if>-->
+  <!--      <if test="engineMipCode != null">-->
+  <!--        engineMipCode,-->
+  <!--      </if>-->
+  <!--      <if test="transmissionMipCode != null">-->
+  <!--        transmissionMipCode,-->
+  <!--      </if>-->
+  <!--      <if test="column44 != null">-->
+  <!--        column44,-->
+  <!--      </if>-->
+  <!--      <if test="column45 != null">-->
+  <!--        column45,-->
+  <!--      </if>-->
+  <!--      <if test="column46 != null">-->
+  <!--        column46,-->
+  <!--      </if>-->
+  <!--    </trim>-->
+  <!--    <trim prefix="values (" suffix=")" suffixOverrides=",">-->
+  <!--      <if test="vin != null">-->
+  <!--        #{vin,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--      <if test="fullSpecificationCode != null">-->
+  <!--        #{fullSpecificationCode,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--      <if test="productionDate != null">-->
+  <!--        #{productionDate,jdbcType=TIMESTAMP},-->
+  <!--      </if>-->
+  <!--      <if test="nation != null">-->
+  <!--        #{nation,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--      <if test="plant != null">-->
+  <!--        #{plant,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--      <if test="catalog != null">-->
+  <!--        #{catalog,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--      <if test="column7 != null">-->
+  <!--        #{column7,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--      <if test="weatherType != null">-->
+  <!--        #{weatherType,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--      <if test="column9 != null">-->
+  <!--        #{column9,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--      <if test="extColor != null">-->
+  <!--        #{extColor,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--      <if test="intColor != null">-->
+  <!--        #{intColor,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--      <if test="area != null">-->
+  <!--        #{area,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--      <if test="orderNumber != null">-->
+  <!--        #{orderNumber,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--      <if test="column14 != null">-->
+  <!--        #{column14,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--      <if test="driveType != null">-->
+  <!--        #{driveType,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--      <if test="column16 != null">-->
+  <!--        #{column16,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--      <if test="optionCode1 != null">-->
+  <!--        #{optionCode1,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--      <if test="optionCode2 != null">-->
+  <!--        #{optionCode2,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--      <if test="vinTag != null">-->
+  <!--        #{vinTag,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--      <if test="country2 != null">-->
+  <!--        #{country2,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--      <if test="column21 != null">-->
+  <!--        #{column21,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--      <if test="column22 != null">-->
+  <!--        #{column22,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--      <if test="column23 != null">-->
+  <!--        #{column23,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--      <if test="engineNumber != null">-->
+  <!--        #{engineNumber,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--      <if test="column25 != null">-->
+  <!--        #{column25,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--      <if test="column26 != null">-->
+  <!--        #{column26,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--      <if test="column27 != null">-->
+  <!--        #{column27,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--      <if test="column28 != null">-->
+  <!--        #{column28,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--      <if test="column29 != null">-->
+  <!--        #{column29,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--      <if test="column30 != null">-->
+  <!--        #{column30,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--      <if test="column31 != null">-->
+  <!--        #{column31,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--      <if test="column32 != null">-->
+  <!--        #{column32,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--      <if test="column33 != null">-->
+  <!--        #{column33,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--      <if test="column34 != null">-->
+  <!--        #{column34,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--      <if test="column35 != null">-->
+  <!--        #{column35,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--      <if test="column36 != null">-->
+  <!--        #{column36,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--      <if test="site != null">-->
+  <!--        #{site,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--      <if test="column38 != null">-->
+  <!--        #{column38,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--      <if test="column39 != null">-->
+  <!--        #{column39,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--      <if test="displayBuildDate != null">-->
+  <!--        #{displayBuildDate,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--      <if test="column41 != null">-->
+  <!--        #{column41,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--      <if test="engineMipCode != null">-->
+  <!--        #{engineMipCode,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--      <if test="transmissionMipCode != null">-->
+  <!--        #{transmissionMipCode,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--      <if test="column44 != null">-->
+  <!--        #{column44,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--      <if test="column45 != null">-->
+  <!--        #{column45,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--      <if test="column46 != null">-->
+  <!--        #{column46,jdbcType=VARCHAR},-->
+  <!--      </if>-->
+  <!--    </trim>-->
+  <!--  </insert>-->
+  <!--  <insert id="batchInsert" parameterType="map">-->
+  <!--    &lt;!&ndash;@mbg.generated&ndash;&gt;-->
+  <!--    insert into vin_data-->
+  <!--    (vin, fullSpecificationCode, productionDate, nation, plant, `catalog`, column7, weatherType,-->
+  <!--      column9, extColor, intColor, area, orderNumber, column14, driveType, column16, -->
+  <!--      optionCode1, optionCode2, vinTag, country2, column21, column22, column23, engineNumber,-->
+  <!--      column25, column26, column27, column28, column29, column30, column31, column32, -->
+  <!--      column33, column34, column35, column36, site, column38, column39, displayBuildDate, -->
+  <!--      column41, engineMipCode, transmissionMipCode, column44, column45, column46)-->
+  <!--    values-->
+  <!--    <foreach collection="list" item="item" separator=",">-->
+  <!--      (#{item.vin,jdbcType=VARCHAR}, #{item.fullSpecificationCode,jdbcType=VARCHAR}, #{item.productionDate,jdbcType=TIMESTAMP}, -->
+  <!--        #{item.nation,jdbcType=VARCHAR}, #{item.plant,jdbcType=VARCHAR}, #{item.catalog,jdbcType=VARCHAR}, -->
+  <!--        #{item.column7,jdbcType=VARCHAR}, #{item.weatherType,jdbcType=VARCHAR}, #{item.column9,jdbcType=VARCHAR},-->
+  <!--        #{item.extColor,jdbcType=VARCHAR}, #{item.intColor,jdbcType=VARCHAR}, #{item.area,jdbcType=VARCHAR}, -->
+  <!--        #{item.orderNumber,jdbcType=VARCHAR}, #{item.column14,jdbcType=VARCHAR}, #{item.driveType,jdbcType=VARCHAR}, -->
+  <!--        #{item.column16,jdbcType=VARCHAR}, #{item.optionCode1,jdbcType=VARCHAR}, #{item.optionCode2,jdbcType=VARCHAR}, -->
+  <!--        #{item.vinTag,jdbcType=VARCHAR}, #{item.country2,jdbcType=VARCHAR}, #{item.column21,jdbcType=VARCHAR}, -->
+  <!--        #{item.column22,jdbcType=VARCHAR}, #{item.column23,jdbcType=VARCHAR}, #{item.engineNumber,jdbcType=VARCHAR},-->
+  <!--        #{item.column25,jdbcType=VARCHAR}, #{item.column26,jdbcType=VARCHAR}, #{item.column27,jdbcType=VARCHAR}, -->
+  <!--        #{item.column28,jdbcType=VARCHAR}, #{item.column29,jdbcType=VARCHAR}, #{item.column30,jdbcType=VARCHAR}, -->
+  <!--        #{item.column31,jdbcType=VARCHAR}, #{item.column32,jdbcType=VARCHAR}, #{item.column33,jdbcType=VARCHAR}, -->
+  <!--        #{item.column34,jdbcType=VARCHAR}, #{item.column35,jdbcType=VARCHAR}, #{item.column36,jdbcType=VARCHAR}, -->
+  <!--        #{item.site,jdbcType=VARCHAR}, #{item.column38,jdbcType=VARCHAR}, #{item.column39,jdbcType=VARCHAR}, -->
+  <!--        #{item.displayBuildDate,jdbcType=VARCHAR}, #{item.column41,jdbcType=VARCHAR}, #{item.engineMipCode,jdbcType=VARCHAR},-->
+  <!--        #{item.transmissionMipCode,jdbcType=VARCHAR}, #{item.column44,jdbcType=VARCHAR}, #{item.column45,jdbcType=VARCHAR},-->
+  <!--        #{item.column46,jdbcType=VARCHAR})-->
+  <!--    </foreach>-->
+  <!--  </insert>-->
+
+  <insert id="batchInsertNew" parameterType="map">
     <!--@mbg.generated-->
-    <!--@Table vin_data-->
-    <result column="vin" jdbcType="VARCHAR" property="vin" />
-    <result column="fullSpecificationCode" jdbcType="VARCHAR" property="fullSpecificationCode" />
-    <result column="productionDate" jdbcType="TIMESTAMP" property="productionDate" />
-    <result column="nation" jdbcType="VARCHAR" property="nation" />
-    <result column="plant" jdbcType="VARCHAR" property="plant" />
-    <result column="catalog" jdbcType="VARCHAR" property="catalog" />
-    <result column="column7" jdbcType="VARCHAR" property="column7" />
-    <result column="weatherType" jdbcType="VARCHAR" property="weatherType" />
-    <result column="column9" jdbcType="VARCHAR" property="column9" />
-    <result column="extColor" jdbcType="VARCHAR" property="extColor" />
-    <result column="intColor" jdbcType="VARCHAR" property="intColor" />
-    <result column="area" jdbcType="VARCHAR" property="area" />
-    <result column="orderNumber" jdbcType="VARCHAR" property="orderNumber" />
-    <result column="column14" jdbcType="VARCHAR" property="column14" />
-    <result column="driveType" jdbcType="VARCHAR" property="driveType" />
-    <result column="column16" jdbcType="VARCHAR" property="column16" />
-    <result column="optionCode1" jdbcType="VARCHAR" property="optionCode1" />
-    <result column="optionCode2" jdbcType="VARCHAR" property="optionCode2" />
-    <result column="vinTag" jdbcType="VARCHAR" property="vinTag" />
-    <result column="country2" jdbcType="VARCHAR" property="country2" />
-    <result column="column21" jdbcType="VARCHAR" property="column21" />
-    <result column="column22" jdbcType="VARCHAR" property="column22" />
-    <result column="column23" jdbcType="VARCHAR" property="column23" />
-    <result column="engineNumber" jdbcType="VARCHAR" property="engineNumber" />
-    <result column="column25" jdbcType="VARCHAR" property="column25" />
-    <result column="column26" jdbcType="VARCHAR" property="column26" />
-    <result column="column27" jdbcType="VARCHAR" property="column27" />
-    <result column="column28" jdbcType="VARCHAR" property="column28" />
-    <result column="column29" jdbcType="VARCHAR" property="column29" />
-    <result column="column30" jdbcType="VARCHAR" property="column30" />
-    <result column="column31" jdbcType="VARCHAR" property="column31" />
-    <result column="column32" jdbcType="VARCHAR" property="column32" />
-    <result column="column33" jdbcType="VARCHAR" property="column33" />
-    <result column="column34" jdbcType="VARCHAR" property="column34" />
-    <result column="column35" jdbcType="VARCHAR" property="column35" />
-    <result column="column36" jdbcType="VARCHAR" property="column36" />
-    <result column="site" jdbcType="VARCHAR" property="site" />
-    <result column="column38" jdbcType="VARCHAR" property="column38" />
-    <result column="column39" jdbcType="VARCHAR" property="column39" />
-    <result column="displayBuildDate" jdbcType="VARCHAR" property="displayBuildDate" />
-    <result column="column41" jdbcType="VARCHAR" property="column41" />
-    <result column="engineMipCode" jdbcType="VARCHAR" property="engineMipCode" />
-    <result column="transmissionMipCode" jdbcType="VARCHAR" property="transmissionMipCode" />
-    <result column="column44" jdbcType="VARCHAR" property="column44" />
-    <result column="column45" jdbcType="VARCHAR" property="column45" />
-    <result column="column46" jdbcType="VARCHAR" property="column46" />
-  </resultMap>
-  <sql id="Base_Column_List">
-    <!--@mbg.generated-->
-    vin, fullSpecificationCode, productionDate, nation, plant, `catalog`, column7, weatherType,
-    column9, extColor, intColor, area, orderNumber, column14, driveType, column16, optionCode1, 
-    optionCode2, vinTag, country2, column21, column22, column23, engineNumber, column25,
-    column26, column27, column28, column29, column30, column31, column32, column33, column34, 
-    column35, column36, site, column38, column39, displayBuildDate, column41, engineMipCode,
-    transmissionMipCode, column44, column45, column46
-  </sql>
-  <insert id="insert" parameterType="com.domain.VinData">
-    <!--@mbg.generated-->
-    insert into vin_data (vin, fullSpecificationCode, productionDate, 
-      nation, plant, `catalog`, 
-      column7, weatherType, column9,
-      extColor, intColor, area, 
-      orderNumber, column14, driveType, 
-      column16, optionCode1, optionCode2, 
-      vinTag, country2, column21, 
-      column22, column23, column24, 
-      column25, column26, column27, 
-      column28, column29, column30, 
-      column31, column32, column33, 
-      column34, column35, column36, 
-      site, column38, column39, 
-      displayBuildDate, column41, engineMipCode,
-      transmissionMipCode, column44, column45,
-      column46)
-    values (#{vin,jdbcType=VARCHAR}, #{fullSpecificationCode,jdbcType=VARCHAR}, #{productionDate,jdbcType=TIMESTAMP}, 
-      #{nation,jdbcType=VARCHAR}, #{plant,jdbcType=VARCHAR}, #{catalog,jdbcType=VARCHAR}, 
-      #{column7,jdbcType=VARCHAR}, #{weatherType,jdbcType=VARCHAR}, #{column9,jdbcType=VARCHAR},
-      #{extColor,jdbcType=VARCHAR}, #{intColor,jdbcType=VARCHAR}, #{area,jdbcType=VARCHAR}, 
-      #{orderNumber,jdbcType=VARCHAR}, #{column14,jdbcType=VARCHAR}, #{driveType,jdbcType=VARCHAR}, 
-      #{column16,jdbcType=VARCHAR}, #{optionCode1,jdbcType=VARCHAR}, #{optionCode2,jdbcType=VARCHAR}, 
-      #{vinTag,jdbcType=VARCHAR}, #{country2,jdbcType=VARCHAR}, #{column21,jdbcType=VARCHAR}, 
-      #{column22,jdbcType=VARCHAR}, #{column23,jdbcType=VARCHAR}, #{engineNumber,jdbcType=VARCHAR},
-      #{column25,jdbcType=VARCHAR}, #{column26,jdbcType=VARCHAR}, #{column27,jdbcType=VARCHAR}, 
-      #{column28,jdbcType=VARCHAR}, #{column29,jdbcType=VARCHAR}, #{column30,jdbcType=VARCHAR}, 
-      #{column31,jdbcType=VARCHAR}, #{column32,jdbcType=VARCHAR}, #{column33,jdbcType=VARCHAR}, 
-      #{column34,jdbcType=VARCHAR}, #{column35,jdbcType=VARCHAR}, #{column36,jdbcType=VARCHAR}, 
-      #{site,jdbcType=VARCHAR}, #{column38,jdbcType=VARCHAR}, #{column39,jdbcType=VARCHAR}, 
-      #{displayBuildDate,jdbcType=VARCHAR}, #{column41,jdbcType=VARCHAR}, #{engineMipCode,jdbcType=VARCHAR},
-      #{transmissionMipCode,jdbcType=VARCHAR}, #{column44,jdbcType=VARCHAR}, #{column45,jdbcType=VARCHAR},
-      #{column46,jdbcType=VARCHAR})
-  </insert>
-  <insert id="insertSelective" parameterType="com.domain.VinData">
-    <!--@mbg.generated-->
-    insert into vin_data
-    <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="vin != null">
-        vin,
-      </if>
-      <if test="fullSpecificationCode != null">
-        fullSpecificationCode,
-      </if>
-      <if test="productionDate != null">
-        productionDate,
-      </if>
-      <if test="nation != null">
-        nation,
-      </if>
-      <if test="plant != null">
-        plant,
-      </if>
-      <if test="catalog != null">
-        `catalog`,
-      </if>
-      <if test="column7 != null">
-        column7,
-      </if>
-      <if test="weatherType != null">
-        weatherType,
-      </if>
-      <if test="column9 != null">
-        column9,
-      </if>
-      <if test="extColor != null">
-        extColor,
-      </if>
-      <if test="intColor != null">
-        intColor,
-      </if>
-      <if test="area != null">
-        area,
-      </if>
-      <if test="orderNumber != null">
-        orderNumber,
-      </if>
-      <if test="column14 != null">
-        column14,
-      </if>
-      <if test="driveType != null">
-        driveType,
-      </if>
-      <if test="column16 != null">
-        column16,
-      </if>
-      <if test="optionCode1 != null">
-        optionCode1,
-      </if>
-      <if test="optionCode2 != null">
-        optionCode2,
-      </if>
-      <if test="vinTag != null">
-        vinTag,
-      </if>
-      <if test="country2 != null">
-        country2,
-      </if>
-      <if test="column21 != null">
-        column21,
-      </if>
-      <if test="column22 != null">
-        column22,
-      </if>
-      <if test="column23 != null">
-        column23,
-      </if>
-      <if test="engineNumber != null">
-        engineNumber,
-      </if>
-      <if test="column25 != null">
-        column25,
-      </if>
-      <if test="column26 != null">
-        column26,
-      </if>
-      <if test="column27 != null">
-        column27,
-      </if>
-      <if test="column28 != null">
-        column28,
-      </if>
-      <if test="column29 != null">
-        column29,
-      </if>
-      <if test="column30 != null">
-        column30,
-      </if>
-      <if test="column31 != null">
-        column31,
-      </if>
-      <if test="column32 != null">
-        column32,
-      </if>
-      <if test="column33 != null">
-        column33,
-      </if>
-      <if test="column34 != null">
-        column34,
-      </if>
-      <if test="column35 != null">
-        column35,
-      </if>
-      <if test="column36 != null">
-        column36,
-      </if>
-      <if test="site != null">
-        site,
-      </if>
-      <if test="column38 != null">
-        column38,
-      </if>
-      <if test="column39 != null">
-        column39,
-      </if>
-      <if test="displayBuildDate != null">
-        displayBuildDate,
-      </if>
-      <if test="column41 != null">
-        column41,
-      </if>
-      <if test="engineMipCode != null">
-        engineMipCode,
-      </if>
-      <if test="transmissionMipCode != null">
-        transmissionMipCode,
-      </if>
-      <if test="column44 != null">
-        column44,
-      </if>
-      <if test="column45 != null">
-        column45,
-      </if>
-      <if test="column46 != null">
-        column46,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="vin != null">
-        #{vin,jdbcType=VARCHAR},
-      </if>
-      <if test="fullSpecificationCode != null">
-        #{fullSpecificationCode,jdbcType=VARCHAR},
-      </if>
-      <if test="productionDate != null">
-        #{productionDate,jdbcType=TIMESTAMP},
-      </if>
-      <if test="nation != null">
-        #{nation,jdbcType=VARCHAR},
-      </if>
-      <if test="plant != null">
-        #{plant,jdbcType=VARCHAR},
-      </if>
-      <if test="catalog != null">
-        #{catalog,jdbcType=VARCHAR},
-      </if>
-      <if test="column7 != null">
-        #{column7,jdbcType=VARCHAR},
-      </if>
-      <if test="weatherType != null">
-        #{weatherType,jdbcType=VARCHAR},
-      </if>
-      <if test="column9 != null">
-        #{column9,jdbcType=VARCHAR},
-      </if>
-      <if test="extColor != null">
-        #{extColor,jdbcType=VARCHAR},
-      </if>
-      <if test="intColor != null">
-        #{intColor,jdbcType=VARCHAR},
-      </if>
-      <if test="area != null">
-        #{area,jdbcType=VARCHAR},
-      </if>
-      <if test="orderNumber != null">
-        #{orderNumber,jdbcType=VARCHAR},
-      </if>
-      <if test="column14 != null">
-        #{column14,jdbcType=VARCHAR},
-      </if>
-      <if test="driveType != null">
-        #{driveType,jdbcType=VARCHAR},
-      </if>
-      <if test="column16 != null">
-        #{column16,jdbcType=VARCHAR},
-      </if>
-      <if test="optionCode1 != null">
-        #{optionCode1,jdbcType=VARCHAR},
-      </if>
-      <if test="optionCode2 != null">
-        #{optionCode2,jdbcType=VARCHAR},
-      </if>
-      <if test="vinTag != null">
-        #{vinTag,jdbcType=VARCHAR},
-      </if>
-      <if test="country2 != null">
-        #{country2,jdbcType=VARCHAR},
-      </if>
-      <if test="column21 != null">
-        #{column21,jdbcType=VARCHAR},
-      </if>
-      <if test="column22 != null">
-        #{column22,jdbcType=VARCHAR},
-      </if>
-      <if test="column23 != null">
-        #{column23,jdbcType=VARCHAR},
-      </if>
-      <if test="engineNumber != null">
-        #{engineNumber,jdbcType=VARCHAR},
-      </if>
-      <if test="column25 != null">
-        #{column25,jdbcType=VARCHAR},
-      </if>
-      <if test="column26 != null">
-        #{column26,jdbcType=VARCHAR},
-      </if>
-      <if test="column27 != null">
-        #{column27,jdbcType=VARCHAR},
-      </if>
-      <if test="column28 != null">
-        #{column28,jdbcType=VARCHAR},
-      </if>
-      <if test="column29 != null">
-        #{column29,jdbcType=VARCHAR},
-      </if>
-      <if test="column30 != null">
-        #{column30,jdbcType=VARCHAR},
-      </if>
-      <if test="column31 != null">
-        #{column31,jdbcType=VARCHAR},
-      </if>
-      <if test="column32 != null">
-        #{column32,jdbcType=VARCHAR},
-      </if>
-      <if test="column33 != null">
-        #{column33,jdbcType=VARCHAR},
-      </if>
-      <if test="column34 != null">
-        #{column34,jdbcType=VARCHAR},
-      </if>
-      <if test="column35 != null">
-        #{column35,jdbcType=VARCHAR},
-      </if>
-      <if test="column36 != null">
-        #{column36,jdbcType=VARCHAR},
-      </if>
-      <if test="site != null">
-        #{site,jdbcType=VARCHAR},
-      </if>
-      <if test="column38 != null">
-        #{column38,jdbcType=VARCHAR},
-      </if>
-      <if test="column39 != null">
-        #{column39,jdbcType=VARCHAR},
-      </if>
-      <if test="displayBuildDate != null">
-        #{displayBuildDate,jdbcType=VARCHAR},
-      </if>
-      <if test="column41 != null">
-        #{column41,jdbcType=VARCHAR},
-      </if>
-      <if test="engineMipCode != null">
-        #{engineMipCode,jdbcType=VARCHAR},
-      </if>
-      <if test="transmissionMipCode != null">
-        #{transmissionMipCode,jdbcType=VARCHAR},
-      </if>
-      <if test="column44 != null">
-        #{column44,jdbcType=VARCHAR},
-      </if>
-      <if test="column45 != null">
-        #{column45,jdbcType=VARCHAR},
-      </if>
-      <if test="column46 != null">
-        #{column46,jdbcType=VARCHAR},
-      </if>
-    </trim>
-  </insert>
-  <insert id="batchInsert" parameterType="map">
-    <!--@mbg.generated-->
-    insert into vin_data
-    (vin, fullSpecificationCode, productionDate, nation, plant, `catalog`, column7, weatherType,
-      column9, extColor, intColor, area, orderNumber, column14, driveType, column16, 
-      optionCode1, optionCode2, vinTag, country2, column21, column22, column23, engineNumber,
-      column25, column26, column27, column28, column29, column30, column31, column32, 
-      column33, column34, column35, column36, site, column38, column39, displayBuildDate, 
-      column41, engineMipCode, transmissionMipCode, column44, column45, column46)
+    insert into vin_data_newest
+    (vin, fullSpecificationCode, buildDate, nation, plant, `catalog`, column7, weatherType,
+    column9, extColor, intColor, area, orderNumber, column14, driveType, column16,
+    optionCode1, optionCode2, vinTag, region, column21, vehicleFactory, column23, column24,
+    engineNumber, column26, column27, column28, transmissionNumber, column30, column31, column32,
+    column33, column34, column35, column36, site, column38, column39, productionDate,
+    column41, engineMipCode, transmissionMipCode, column44, column45, column46)
     values
     <foreach collection="list" item="item" separator=",">
-      (#{item.vin,jdbcType=VARCHAR}, #{item.fullSpecificationCode,jdbcType=VARCHAR}, #{item.productionDate,jdbcType=TIMESTAMP}, 
-        #{item.nation,jdbcType=VARCHAR}, #{item.plant,jdbcType=VARCHAR}, #{item.catalog,jdbcType=VARCHAR}, 
-        #{item.column7,jdbcType=VARCHAR}, #{item.weatherType,jdbcType=VARCHAR}, #{item.column9,jdbcType=VARCHAR},
-        #{item.extColor,jdbcType=VARCHAR}, #{item.intColor,jdbcType=VARCHAR}, #{item.area,jdbcType=VARCHAR}, 
-        #{item.orderNumber,jdbcType=VARCHAR}, #{item.column14,jdbcType=VARCHAR}, #{item.driveType,jdbcType=VARCHAR}, 
-        #{item.column16,jdbcType=VARCHAR}, #{item.optionCode1,jdbcType=VARCHAR}, #{item.optionCode2,jdbcType=VARCHAR}, 
-        #{item.vinTag,jdbcType=VARCHAR}, #{item.country2,jdbcType=VARCHAR}, #{item.column21,jdbcType=VARCHAR}, 
-        #{item.column22,jdbcType=VARCHAR}, #{item.column23,jdbcType=VARCHAR}, #{item.engineNumber,jdbcType=VARCHAR},
-        #{item.column25,jdbcType=VARCHAR}, #{item.column26,jdbcType=VARCHAR}, #{item.column27,jdbcType=VARCHAR}, 
-        #{item.column28,jdbcType=VARCHAR}, #{item.column29,jdbcType=VARCHAR}, #{item.column30,jdbcType=VARCHAR}, 
-        #{item.column31,jdbcType=VARCHAR}, #{item.column32,jdbcType=VARCHAR}, #{item.column33,jdbcType=VARCHAR}, 
-        #{item.column34,jdbcType=VARCHAR}, #{item.column35,jdbcType=VARCHAR}, #{item.column36,jdbcType=VARCHAR}, 
-        #{item.site,jdbcType=VARCHAR}, #{item.column38,jdbcType=VARCHAR}, #{item.column39,jdbcType=VARCHAR}, 
-        #{item.displayBuildDate,jdbcType=VARCHAR}, #{item.column41,jdbcType=VARCHAR}, #{item.engineMipCode,jdbcType=VARCHAR},
-        #{item.transmissionMipCode,jdbcType=VARCHAR}, #{item.column44,jdbcType=VARCHAR}, #{item.column45,jdbcType=VARCHAR},
-        #{item.column46,jdbcType=VARCHAR})
+      (#{item.vin,jdbcType=VARCHAR}, #{item.fullSpecificationCode,jdbcType=VARCHAR}, #{item.buildDate,jdbcType=TIMESTAMP},
+      #{item.nation,jdbcType=VARCHAR}, #{item.plant,jdbcType=VARCHAR}, #{item.catalog,jdbcType=VARCHAR},
+      #{item.column7,jdbcType=VARCHAR}, #{item.weatherType,jdbcType=VARCHAR}, #{item.column9,jdbcType=VARCHAR},
+      #{item.extColor,jdbcType=VARCHAR}, #{item.intColor,jdbcType=VARCHAR}, #{item.area,jdbcType=VARCHAR},
+      #{item.orderNumber,jdbcType=VARCHAR}, #{item.column14,jdbcType=VARCHAR}, #{item.driveType,jdbcType=VARCHAR},
+      #{item.column16,jdbcType=VARCHAR}, #{item.optionCode1,jdbcType=VARCHAR}, #{item.optionCode2,jdbcType=VARCHAR},
+      #{item.vinTag,jdbcType=VARCHAR}, #{item.region,jdbcType=VARCHAR}, #{item.column21,jdbcType=VARCHAR},
+      #{item.vehicleFactory,jdbcType=VARCHAR}, #{item.column23,jdbcType=VARCHAR}, #{item.column24,jdbcType=VARCHAR},
+      #{item.engineNumber,jdbcType=VARCHAR}, #{item.column26,jdbcType=VARCHAR}, #{item.column27,jdbcType=VARCHAR},
+      #{item.column28,jdbcType=VARCHAR}, #{item.transmissionNumber,jdbcType=VARCHAR}, #{item.column30,jdbcType=VARCHAR},
+      #{item.column31,jdbcType=VARCHAR}, #{item.column32,jdbcType=VARCHAR}, #{item.column33,jdbcType=VARCHAR},
+      #{item.column34,jdbcType=VARCHAR}, #{item.column35,jdbcType=VARCHAR}, #{item.column36,jdbcType=VARCHAR},
+      #{item.site,jdbcType=VARCHAR}, #{item.column38,jdbcType=VARCHAR}, #{item.column39,jdbcType=VARCHAR},
+      #{item.productionDate,jdbcType=VARCHAR}, #{item.column41,jdbcType=VARCHAR}, #{item.engineMipCode,jdbcType=VARCHAR},
+      #{item.transmissionMipCode,jdbcType=VARCHAR}, #{item.column44,jdbcType=VARCHAR}, #{item.column45,jdbcType=VARCHAR},
+      #{item.column46,jdbcType=VARCHAR})
     </foreach>
   </insert>
 
-<!--auto generated by MybatisCodeHelper on 2024-05-15-->
-  <select id="selectByCatalog" resultMap="BaseResultMap">
-    select
-    <!--<include refid="Base_Column_List"/>-->
-    distinct fullSpecificationCode, optionCode1, optionCode2, extcolor, intcolor, vintag, plant, nation, engineMipCode, transmissionMipCode, area, weathertype, drivetype, productiondate
-    from vin_data
-    <where>
-      <if test="catalog != null">
-        and `catalog`=#{catalog,jdbcType=VARCHAR}
-      </if>
-    </where>
-  </select>
+  <!--auto generated by MybatisCodeHelper on 2024-05-15-->
+  <!--  <select id="selectByCatalog" resultMap="BaseResultMap">-->
+  <!--    select-->
+  <!--    &lt;!&ndash;<include refid="Base_Column_List"/>&ndash;&gt;-->
+  <!--    distinct fullSpecificationCode, optionCode1, optionCode2, extcolor, intcolor, vintag, plant, nation, engineMipCode, transmissionMipCode, area, weathertype, drivetype, productiondate-->
+  <!--    from vin_data-->
+  <!--    <where>-->
+  <!--      <if test="catalog != null">-->
+  <!--        and `catalog`=#{catalog,jdbcType=VARCHAR}-->
+  <!--      </if>-->
+  <!--    </where>-->
+  <!--  </select>-->
+
+  <!--  <select id = "selectByCatalog2" resultType = "org.example.model.VinDataDto">-->
+  <!--    select rowNum,-->
+  <!--    fullSpecificationCode,-->
+  <!--    optionCode1,-->
+  <!--    optionCode2,-->
+  <!--    extcolor,-->
+  <!--    intcolor,-->
+  <!--    vintag,-->
+  <!--    plant,-->
+  <!--    nation,-->
+  <!--    engineMipCode,-->
+  <!--    transmissionMipCode,-->
+  <!--    area,-->
+  <!--    weathertype,-->
+  <!--    drivetype,-->
+  <!--    productiondate-->
+  <!--    from (-->
+  <!--    SELECT-->
+  <!--    ROW_NUMBER() OVER (ORDER BY fullSpecificationCode) AS rowNum,-->
+  <!--    fullSpecificationCode,-->
+  <!--    optionCode1,-->
+  <!--    optionCode2,-->
+  <!--    extcolor,-->
+  <!--    intcolor,-->
+  <!--    vintag,-->
+  <!--    plant,-->
+  <!--    nation,-->
+  <!--    engineMipCode,-->
+  <!--    transmissionMipCode,-->
+  <!--    area,-->
+  <!--    weathertype,-->
+  <!--    drivetype,-->
+  <!--    productiondate-->
+  <!--    FROM (-->
+  <!--    SELECT DISTINCT-->
+  <!--    fullSpecificationCode,-->
+  <!--    optionCode1,-->
+  <!--    optionCode2,-->
+  <!--    extcolor,-->
+  <!--    intcolor,-->
+  <!--    vintag,-->
+  <!--    plant,-->
+  <!--    nation,-->
+  <!--    engineMipCode,-->
+  <!--    transmissionMipCode,-->
+  <!--    area,-->
+  <!--    weathertype,-->
+  <!--    drivetype,-->
+  <!--    productiondate-->
+  <!--    FROM vin_data-->
+  <!--    WHERE catalog = #{catalog,jdbcType=VARCHAR}-->
+  <!--    ) AS distinct_vin_data-->
+  <!--    ) as distinct_vin_data2-->
+  <!--    where-->
+  <!--    rowNum <![CDATA[>]]> #{start, jdbcType=INTEGER} limit 1000-->
+  <!--  </select>-->
 
   <select id = "selectByCatalog2" resultType = "org.example.model.VinDataDto">
     select rowNum,
@@ -437,7 +524,7 @@
     area,
     weathertype,
     drivetype,
-    productiondate
+    builddate
     from (
     SELECT
     ROW_NUMBER() OVER (ORDER BY fullSpecificationCode) AS rowNum,
@@ -454,7 +541,7 @@
     area,
     weathertype,
     drivetype,
-    productiondate
+    builddate
     FROM (
     SELECT DISTINCT
     fullSpecificationCode,
@@ -470,7 +557,7 @@
     area,
     weathertype,
     drivetype,
-    productiondate
+    builddate
     FROM vin_data_newest
     WHERE catalog = #{catalog,jdbcType=VARCHAR}
     ) AS distinct_vin_data
